@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         id="bstudio_nxp"
+         point="org.eclipse.core.runtime.products">
+      <product
+            application="org.eclipse.ui.ide.workbench"
+            name="BeyondStudio for NXP">
+         <property
+               name="windowImages"
+               value="icons/NXP16.png,icons/NXP32.png">
+         </property>
+         <property
+               name="aboutText"
+               value="%aboutText">
+         </property>
+         <property
+               name="aboutImage"
+               value="icons/NXP_Vertical.png">
+         </property>
+         <property
+               name="startupForegroundColor"
+               value="000000">
+         </property>
+         <property
+               name="startupProgressRect"
+               value="5,297,490,15">
+         </property>
+         <property
+               name="startupMessageRect"
+               value="7,272,490,20">
+         </property>
+         <property
+               name="appName"
+               value="BeyondStudio for NXP">
+         </property>
+         <property
+               name="preferenceCustomization"
+               value="plugin_customization.ini">
+         </property>
+         <property
+               name="cssTheme"
+               value="org.eclipse.e4.ui.css.theme.e4_classic">
+         </property>
+         <property
+               name="applicationCSSResources"
+               value="platform:/plugin/org.eclipse.platform/images/">
+         </property>
+      </product>
+   </extension>
+
+
+</plugin>

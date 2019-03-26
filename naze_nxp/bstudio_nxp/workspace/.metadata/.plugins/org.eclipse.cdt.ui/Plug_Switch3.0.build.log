@@ -1,0 +1,107 @@
+10:24:10 **** Incremental Build of configuration SmartPlug for project Plug_Switch3.0 ****
+make LIGHT=SmartPlug TRACE=1 JENNIC_CHIP_FAMILY=JN516x JENNIC_CHIP=JN5169 OTA=1 OTA_ENCRYPTED=0 all 
+JENNIC_MAC is Mini MAC shim 
+Building trace version ...
+Traceback (most recent call last):
+  File "ZPSConfig.py", line 53, in <module>
+  File "zipextimporter.pyo", line 82, in load_module
+  File "amara\__init__.pyo", line 11, in <module>
+  File "zipextimporter.pyo", line 82, in load_module
+  File "amara\binderytools.pyo", line 13, in <module>
+  File "zipextimporter.pyo", line 82, in load_module
+  File "Ft\Xml\__init__.pyo", line 160, in <module>
+  File "zipextimporter.pyo", line 82, in load_module
+  File "Ft\Xml\Lib\__init__.pyo", line 15, in <module>
+  File "zipextimporter.pyo", line 82, in load_module
+  File "Ft\Lib\Uri.pyo", line 16, in <module>
+  File "zipextimporter.pyo", line 82, in load_module
+  File "urllib2.pyo", line 92, in <module>
+  File "zipextimporter.pyo", line 82, in load_module
+  File "httplib.pyo", line 70, in <module>
+  File "zipextimporter.pyo", line 82, in load_module
+  File "mimetools.pyo", line 6, in <module>
+  File "zipextimporter.pyo", line 82, in load_module
+  File "tempfile.pyo", line 33, in <module>
+  File "zipextimporter.pyo", line 82, in load_module
+  File "random.pyo", line 838, in <module>
+  File "random.pyo", line 94, in __init__
+  File "random.pyo", line 108, in seed
+WindowsError: [Error -2146893818] 
+Traceback (most recent call last):
+  File "ZPSConfig.py", line 53, in <module>
+  File "zipextimporter.pyo", line 82, in load_module
+  File "amara\__init__.pyo", line 11, in <module>
+  File "zipextimporter.pyo", line 82, in load_module
+  File "amara\binderytools.pyo", line 13, in <module>
+  File "zipextimporter.pyo", line 82, in load_module
+  File "Ft\Xml\__init__.pyo", line 160, in <module>
+  File "zipextimporter.pyo", line 82, in load_module
+  File "Ft\Xml\Lib\__init__.pyo", line 15, in <module>
+  File "zipextimporter.pyo", line 82, in load_module
+  File "Ft\Lib\Uri.pyo", line 16, in <module>
+  File "zipextimporter.pyo", line 82, in load_module
+  File "urllib2.pyo", line 92, in <module>
+  File "zipextimporter.pyo", line 82, in load_module
+  File "httplib.pyo", line 70, in <module>
+  File "zipextimporter.pyo", line 82, in load_module
+  File "mimetools.pyo", line 6, in <module>
+  File "zipextimporter.pyo", line 82, in load_module
+  File "tempfile.pyo", line 33, in <module>
+  File "zipextimporter.pyo", line 82, in load_module
+  File "random.pyo", line 838, in <module>
+  File "random.pyo", line 94, in __init__
+  File "random.pyo", line 108, in seed
+WindowsError: [Error -2146893818] 
+Traceback (most recent call last):
+  File "ZPSConfig.py", line 53, in <module>
+  File "zipextimporter.pyo", line 82, in load_module
+  File "amara\__init__.pyo", line 11, in <module>
+  File "zipextimporter.pyo", line 82, in load_module
+  File "amara\binderytools.pyo", line 13, in <module>
+  File "zipextimporter.pyo", line 82, in load_module
+  File "Ft\Xml\__init__.pyo", line 160, in <module>
+  File "zipextimporter.pyo", line 82, in load_module
+  File "Ft\Xml\Lib\__init__.pyo", line 15, in <module>
+  File "zipextimporter.pyo", line 82, in load_module
+  File "Ft\Lib\Uri.pyo", line 16, in <module>
+  File "zipextimporter.pyo", line 82, in load_module
+  File "urllib2.pyo", line 92, in <module>
+  File "zipextimporter.pyo", line 82, in load_module
+  File "httplib.pyo", line 70, in <module>
+  File "zipextimporter.pyo", line 82, in load_module
+  File "mimetools.pyo", line 6, in <module>
+  File "zipextimporter.pyo", line 82, in load_module
+  File "tempfile.pyo", line 33, in <module>
+  File "zipextimporter.pyo", line 82, in load_module
+  File "random.pyo", line 838, in <module>
+  File "random.pyo", line 94, in __init__
+  File "random.pyo", line 108, in seed
+WindowsError: [Error -2146893818] 
+bash.exe: warning: could not find /tmp, please create!
+bash.exe: warning: could not find /tmp, please create!
+bash.exe: warning: could not find /tmp, please create!
+bash.exe: warning: could not find /tmp, please create!
+bash.exe: warning: could not find /tmp, please create!
+bash.exe: warning: could not find /tmp, please create!
+bash.exe: warning: could not find /tmp, please create!
+bash.exe: warning: could not find /tmp, please create!
+bash.exe: warning: could not find /tmp, please create!
+bash.exe: warning: could not find /tmp, please create!
+bash.exe: warning: could not find /tmp, please create!
+bash.exe: warning: could not find /tmp, please create!
+bash.exe: warning: could not find /tmp, please create!
+bash.exe: warning: could not find /tmp, please create!
+bash.exe: warning: could not find /tmp, please create!
+bash.exe: warning: could not find /tmp, please create!
+bash.exe: warning: could not find /tmp, please create!
+bash.exe: warning: could not find /tmp, please create!
+bash.exe: warning: could not find /tmp, please create!
+bash.exe: warning: could not find /tmp, please create!
+bash.exe: warning: could not find /tmp, please create!
+bash.exe: warning: could not find /tmp, please create!
+Generating OTA binary ...
+rm -f App_SmartPlug.o
+make: *** No rule to make target `/e/NXP/Plug/SmartPlug/Build/App_SmartPlug.o', needed by `/e/NXP/Plug/SmartPlug/Build/SmartPlug_JN5169_DR1175.elf'.  Stop.
+
+10:24:22 Build Finished (took 11s.833ms)
+

@@ -1,0 +1,3 @@
+---- vBusErrorHandler Matches (2 in 1 files) ----
+Port.c (e:\nxp\bstudio_nxp\sdk\jn-sw-4170\components\zigbeecommon\source):void vBusErrorHandler(void);
+Port.c (e:\nxp\bstudio_nxp\sdk\jn-sw-4170\components\zigbeecommon\source):WEAK void vBusErrorHandler(void)

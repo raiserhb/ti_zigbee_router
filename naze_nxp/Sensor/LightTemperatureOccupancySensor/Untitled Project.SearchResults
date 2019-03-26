@@ -1,0 +1,8 @@
+---- APP_cbTimerButtonScan Matches (7 in 3 files) ----
+App_main.c (source):    ZTIMER_eOpen(&u8TimerButtonScan,            APP_cbTimerButtonScan,              NULL);
+App_main.c (source):    ZTIMER_eOpen(&u8TimerButtonScan,            APP_cbTimerButtonScan,              NULL,   ZTIMER_FLAG_PREVENT_SLEEP);
+App_sensor_buttons.c (source):        APP_cbTimerButtonScan(NULL);
+App_sensor_buttons.c (source):        APP_cbTimerButtonScan(NULL);
+App_sensor_buttons.c (source):PUBLIC void APP_cbTimerButtonScan(void *pvParam)
+App_sensor_buttons.c (source):    APP_cbTimerButtonScan(NULL);
+App_sensor_buttons.h (source):PUBLIC void APP_cbTimerButtonScan(void *pvParam);

@@ -1,0 +1,1 @@
+C:\NXP\ProductionFlashProgrammer\JN51xxProgrammer.exe -s COM7 -P 115200 -S internal -f E:\NXP\Sensor\SampleDoorLock\Build\OTABuild\SampleDoorLock_JN5169_DR1199.bin --eraseeeprom=full -v

@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Require-Bundle: org.eclipse.platform,org.eclipse.equinox.app
+Bundle-Vendor: NXP
+Bundle-Version: 1.0.0.201508141340
+Bundle-Localization: plugin
+Bundle-Name: Beyond Studio for NXP Branding Plugin
+Bundle-ManifestVersion: 2
+Bundle-SymbolicName: com.nxp.bsn.branding;singleton:=true
+
+

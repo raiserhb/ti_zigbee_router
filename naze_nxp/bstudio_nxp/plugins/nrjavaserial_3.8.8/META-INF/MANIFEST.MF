@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Export-Package: gnu.io;version="3.8.8"
+Bundle-ClassPath: nrjavaserial-3.8.8.jar
+Bundle-Version: 3.8.8
+Bundle-Name: Nrjavaserial
+Bundle-ManifestVersion: 2
+Bundle-SymbolicName: nrjavaserial
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+
+

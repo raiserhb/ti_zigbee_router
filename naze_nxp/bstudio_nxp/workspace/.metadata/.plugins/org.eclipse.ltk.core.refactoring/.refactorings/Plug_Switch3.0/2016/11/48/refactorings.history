@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;Plug_Switch3.0/DimmableLight&apos; to &apos;SmartPlug&apos;" description="Rename resource &apos;DimmableLight&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="DimmableLight" name="SmartPlug" stamp="1480125790486" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;Plug_Switch3.0/Common_Light&apos; to &apos;Common_Plug&apos;" description="Rename resource &apos;Common_Light&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Common_Light" name="Common_Plug" stamp="1480125807002" updateReferences="true"/>
+</session>

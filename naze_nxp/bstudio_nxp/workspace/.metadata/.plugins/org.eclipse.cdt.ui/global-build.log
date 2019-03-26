@@ -1,0 +1,80 @@
+17:44:49 **** Incremental Build of configuration WL_DoorLock for project JN-AN-1220-Zigbee-3-0-Sensors ****
+make JENNIC_CHIP=JN5169 JENNIC_CHIP_FAMILY=JN516x SENSOR=WL_DoorLock OTA=1 APP_SW_VERSION=20 OTA_ENCRYPTED=0 KEEPALIVETIME=255 -k -j4 all 
+JENNIC_MAC is Mini MAC shim 
+Building trace version ...
+Generating OTA binary ...
+cp -f WL_DoorLock_JN5169_DR1199.bin OTABuild/DoorLock.bin
+OTABuild/DoorLockCreateOtaClient.bat OTABuild JN-SW-4170 0x117E FNB56-DOR11HT0000000000000000000 4 JN516x 0x000A 20
+
+Jennic Flash Encryption Tool 1.1.8
+
+Data size 8 68 0
+Data size 16 164 40
+ Created  outputffffffffffffffff.bin
+Done.
+going to exit
+
+Jennic Flash Encryption Tool 1.1.8
+
+167956
+OTA Header String Given 464E4235362D444F523131485430303030303030303030303030303030303030
+Sizes:
+|  Server  |OTA Header|  Client  | Total Client
+|         0|        56|    167952|    168014
+
+Jennic Flash Encryption Tool 1.1.8
+
+167956
+OTA Header String Given 464E4235362D444F523131485430303030303030303030303030303030303030
+Sizes:
+|  Server  |OTA Header|  Client  | Total Client
+|         0|        56|    167952|    168014
+
+Jennic Flash Encryption Tool 1.1.8
+
+167956
+OTA Header String Given 464E4235362D444F523131485430303030303030303030303030303030303030
+Sizes:
+|  Server  |OTA Header|  Client  | Total Client
+|         0|        56|    167952|    168014
+
+Jennic Flash Encryption Tool 1.1.8
+
+167956
+OTA Header String Given 464E4235362D444F523131485430303030303030303030303030303030303030
+Sizes:
+|  Server  |OTA Header|  Client  | Total Client
+|         0|        56|    167952|    168014
+
+Jennic Flash Encryption Tool 1.1.8
+
+167956
+0x117e
+0xa
+OTA Header String Fetched From Bin FNB56-DOR11HT0000000000000000000
+Sizes:
+|  Server  |OTA Header|  Client  | Total Client
+|         0|        56|    167952|    168014
+
+Jennic Flash Encryption Tool 1.1.8
+
+167956
+OTA Header String Given 464E4235362D444F523131485430303030303030303030303030303030303030
+Sizes:
+|  Server  |OTA Header|  Client  | Total Client
+|         0|        56|    167952|    168014
+
+Jennic Flash Encryption Tool 1.1.8
+
+167956
+OTA Header String Given 464E4235362D444F523131485430303030303030303030303030303030303030
+Sizes:
+|  Server  |OTA Header|  Client  | Total Client
+|         0|        56|    167952|    168014
+mv OTABuild/DoorLock.bin OTABuild/WL_DoorLock_JN5169_DR1199.bin
+mv OTABuild/ClientUpGradeImagewithOTAHeaderV2.bin OTABuild/WL_DoorLock_JN5169_DR1199_V2.bin
+mv OTABuild/ClientUpGradeImagewithOTAHeaderV3.bin OTABuild/WL_DoorLock_JN5169_DR1199_V3.bin
+mv OTABuild/ClientUpGradeImagewithOTAHeaderV2.ota OTABuild/WL_DoorLock_JN5169_DR1199_V2.ota
+mv OTABuild/ClientUpGradeImagewithOTAHeaderV3.ota OTABuild/WL_DoorLock_JN5169_DR1199_V3.ota
+rm -f /WL_DoorLock_JN5169_DR1199.bin
+rm -f /OTABuild/DoorLock.bin

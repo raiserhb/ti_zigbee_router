@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Export-Package: com.beyondsemi.base.toolchains,com.beyondsemi.base.too
+ lchains.os
+Require-Bundle: org.eclipse.ui,org.eclipse.core.runtime
+Bundle-Vendor: Beyond Semiconductor
+Bundle-ActivationPolicy: lazy
+Bundle-Version: 1.1.9.201508141340
+Bundle-Name: Beyond Studio toolchains plug-in
+Bundle-Activator: com.beyondsemi.base.toolchains.ToolchainsPlugin
+Bundle-ManifestVersion: 2
+Bundle-SymbolicName: com.beyondsemi.base.toolchains;singleton:=true
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+
+

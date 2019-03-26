@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Delete resource &apos;JN-AN-1220-Zigbee-3-0-Sensors/Common/Source/app (2).zpscfg&apos;" deleteContents="false" description="Delete resource &apos;JN-AN-1220-Zigbee-3-0-Sensors/Common/Source/app (2).zpscfg&apos;" element1="/JN-AN-1220-Zigbee-3-0-Sensors/Common/Source/app (2).zpscfg" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1502111425892"/>
+</session>

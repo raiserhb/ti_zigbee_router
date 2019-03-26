@@ -1,0 +1,1 @@
+C:\NXP\ProductionFlashProgrammer\JN51xxProgrammer.exe -s COM3 -P 115200 -S internal -f E:\NXP\Sensor\WL_DoorLock\Build\FB-56DOR10CW*.bin --eraseeeprom=full -v

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item value="COM17" key="jmp.prog.port"/>
+	<item value="PRESERVE" key="jmp.prog.eeprom.mode"/>
+	<item value="1000000" key="jmp.prog.baud"/>
+	<list key="jmp.prog.eeprom.filelist">
+		<item value=""/>
+	</list>
+	<list key="jmp.prog.image.filelist">
+		<item value="${workspace_loc:/JN-AN-1220-Zigbee-3-0-Sensors/WL_DoorLock/Build/OTABuild/WL_DoorLock_JN5169_DR1199.bin}"/>
+		<item value="C:\Users\Administrator\Desktop\doorlock\FNB56-DOR18HT1.2_201811112_50E93513.bin"/>
+		<item value="E:\汇泰龙华为HLink\HLinkJlinkTool\ameba1-flash-tool-v25\OtaPackage\door_zigbee\1.2.8\113L_20181110_zigbee_V1.2.8_50E93513.bin"/>
+		<item value="C:\Users\Administrator\Desktop\HLinkJlinkTool\ameba1-flash-tool-v25\OtaPackage\door_zigbee\1.2.0\113L_20181106_zigbee_V1.2.0_18C3211C.bin"/>
+		<item value="E:\nxp\Sensor\WL_DoorLock\Build\OTABuild\FNB56-DOR01SN1.0_20181013_144EA990_3.bin"/>
+		<item value="C:\Users\Administrator\Desktop\FNB56-DOR01SN1.0_20181013_504E6265_2.bin"/>
+		<item value="C:\Users\Administrator\Desktop\doorlock\FNB56-DOR16HBA.3_20181012_04D6B512.bin"/>
+		<item value="C:\Users\Administrator\Desktop\HLinkJlinkTool\ameba1-flash-tool-v25\OtaPackage\door_zigbee\1.0.9\113L_0FA94041_zigbee_V1.0.9_20180929.bin"/>
+		<item value="C:\Users\Administrator\Desktop\FNB56-DOR01SN1.0_20181010_35F75347.bin"/>
+		<item value="C:\Users\Administrator\Desktop\doorlock\FNB56-DOR18HT1.0_201809001BB587A9E.bin"/>
+	</list>
+</section>
