@@ -1,1 +1,0 @@
-C:\NXP\ProductionFlashProgrammer\JN51xxProgrammer.exe -s COM3 -P 115200 -S internal -f E:\NXP\Sensor\OccupancySensor\Build\OccupancySensor_JN5169_DR1199_2017_1024.bin --eraseeeprom=full -v

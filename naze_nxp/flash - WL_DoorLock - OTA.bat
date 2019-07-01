@@ -1,1 +1,0 @@
-C:\NXP\ProductionFlashProgrammer\JN51xxProgrammer.exe -s COM3 -P 512000 -S internal -f E:\NXP\Sensor\WL_DoorLock\Build\OTABuild\WL_DoorLock_JN5169_DR1199.bin

@@ -1,6 +1,0 @@
-11:31:53 **** Build of configuration ExtendedColorLight_1 for project JN-AN-1218-Zigbee-3-0-Light-Bulb ****
-make LIGHT=ExtendedColorLight JENNIC_CHIP_FAMILY=JN516x JENNIC_CHIP=JN5169 TRACE=1 OTA=0 OTA_ENCRYPTED=0 all 
-make: *** No rule to make target `all'.  Stop.
-
-11:31:53 Build Finished (took 621ms)
-

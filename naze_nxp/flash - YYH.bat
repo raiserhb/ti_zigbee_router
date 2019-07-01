@@ -1,1 +1,0 @@
-C:\NXP\ProductionFlashProgrammer\JN51xxProgrammer.exe -s COM3 -P 115200 -S internal -f E:\NXP\Sensor\WL_DoorLock\Build\WL_DoorLock_JN5169_DR1199_YYH_CUSTOM.bin --eraseeeprom=full -v

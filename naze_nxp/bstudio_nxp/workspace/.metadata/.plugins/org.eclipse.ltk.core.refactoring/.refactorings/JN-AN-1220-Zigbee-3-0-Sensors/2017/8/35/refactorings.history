@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename resource &apos;JN-AN-1220-Zigbee-3-0-Sensors/DoorLock&apos; to &apos;SampleDoorLock&apos;" description="Rename resource &apos;DoorLock&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="DoorLock" name="SampleDoorLock" stamp="1503989060577" updateReferences="true"/>
-</session>
