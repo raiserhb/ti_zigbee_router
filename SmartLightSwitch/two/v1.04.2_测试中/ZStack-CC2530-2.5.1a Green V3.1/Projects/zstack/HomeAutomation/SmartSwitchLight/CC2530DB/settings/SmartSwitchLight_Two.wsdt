@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<Workspace>
+  <ConfigDictionary>
+    
+  <CurrentConfigs><Project>SmartSwitchLight_Two/RouterDeviceEB</Project></CurrentConfigs></ConfigDictionary>
+  <Desktop>
+    <Static>
+      <Workspace>
+        <ColumnWidths>
+          
+          
+          
+          
+        <Column0>308</Column0><Column1>27</Column1><Column2>27</Column2><Column3>27</Column3></ColumnWidths>
+      </Workspace>
+      <Build>
+        
+        
+        
+        
+      <ColumnWidth0>20</ColumnWidth0><ColumnWidth1>1395</ColumnWidth1><ColumnWidth2>372</ColumnWidth2><ColumnWidth3>93</ColumnWidth3></Build>
+    <Find-in-Files><ColumnWidth0>664</ColumnWidth0><ColumnWidth1>94</ColumnWidth1><ColumnWidth2>1138</ColumnWidth2></Find-in-Files><TerminalIO/><Debug-Log><ColumnWidth0>19</ColumnWidth0><ColumnWidth1>1542</ColumnWidth1></Debug-Log></Static>
+    <Windows>
+      
+      
+    <Wnd2>
+        <Tabs>
+          <Tab>
+            <Identity>TabID-25074-15364</Identity>
+            <TabName>Workspace</TabName>
+            <Factory>Workspace</Factory>
+            <Session>
+              
+            <NodeDict><ExpandedNode>SmartSwitchLight_Two</ExpandedNode><ExpandedNode>SmartSwitchLight_Two/App</ExpandedNode><ExpandedNode>SmartSwitchLight_Two/HAL</ExpandedNode><ExpandedNode>SmartSwitchLight_Two/HAL/Target</ExpandedNode><ExpandedNode>SmartSwitchLight_Two/HAL/Target/CC2530EB</ExpandedNode><ExpandedNode>SmartSwitchLight_Two/HAL/Target/CC2530EB/Config</ExpandedNode><ExpandedNode>SmartSwitchLight_Two/Tools</ExpandedNode><ExpandedNode>SmartSwitchLight_Two/ZDO</ExpandedNode><ExpandedNode>SmartSwitchLight_Two/ZMac</ExpandedNode><ExpandedNode>SmartSwitchLight_Two/ZMain</ExpandedNode></NodeDict></Session>
+          </Tab>
+        </Tabs>
+        
+      <SelectedTab>0</SelectedTab></Wnd2><Wnd3>
+        <Tabs>
+          <Tab>
+            <Identity>TabID-12235-15400</Identity>
+            <TabName>Build</TabName>
+            <Factory>Build</Factory>
+            <Session/>
+          </Tab>
+        <Tab><Identity>TabID-27291-16141</Identity><TabName>Find in Files</TabName><Factory>Find-in-Files</Factory><Session/></Tab><Tab><Identity>TabID-4779-13227</Identity><TabName>Debug Log</TabName><Factory>Debug-Log</Factory><Session/></Tab></Tabs>
+        
+      <SelectedTab>1</SelectedTab></Wnd3></Windows>
+    <Editor>
+      
+      
+      
+      
+    <Pane><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\..\..\..\..\Components\stack\sys\ZGlobals.c</Filename><XPos>0</XPos><YPos>84</YPos><SelStart>3936</SelStart><SelEnd>3956</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\..\..\..\..\Components\stack\sys\ZGlobals.h</Filename><XPos>0</XPos><YPos>198</YPos><SelStart>7538</SelStart><SelEnd>7538</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\..\..\..\..\Components\stack\zcl\zcl.h</Filename><XPos>0</XPos><YPos>129</YPos><SelStart>8003</SelStart><SelEnd>8070</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\..\..\..\..\Components\stack\zdo\ZDProfile.h</Filename><XPos>0</XPos><YPos>485</YPos><SelStart>16201</SelStart><SelEnd>16201</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\..\..\..\..\COMPONENTS\stack\zdo\ZDObject.c</Filename><XPos>0</XPos><YPos>723</YPos><SelStart>22099</SelStart><SelEnd>22099</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\..\..\..\..\Components\osal\include\ZComDef.h</Filename><XPos>0</XPos><YPos>217</YPos><SelStart>9551</SelStart><SelEnd>9551</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\..\..\ZMain\TI2530DB\OnBoard.h</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\..\..\..\..\Components\mac\low_level\srf04\single_chip\mac_radio_defs.c</Filename><XPos>0</XPos><YPos>290</YPos><SelStart>13095</SelStart><SelEnd>13095</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\..\Source\zcl_ha.h</Filename><XPos>0</XPos><YPos>70</YPos><SelStart>3606</SelStart><SelEnd>3606</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\..\..\..\..\COMPONENTS\stack\zcl\zcl.c</Filename><XPos>0</XPos><YPos>1326</YPos><SelStart>44066</SelStart><SelEnd>44075</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\Tools\CC2530DB\f8wEndev.cfg</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\Tools\CC2530DB\f8wConfig.cfg</Filename><XPos>0</XPos><YPos>36</YPos><SelStart>2019</SelStart><SelEnd>2019</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\..\..\ZMain\TI2530DB\ZMain.c</Filename><XPos>0</XPos><YPos>69</YPos><SelStart>3362</SelStart><SelEnd>3362</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\..\..\..\..\COMPONENTS\osal\common\OSAL.c</Filename><XPos>0</XPos><YPos>1028</YPos><SelStart>26937</SelStart><SelEnd>26937</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\Source\zcl_light_control.c</Filename><XPos>0</XPos><YPos>237</YPos><SelStart>6137</SelStart><SelEnd>6215</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\Tools\CC2530DB\f8wRouter.cfg</Filename><XPos>0</XPos><YPos>3</YPos><SelStart>804</SelStart><SelEnd>804</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\Source\zcl_light_control.h</Filename><XPos>0</XPos><YPos>3</YPos><SelStart>462</SelStart><SelEnd>462</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\Source\zcl_onofflight.c</Filename><XPos>0</XPos><YPos>333</YPos><SelStart>12475</SelStart><SelEnd>12708</SelEnd></Tab><ActiveTab>17</ActiveTab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\..\..\..\..\Components\hal\target\CC2530EB\hal_board_cfg.h</Filename><XPos>0</XPos><YPos>128</YPos><SelStart>9195</SelStart><SelEnd>9195</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\Source\zcl_onofflight.h</Filename><XPos>0</XPos><YPos>42</YPos><SelStart>2747</SelStart><SelEnd>2747</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\Source\zcl_onofflight_data.c</Filename><XPos>0</XPos><YPos>343</YPos><SelStart>11058</SelStart><SelEnd>11058</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\..\..\..\..\Components\stack\zdo\ZDApp.h</Filename><XPos>0</XPos><YPos>51</YPos><SelStart>2945</SelStart><SelEnd>2945</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\..\..\..\..\COMPONENTS\stack\zdo\ZDApp.c</Filename><XPos>0</XPos><YPos>273</YPos><SelStart>9077</SelStart><SelEnd>9077</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\Source\zcl_device_info.c</Filename><XPos>0</XPos><YPos>112</YPos><SelStart>3106</SelStart><SelEnd>3106</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\Source\zcl_device_info.h</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>295</SelStart><SelEnd>295</SelEnd></Tab></Pane><ActivePane>0</ActivePane><Sizes><Pane><X>1000000</X><Y>1000000</Y></Pane></Sizes><SplitMode>1</SplitMode></Editor>
+    <Positions>
+      
+      
+      
+      
+      
+    <Top><Row0><Sizes><Toolbar-010aec58><key>iaridepm.enu1</key></Toolbar-010aec58></Sizes></Row0></Top><Left><Row0><Sizes><Wnd2><Rect><Top>-2</Top><Left>-2</Left><Bottom>528</Bottom><Right>399</Right><x>-2</x><y>-2</y><xscreen>161</xscreen><yscreen>161</yscreen><sizeHorzCX>105435</sizeHorzCX><sizeHorzCY>197304</sizeHorzCY><sizeVertCX>262606</sizeVertCX><sizeVertCY>649510</sizeVertCY></Rect></Wnd2></Sizes></Row0></Left><Right><Row0><Sizes/></Row0></Right><Bottom><Row0><Sizes><Wnd3><Rect><Top>-2</Top><Left>-2</Left><Bottom>243</Bottom><Right>1529</Right><x>-2</x><y>-2</y><xscreen>1531</xscreen><yscreen>245</yscreen><sizeHorzCX>1002620</sizeHorzCX><sizeHorzCY>300245</sizeHorzCY><sizeVertCX>105435</sizeVertCX><sizeVertCY>197304</sizeVertCY></Rect></Wnd3></Sizes></Row0></Bottom><Float><Sizes/></Float></Positions>
+  </Desktop>
+</Workspace>
+
+

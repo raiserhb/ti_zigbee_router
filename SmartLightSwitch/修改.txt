@@ -1,0 +1,7 @@
+V1.01.0:
+
+1.DNWK_LINK_STATUS_PERIOD     默认15s   之后第一次修改为150s   现修改为60s
+
+2.-DBEACON_REQUEST_DELAY=1000   默认100    第一次修改为5000    现修改为
+
+zcl_SendDefaultRspCmd() 		注释掉发送default on/off的函数

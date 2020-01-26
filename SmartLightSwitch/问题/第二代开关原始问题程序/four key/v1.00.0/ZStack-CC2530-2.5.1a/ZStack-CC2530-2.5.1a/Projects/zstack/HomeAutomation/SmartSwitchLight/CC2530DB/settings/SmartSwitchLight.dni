@@ -1,0 +1,36 @@
+[DebugChecksum]
+Checksum=849234781
+[DisAssemblyWindow]
+NumStates=_ 1
+State 1=_ 1
+[InstructionProfiling]
+Enabled=_ 0
+[CodeCoverage]
+Enabled=_ 0
+[StackPlugin]
+Enabled=1
+OverflowWarningsEnabled=1
+WarningThreshold=90
+SpWarningsEnabled=1
+WarnHow=0
+UseTrigger=1
+TriggerName=main
+LimitSize=0
+ByteLimit=50
+[TermIOLog]
+LoggingEnabled=_ 0
+LogFile=_ ""
+[Log file]
+LoggingEnabled=_ 0
+LogFile=_ ""
+Category=_ 0
+[Breakpoints]
+Count=0
+[ChipconEmu]
+Stop timers on halt=1
+Leave target running=1
+[Aliases]
+A0=_ "D:\device\ZStack-CC2530-2.5.1a\COMPONENTS\osal\mcu\cc2530\OSAL_Math.s51" ""
+A1=_ "F:\TEST\ZStack-CC2530-2.5.1a\ZStack-CC2530-2.5.1a\Projects\zstack\ZMain\TI2530DB\ZMain.c" ""
+Count=2
+SuppressDialog=1

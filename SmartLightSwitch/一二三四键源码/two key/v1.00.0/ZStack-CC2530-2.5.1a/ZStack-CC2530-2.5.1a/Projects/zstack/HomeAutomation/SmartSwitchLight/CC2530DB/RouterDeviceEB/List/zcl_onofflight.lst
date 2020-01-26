@@ -1,0 +1,1976 @@
+###############################################################################
+#                                                                             #
+# IAR C/C++ Compiler V8.10.1.10194/W32 for 8051         12/Dec/2016  16:48:59 #
+# Copyright 2004-2011 IAR Systems AB.                                         #
+#                                                                             #
+#    Core               =  plain                                              #
+#    Code model         =  banked                                             #
+#    Data model         =  large                                              #
+#    Calling convention =  xdata reentrant                                    #
+#    Constant location  =  data_rom                                           #
+#    Dptr setup         =  1,16                                               #
+#    Source file        =  D:\work space\Smart Product\SmartLightSwitch\two   #
+#                          key\v1.00.0\ZStack-CC2530-2.5.1a\ZStack-CC2530-2.5 #
+#                          .1a\Projects\zstack\HomeAutomation\SmartSwitchLigh #
+#                          t\Source\zcl_onofflight.c                          #
+#    Command line       =  -f "D:\work space\Smart Product\SmartLightSwitch\t #
+#                          wo key\v1.00.0\ZStack-CC2530-2.5.1a\ZStack-CC2530- #
+#                          2.5.1a\Projects\zstack\HomeAutomation\SmartSwitchL #
+#                          ight\CC2530DB\..\Tools\CC2530DB\f8wRouter.cfg"     #
+#                          (-DCPU32MHZ -DROOT=__near_func                     #
+#                          -DMAC_CFG_APP_PENDING_QUEUE=TRUE                   #
+#                          -DMAC_CFG_TX_DATA_MAX=5 -DMAC_CFG_TX_MAX=8         #
+#                          -DMAC_CFG_RX_MAX=5 -DRTR_NWK -DNV_RESTORE          #
+#                          -DNV_INIT -DHAL_KEY=FALSE -DHAL_LED=FALSE          #
+#                          -DHAL_LCD=FALSE -DHAL_ADC=FALSE -DTC_LINKKEY_JOIN  #
+#                          -DMAX_NEIGHBOR_ENTRIES=48 -DTVSA_DATA_CNF=1        #
+#                          -DPACKET_FILTER_STATS -DNWK_LINK_STATUS_PERIOD=60) #
+#                           -f "D:\work space\Smart                           #
+#                          Product\SmartLightSwitch\two                       #
+#                          key\v1.00.0\ZStack-CC2530-2.5.1a\ZStack-CC2530-2.5 #
+#                          .1a\Projects\zstack\HomeAutomation\SmartSwitchLigh #
+#                          t\CC2530DB\..\Tools\CC2530DB\f8wConfig.cfg"        #
+#                          (-DZIGBEEPRO -DSECURE=1 -DZG_SECURE_DYNAMIC=0      #
+#                          -DREFLECTOR -DDEFAULT_CHANLIST=0x00000800          #
+#                          -DZDAPP_CONFIG_PAN_ID=0xFFFF                       #
+#                          -DNWK_START_DELAY=100 -DEXTENDED_JOINING_RANDOM_MA #
+#                          SK=0x007F -DBEACON_REQUEST_DELAY=5000              #
+#                          -DBEACON_REQ_DELAY_MASK=0x00FF                     #
+#                          -DLINK_STATUS_JITTER_MASK=0x007F                   #
+#                          -DROUTE_EXPIRY_TIME=30 -DAPSC_ACK_WAIT_DURATION_PO #
+#                          LLED=3000 -DNWK_INDIRECT_MSG_TIMEOUT=7             #
+#                          -DMAX_RREQ_ENTRIES=8 -DAPSC_MAX_FRAME_RETRIES=3    #
+#                          -DNWK_MAX_DATA_RETRIES=2                           #
+#                          -DMAX_POLL_FAILURE_RETRIES=2 -DMAX_BCAST=9         #
+#                          -DAPS_MAX_GROUPS=16 -DMAX_RTG_ENTRIES=40           #
+#                          -DNWK_MAX_BINDING_ENTRIES=4                        #
+#                          -DMAX_BINDING_CLUSTER_IDS=4                        #
+#                          -DDEFAULT_KEY={0x79,0x69,0x20,0x68,0x75,0x69,0x20, #
+#                          0x79,0x75,0x6E,0x20,0x73,0x6D,0x61,0x72,0x74}      #
+#                          -DMAC_MAX_FRAME_SIZE=116                           #
+#                          -DZDNWKMGR_MIN_TRANSMISSIONS=20 "-DCONST=const     #
+#                          __code" -DGENERIC=__generic                        #
+#                          -DRFD_RCVC_ALWAYS_ON=TRUE -DPOLL_RATE=0            #
+#                          -DQUEUED_POLL_RATE=0 -DRESPONSE_POLL_RATE=0        #
+#                          -DREJOIN_POLL_RATE=440) -f "D:\work space\Smart    #
+#                          Product\SmartLightSwitch\two                       #
+#                          key\v1.00.0\ZStack-CC2530-2.5.1a\ZStack-CC2530-2.5 #
+#                          .1a\Projects\zstack\HomeAutomation\SmartSwitchLigh #
+#                          t\CC2530DB\..\Tools\CC2530DB\f8wZCL.cfg"           #
+#                          (-DZCL_READ -DZCL_WRITE -DZCL_REPORT -DZCL_BASIC   #
+#                          -DZCL_IDENTIFY -DZCL_ON_OFF -DZCL_KEY_ESTABLISH    #
+#                          -DZCL_KEY_ESTABLISHMENT_KEY_GENERATE_TIMEOUT=4     #
+#                          -DZCL_KEY_ESTABLISHMENT_MAC_GENERATE_TIMEOUT=10    #
+#                          -DZCL_KEY_ESTABLISHMENT_EKEY_GENERATE_TIMEOUT=10   #
+#                          -DZCL_LOAD_CONTROL -DZCL_SIMPLE_METERING           #
+#                          -DZCL_PRICING -DZCL_MESSAGE -DZCL_TUNNELING        #
+#                          -DZCL_TOU) -DZCL_DEVICE_MGMT "D:\work space\Smart  #
+#                          Product\SmartLightSwitch\two                       #
+#                          key\v1.00.0\ZStack-CC2530-2.5.1a\ZStack-CC2530-2.5 #
+#                          .1a\Projects\zstack\HomeAutomation\SmartSwitchLigh #
+#                          t\Source\zcl_onofflight.c" -lC "D:\work            #
+#                          space\Smart Product\SmartLightSwitch\two           #
+#                          key\v1.00.0\ZStack-CC2530-2.5.1a\ZStack-CC2530-2.5 #
+#                          .1a\Projects\zstack\HomeAutomation\SmartSwitchLigh #
+#                          t\CC2530DB\RouterDeviceEB\List\" -lA "D:\work      #
+#                          space\Smart Product\SmartLightSwitch\two           #
+#                          key\v1.00.0\ZStack-CC2530-2.5.1a\ZStack-CC2530-2.5 #
+#                          .1a\Projects\zstack\HomeAutomation\SmartSwitchLigh #
+#                          t\CC2530DB\RouterDeviceEB\List\" --diag_suppress   #
+#                          Pe001,Pa010 -o "D:\work space\Smart                #
+#                          Product\SmartLightSwitch\two                       #
+#                          key\v1.00.0\ZStack-CC2530-2.5.1a\ZStack-CC2530-2.5 #
+#                          .1a\Projects\zstack\HomeAutomation\SmartSwitchLigh #
+#                          t\CC2530DB\RouterDeviceEB\Obj\" -e --debug         #
+#                          --core=plain --dptr=16,1 --data_model=large        #
+#                          --code_model=banked --calling_convention=xdata_ree #
+#                          ntrant --place_constants=data_rom                  #
+#                          --nr_virtual_regs 16 -I "D:\work space\Smart       #
+#                          Product\SmartLightSwitch\two                       #
+#                          key\v1.00.0\ZStack-CC2530-2.5.1a\ZStack-CC2530-2.5 #
+#                          .1a\Projects\zstack\HomeAutomation\SmartSwitchLigh #
+#                          t\CC2530DB\" -I "D:\work space\Smart               #
+#                          Product\SmartLightSwitch\two                       #
+#                          key\v1.00.0\ZStack-CC2530-2.5.1a\ZStack-CC2530-2.5 #
+#                          .1a\Projects\zstack\HomeAutomation\SmartSwitchLigh #
+#                          t\CC2530DB\..\Source\" -I "D:\work space\Smart     #
+#                          Product\SmartLightSwitch\two                       #
+#                          key\v1.00.0\ZStack-CC2530-2.5.1a\ZStack-CC2530-2.5 #
+#                          .1a\Projects\zstack\HomeAutomation\SmartSwitchLigh #
+#                          t\CC2530DB\..\..\Source\" -I "D:\work space\Smart  #
+#                          Product\SmartLightSwitch\two                       #
+#                          key\v1.00.0\ZStack-CC2530-2.5.1a\ZStack-CC2530-2.5 #
+#                          .1a\Projects\zstack\HomeAutomation\SmartSwitchLigh #
+#                          t\CC2530DB\..\..\..\ZMain\TI2530DB\" -I "D:\work   #
+#                          space\Smart Product\SmartLightSwitch\two           #
+#                          key\v1.00.0\ZStack-CC2530-2.5.1a\ZStack-CC2530-2.5 #
+#                          .1a\Projects\zstack\HomeAutomation\SmartSwitchLigh #
+#                          t\CC2530DB\..\..\..\..\..\Components\hal\include\" #
+#                           -I "D:\work space\Smart                           #
+#                          Product\SmartLightSwitch\two                       #
+#                          key\v1.00.0\ZStack-CC2530-2.5.1a\ZStack-CC2530-2.5 #
+#                          .1a\Projects\zstack\HomeAutomation\SmartSwitchLigh #
+#                          t\CC2530DB\..\..\..\..\..\Components\hal\target\CC #
+#                          2530EB\" -I "D:\work space\Smart                   #
+#                          Product\SmartLightSwitch\two                       #
+#                          key\v1.00.0\ZStack-CC2530-2.5.1a\ZStack-CC2530-2.5 #
+#                          .1a\Projects\zstack\HomeAutomation\SmartSwitchLigh #
+#                          t\CC2530DB\..\..\..\..\..\Components\mac\include\" #
+#                           -I "D:\work space\Smart                           #
+#                          Product\SmartLightSwitch\two                       #
+#                          key\v1.00.0\ZStack-CC2530-2.5.1a\ZStack-CC2530-2.5 #
+#                          .1a\Projects\zstack\HomeAutomation\SmartSwitchLigh #
+#                          t\CC2530DB\..\..\..\..\..\Components\mac\high_leve #
+#                          l\" -I "D:\work space\Smart                        #
+#                          Product\SmartLightSwitch\two                       #
+#                          key\v1.00.0\ZStack-CC2530-2.5.1a\ZStack-CC2530-2.5 #
+#                          .1a\Projects\zstack\HomeAutomation\SmartSwitchLigh #
+#                          t\CC2530DB\..\..\..\..\..\Components\mac\low_level #
+#                          \srf04\" -I "D:\work space\Smart                   #
+#                          Product\SmartLightSwitch\two                       #
+#                          key\v1.00.0\ZStack-CC2530-2.5.1a\ZStack-CC2530-2.5 #
+#                          .1a\Projects\zstack\HomeAutomation\SmartSwitchLigh #
+#                          t\CC2530DB\..\..\..\..\..\Components\mac\low_level #
+#                          \srf04\single_chip\" -I "D:\work space\Smart       #
+#                          Product\SmartLightSwitch\two                       #
+#                          key\v1.00.0\ZStack-CC2530-2.5.1a\ZStack-CC2530-2.5 #
+#                          .1a\Projects\zstack\HomeAutomation\SmartSwitchLigh #
+#                          t\CC2530DB\..\..\..\..\..\Components\mt\" -I       #
+#                          "D:\work space\Smart Product\SmartLightSwitch\two  #
+#                          key\v1.00.0\ZStack-CC2530-2.5.1a\ZStack-CC2530-2.5 #
+#                          .1a\Projects\zstack\HomeAutomation\SmartSwitchLigh #
+#                          t\CC2530DB\..\..\..\..\..\Components\osal\include\ #
+#                          " -I "D:\work space\Smart                          #
+#                          Product\SmartLightSwitch\two                       #
+#                          key\v1.00.0\ZStack-CC2530-2.5.1a\ZStack-CC2530-2.5 #
+#                          .1a\Projects\zstack\HomeAutomation\SmartSwitchLigh #
+#                          t\CC2530DB\..\..\..\..\..\Components\services\sadd #
+#                          r\" -I "D:\work space\Smart                        #
+#                          Product\SmartLightSwitch\two                       #
+#                          key\v1.00.0\ZStack-CC2530-2.5.1a\ZStack-CC2530-2.5 #
+#                          .1a\Projects\zstack\HomeAutomation\SmartSwitchLigh #
+#                          t\CC2530DB\..\..\..\..\..\Components\services\sdat #
+#                          a\" -I "D:\work space\Smart                        #
+#                          Product\SmartLightSwitch\two                       #
+#                          key\v1.00.0\ZStack-CC2530-2.5.1a\ZStack-CC2530-2.5 #
+#                          .1a\Projects\zstack\HomeAutomation\SmartSwitchLigh #
+#                          t\CC2530DB\..\..\..\..\..\Components\stack\af\"    #
+#                          -I "D:\work space\Smart Product\SmartLightSwitch\t #
+#                          wo key\v1.00.0\ZStack-CC2530-2.5.1a\ZStack-CC2530- #
+#                          2.5.1a\Projects\zstack\HomeAutomation\SmartSwitchL #
+#                          ight\CC2530DB\..\..\..\..\..\Components\stack\nwk\ #
+#                          " -I "D:\work space\Smart                          #
+#                          Product\SmartLightSwitch\two                       #
+#                          key\v1.00.0\ZStack-CC2530-2.5.1a\ZStack-CC2530-2.5 #
+#                          .1a\Projects\zstack\HomeAutomation\SmartSwitchLigh #
+#                          t\CC2530DB\..\..\..\..\..\Components\stack\sapi\"  #
+#                          -I "D:\work space\Smart Product\SmartLightSwitch\t #
+#                          wo key\v1.00.0\ZStack-CC2530-2.5.1a\ZStack-CC2530- #
+#                          2.5.1a\Projects\zstack\HomeAutomation\SmartSwitchL #
+#                          ight\CC2530DB\..\..\..\..\..\Components\stack\sec\ #
+#                          " -I "D:\work space\Smart                          #
+#                          Product\SmartLightSwitch\two                       #
+#                          key\v1.00.0\ZStack-CC2530-2.5.1a\ZStack-CC2530-2.5 #
+#                          .1a\Projects\zstack\HomeAutomation\SmartSwitchLigh #
+#                          t\CC2530DB\..\..\..\..\..\Components\stack\sys\"   #
+#                          -I "D:\work space\Smart Product\SmartLightSwitch\t #
+#                          wo key\v1.00.0\ZStack-CC2530-2.5.1a\ZStack-CC2530- #
+#                          2.5.1a\Projects\zstack\HomeAutomation\SmartSwitchL #
+#                          ight\CC2530DB\..\..\..\..\..\Components\stack\zcl\ #
+#                          " -I "D:\work space\Smart                          #
+#                          Product\SmartLightSwitch\two                       #
+#                          key\v1.00.0\ZStack-CC2530-2.5.1a\ZStack-CC2530-2.5 #
+#                          .1a\Projects\zstack\HomeAutomation\SmartSwitchLigh #
+#                          t\CC2530DB\..\..\..\..\..\Components\stack\zdo\"   #
+#                          -I "D:\work space\Smart Product\SmartLightSwitch\t #
+#                          wo key\v1.00.0\ZStack-CC2530-2.5.1a\ZStack-CC2530- #
+#                          2.5.1a\Projects\zstack\HomeAutomation\SmartSwitchL #
+#                          ight\CC2530DB\..\..\..\..\..\Components\zmac\" -I  #
+#                          "D:\work space\Smart Product\SmartLightSwitch\two  #
+#                          key\v1.00.0\ZStack-CC2530-2.5.1a\ZStack-CC2530-2.5 #
+#                          .1a\Projects\zstack\HomeAutomation\SmartSwitchLigh #
+#                          t\CC2530DB\..\..\..\..\..\Components\zmac\f8w\"    #
+#                          -Oh --require_prototypes                           #
+#    List file          =  D:\work space\Smart Product\SmartLightSwitch\two   #
+#                          key\v1.00.0\ZStack-CC2530-2.5.1a\ZStack-CC2530-2.5 #
+#                          .1a\Projects\zstack\HomeAutomation\SmartSwitchLigh #
+#                          t\CC2530DB\RouterDeviceEB\List\zcl_onofflight.lst  #
+#    Object file        =  D:\work space\Smart Product\SmartLightSwitch\two   #
+#                          key\v1.00.0\ZStack-CC2530-2.5.1a\ZStack-CC2530-2.5 #
+#                          .1a\Projects\zstack\HomeAutomation\SmartSwitchLigh #
+#                          t\CC2530DB\RouterDeviceEB\Obj\zcl_onofflight.r51   #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+D:\work space\Smart Product\SmartLightSwitch\two key\v1.00.0\ZStack-CC2530-2.5.1a\ZStack-CC2530-2.5.1a\Projects\zstack\HomeAutomation\SmartSwitchLight\Source\zcl_onofflight.c
+      1          /**************************************************************************************************
+      2            Filename:       zcl_sampleLight.c
+      3            Revised:        $Date: 2009-03-18 15:56:27 -0700 (Wed, 18 Mar 2009) $
+      4            Revision:       $Revision: 19453 $
+      5          
+      6          
+      7            Description:    Zigbee Cluster Library - sample device application.
+      8          
+      9          
+     10            Copyright 2006-2009 Texas Instruments Incorporated. All rights reserved.
+     11          
+     12            IMPORTANT: Your use of this Software is limited to those specific rights
+     13            granted under the terms of a software license agreement between the user
+     14            who downloaded the software, his/her employer (which must be your employer)
+     15            and Texas Instruments Incorporated (the "License").  You may not use this
+     16            Software unless you agree to abide by the terms of the License. The License
+     17            limits your use, and you acknowledge, that the Software may not be modified,
+     18            copied or distributed unless embedded on a Texas Instruments microcontroller
+     19            or used solely and exclusively in conjunction with a Texas Instruments radio
+     20            frequency transceiver, which is integrated into your product.  Other than for
+     21            the foregoing purpose, you may not use, reproduce, copy, prepare derivative
+     22            works of, modify, distribute, perform, display or sell this Software and/or
+     23            its documentation for any purpose.
+     24          
+     25            YOU FURTHER ACKNOWLEDGE AND AGREE THAT THE SOFTWARE AND DOCUMENTATION ARE
+     26            PROVIDED 揂S IS?WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED, 
+     27            INCLUDING WITHOUT LIMITATION, ANY WARRANTY OF MERCHANTABILITY, TITLE, 
+     28            NON-INFRINGEMENT AND FITNESS FOR A PARTICULAR PURPOSE. IN NO EVENT SHALL
+     29            TEXAS INSTRUMENTS OR ITS LICENSORS BE LIABLE OR OBLIGATED UNDER CONTRACT,
+     30            NEGLIGENCE, STRICT LIABILITY, CONTRIBUTION, BREACH OF WARRANTY, OR OTHER
+     31            LEGAL EQUITABLE THEORY ANY DIRECT OR INDIRECT DAMAGES OR EXPENSES
+     32            INCLUDING BUT NOT LIMITED TO ANY INCIDENTAL, SPECIAL, INDIRECT, PUNITIVE
+     33            OR CONSEQUENTIAL DAMAGES, LOST PROFITS OR LOST DATA, COST OF PROCUREMENT
+     34            OF SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
+     35            (INCLUDING BUT NOT LIMITED TO ANY DEFENSE THEREOF), OR OTHER SIMILAR COSTS.
+     36          
+     37            Should you have any questions regarding your right to use this Software,
+     38            contact Texas Instruments Incorporated at www.TI.com. 
+     39          **************************************************************************************************/
+     40          
+     41          /*********************************************************************
+     42            This device will be like a Light device.  This application is not
+     43            intended to be a Light device, but will use the device description
+     44            to implement this sample code.
+     45          *********************************************************************/
+     46          
+     47          /*********************************************************************
+     48           * INCLUDES
+     49           */
+     50          #include "ZComDef.h"
+     51          #include "OSAL.h"
+     52          #include "AF.h"
+     53          #include "ZDApp.h"
+     54          
+     55          #include "zcl.h"
+     56          #include "zcl_general.h"
+     57          #include "zcl_ha.h"
+     58          
+     59          #include "zcl_onofflight.h"
+     60          
+     61          #include "onboard.h"
+
+   \                                 In  segment SFR_AN, at 0x90
+   \   union <unnamed> volatile __sfr _A_P1
+   \                     _A_P1:
+   \   000000                DS 1
+     62          
+     63          /* HAL */
+     64          #include "hal_lcd.h"
+     65          #include "hal_led.h"
+     66          #include "hal_key.h"
+     67          
+     68          #include "zcl_light_control.h"
+     69          #include "zcl_device_info.h"
+     70          
+     71          
+     72          /*********************************************************************
+     73           * MACROS
+     74           */
+     75          
+     76          /*********************************************************************
+     77           * CONSTANTS
+     78           */
+     79          /*********************************************************************
+     80           * TYPEDEFS
+     81           */
+     82          
+     83          /*********************************************************************
+     84           * GLOBAL VARIABLES
+     85           */
+
+   \                                 In  segment XDATA_Z, align 1, keep-with-next
+     86          byte zclOnOffLight_TaskID;
+   \                     zclOnOffLight_TaskID:
+   \   000000                DS 1
+   \   000001                REQUIRE __INIT_XDATA_Z
+
+   \                                 In  segment XDATA_Z, align 1, keep-with-next
+     87          devStates_t zclDevice_NwkState;
+   \                     zclDevice_NwkState:
+   \   000000                DS 1
+   \   000001                REQUIRE __INIT_XDATA_Z
+
+   \                                 In  segment XDATA_Z, align 1, keep-with-next
+     88          uint8 zclDevice_RejoinCounter = 0;
+   \                     zclDevice_RejoinCounter:
+   \   000000                DS 1
+   \   000001                REQUIRE __INIT_XDATA_Z
+
+   \                                 In  segment XDATA_I, align 1, keep-with-next
+     89          int8 zclDevice_JoinNetworkOk = 6;
+   \                     zclDevice_JoinNetworkOk:
+   \   000000                DS 1
+   \   000001                REQUIRE `?<Initializer for zclDevice_JoinNetworkOk>`
+   \   000001                REQUIRE __INIT_XDATA_I
+
+   \                                 In  segment XDATA_Z, align 1, keep-with-next
+     90          int8 zclDevice_InitDone = 0;
+   \                     zclDevice_InitDone:
+   \   000000                DS 1
+   \   000001                REQUIRE __INIT_XDATA_Z
+
+   \                                 In  segment XDATA_Z, align 1, keep-with-next
+     91          uint8 zcl_Led_Blink = 0;
+   \                     zcl_Led_Blink:
+   \   000000                DS 1
+   \   000001                REQUIRE __INIT_XDATA_Z
+
+   \                                 In  segment XDATA_Z, align 1, keep-with-next
+     92          endPointDesc_t DeviceApp_epDesc;
+   \                     DeviceApp_epDesc:
+   \   000000                DS 6
+   \   000006                REQUIRE __INIT_XDATA_Z
+
+   \                                 In  segment XDATA_Z, align 1, keep-with-next
+     93          uint8 g_u8JoinNwkOnce = 0;
+   \                     g_u8JoinNwkOnce:
+   \   000000                DS 1
+   \   000001                REQUIRE __INIT_XDATA_Z
+
+   \                                 In  segment XDATA_Z, align 1, keep-with-next
+     94          uint8 g_u8restFlag = 0;
+   \                     g_u8restFlag:
+   \   000000                DS 1
+   \   000001                REQUIRE __INIT_XDATA_Z
+
+   \                                 In  segment XDATA_Z, align 1, keep-with-next
+     95          uint8 abno_led = 0;
+   \                     abno_led:
+   \   000000                DS 1
+   \   000001                REQUIRE __INIT_XDATA_Z
+
+   \                                 In  segment XDATA_Z, align 1, keep-with-next
+     96          uint8 ledcontrol = 0;
+   \                     ledcontrol:
+   \   000000                DS 1
+   \   000001                REQUIRE __INIT_XDATA_Z
+     97          
+     98          /*********************************************************************
+     99           * GLOBAL FUNCTIONS
+    100           */
+    101          
+    102          /*********************************************************************
+    103           * LOCAL VARIABLES
+    104           */
+    105          //static afAddrType_t zclOnOffLight_DstAddr;
+    106          
+    107          /*********************************************************************
+    108           * LOCAL FUNCTIONS
+    109           */
+    110          static void zclOnOffLight_HandleKeys( byte shift, byte keys );
+    111          static void zclOnOffLight_BasicResetCB( void );
+    112          static void zclOnOffLight_IdentifyCB( zclIdentify_t *pCmd );
+    113          static void zclOnOffLight_IdentifyQueryRspCB( zclIdentifyQueryRsp_t *pRsp );
+    114          static void zclOnOffLight0_OnOffCB(uint8 cmd );
+    115          static void zclOnOffLight1_OnOffCB(uint8 cmd );
+    116          static void zclOnOffLight_OnOffCB(uint8 light, uint8 cmd );
+    117          static void zclOnOffLight_ProcessIdentifyTimeChange( void );
+    118          
+    119          // Functions to process ZCL Foundation incoming Command/Response messages 
+    120          static void zclOnOffLight_ProcessIncomingMsg( zclIncomingMsg_t *msg );
+    121          #ifdef ZCL_READ
+    122          static uint8 zclOnOffLight_ProcessInReadRspCmd( zclIncomingMsg_t *pInMsg );
+    123          #endif
+    124          #ifdef ZCL_WRITE
+    125          static uint8 zclOnOffLight_ProcessInWriteRspCmd( zclIncomingMsg_t *pInMsg );
+    126          #endif
+    127          static uint8 zclOnOffLight_ProcessInDefaultRspCmd( zclIncomingMsg_t *pInMsg );
+    128          #ifdef ZCL_DISCOVER
+    129          static uint8 zclOnOffLight_ProcessInDiscRspCmd( zclIncomingMsg_t *pInMsg );
+    130          #endif
+    131          
+    132          /*********************************************************************
+    133           * ZCL General Profile Callback table
+    134           */
+
+   \                                 In  segment XDATA_I, align 1, keep-with-next
+    135          static zclGeneral_AppCallbacks_t zclOnOffLight0_CmdCallbacks =
+   \                     zclOnOffLight0_CmdCallbacks:
+   \   000000                DS 30
+   \   00001E                REQUIRE `?<Initializer for zclOnOffLight0_CmdCallbacks>`
+   \   00001E                REQUIRE __INIT_XDATA_I
+    136          {
+    137            zclOnOffLight_BasicResetCB,              // Basic Cluster Reset command
+    138            zclOnOffLight_IdentifyCB,                // Identify command  
+    139            zclOnOffLight_IdentifyQueryRspCB,        // Identify Query Response command
+    140            zclOnOffLight0_OnOffCB,                   // On/Off cluster command
+    141            NULL,                                     // Level Control Move to Level command
+    142            NULL,                                     // Level Control Move command
+    143            NULL,                                     // Level Control Step command
+    144            NULL,                                     // Group Response commands
+    145            NULL,                                     // Scene Store Request command
+    146            NULL,                                     // Scene Recall Request command
+    147            NULL,                                     // Scene Response command
+    148            NULL,                                     // Alarm (Response) command
+    149            NULL,                                     // RSSI Location commands
+    150            NULL,                                     // RSSI Location Response commands
+    151          };
+
+   \                                 In  segment XDATA_I, align 1, keep-with-next
+    152          static zclGeneral_AppCallbacks_t zclOnOffLight1_CmdCallbacks =
+   \                     zclOnOffLight1_CmdCallbacks:
+   \   000000                DS 30
+   \   00001E                REQUIRE `?<Initializer for zclOnOffLight1_CmdCallbacks>`
+   \   00001E                REQUIRE __INIT_XDATA_I
+    153          {
+    154            zclOnOffLight_BasicResetCB,              // Basic Cluster Reset command
+    155            zclOnOffLight_IdentifyCB,                // Identify command  
+    156            zclOnOffLight_IdentifyQueryRspCB,        // Identify Query Response command
+    157            zclOnOffLight1_OnOffCB,                   // On/Off cluster command
+    158            NULL,                                     // Level Control Move to Level command
+    159            NULL,                                     // Level Control Move command
+    160            NULL,                                     // Level Control Step command
+    161            NULL,                                     // Group Response commands
+    162            NULL,                                     // Scene Store Request command
+    163            NULL,                                     // Scene Recall Request command
+    164            NULL,                                     // Scene Response command
+    165            NULL,                                     // Alarm (Response) command
+    166            NULL,                                     // RSSI Location commands
+    167            NULL,                                     // RSSI Location Response commands
+    168          };
+    169          
+    170          /*********************************************************************
+    171           * @fn          zclOnOffLight_Init
+    172           *
+    173           * @brief       Initialization function for the zclGeneral layer.
+    174           *
+    175           * @param       none
+    176           *
+    177           * @return      none
+    178           */
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+    179          void zclOnOffLight_Init( byte task_id )
+   \                     zclOnOffLight_Init:
+    180          {
+   \   000000   74F7         MOV     A,#-0x9
+   \   000002   12....       LCALL   ?BANKED_ENTER_XDATA
+   \   000005                ; Saved register size: 9
+   \   000005                ; Auto size: 0
+   \   000005   E9           MOV     A,R1
+    181            zclOnOffLight_TaskID = task_id;
+   \   000006   90....       MOV     DPTR,#zclOnOffLight_TaskID
+   \   000009   F0           MOVX    @DPTR,A
+    182            zclDevice_JoinNetworkOk = 6;
+   \   00000A   90....       MOV     DPTR,#zclDevice_JoinNetworkOk
+   \   00000D   7406         MOV     A,#0x6
+   \   00000F   F0           MOVX    @DPTR,A
+    183            zclDevice_NwkState = DEV_INIT;
+   \   000010   90....       MOV     DPTR,#zclDevice_NwkState
+   \   000013   7401         MOV     A,#0x1
+   \   000015   F0           MOVX    @DPTR,A
+    184            zclDevice_InitDone = 0;
+   \   000016   90....       MOV     DPTR,#zclDevice_InitDone
+   \   000019   E4           CLR     A
+   \   00001A   F0           MOVX    @DPTR,A
+    185            zclDevice_RejoinCounter = 0;
+   \   00001B   90....       MOV     DPTR,#zclDevice_RejoinCounter
+   \   00001E   F0           MOVX    @DPTR,A
+    186            // Set destination address to indirect
+    187            //zclOnOffLight_DstAddr.addrMode = (afAddrMode_t)AddrNotPresent;
+    188            //zclOnOffLight_DstAddr.endPoint = 0;
+    189            //zclOnOffLight_DstAddr.addr.shortAddr = 0;
+    190              
+    191            DeviceApp_epDesc.endPoint = 0xF0;
+   \   00001F   90....       MOV     DPTR,#DeviceApp_epDesc
+   \   000022   74F0         MOV     A,#-0x10
+   \   000024   F0           MOVX    @DPTR,A
+    192            DeviceApp_epDesc.task_id = &zclOnOffLight_TaskID;
+   \   000025   A3           INC     DPTR
+   \   000026   74..         MOV     A,#zclOnOffLight_TaskID & 0xff
+   \   000028   F0           MOVX    @DPTR,A
+   \   000029   A3           INC     DPTR
+   \   00002A   74..         MOV     A,#(zclOnOffLight_TaskID >> 8) & 0xff
+   \   00002C   F0           MOVX    @DPTR,A
+    193            DeviceApp_epDesc.simpleDesc
+    194                      = (SimpleDescriptionFormat_t *)&zclOnOffLight0_SimpleDesc;
+   \   00002D   A3           INC     DPTR
+   \   00002E   74..         MOV     A,#zclOnOffLight0_SimpleDesc & 0xff
+   \   000030   F0           MOVX    @DPTR,A
+   \   000031   A3           INC     DPTR
+   \   000032   74..         MOV     A,#(zclOnOffLight0_SimpleDesc >> 8) & 0xff
+   \   000034   F0           MOVX    @DPTR,A
+    195            DeviceApp_epDesc.latencyReq = noLatencyReqs;
+   \   000035   A3           INC     DPTR
+   \   000036   E4           CLR     A
+   \   000037   F0           MOVX    @DPTR,A
+    196          
+    197            // Register the endpoint description with the AF
+    198            afRegister( &DeviceApp_epDesc );
+   \   000038                ; Setup parameters for call to function afRegister
+   \   000038   7A..         MOV     R2,#DeviceApp_epDesc & 0xff
+   \   00003A   7B..         MOV     R3,#(DeviceApp_epDesc >> 8) & 0xff
+   \   00003C   12....       LCALL   ??afRegister?relay
+    199          
+    200            // This app is part of the Home Automation Profile
+    201            zclHA_Init( &zclOnOffLight0_SimpleDesc );
+   \   00003F                ; Setup parameters for call to function zclHA_Init
+   \   00003F   7A..         MOV     R2,#zclOnOffLight0_SimpleDesc & 0xff
+   \   000041   7B..         MOV     R3,#(zclOnOffLight0_SimpleDesc >> 8) & 0xff
+   \   000043   12....       LCALL   ??zclHA_Init?relay
+    202            zclHA_Init( &zclOnOffLight1_SimpleDesc );
+   \   000046                ; Setup parameters for call to function zclHA_Init
+   \   000046   7A..         MOV     R2,#zclOnOffLight1_SimpleDesc & 0xff
+   \   000048   7B..         MOV     R3,#(zclOnOffLight1_SimpleDesc >> 8) & 0xff
+   \   00004A   12....       LCALL   ??zclHA_Init?relay
+    203          
+    204            // Register the ZCL General Cluster Library callback functions
+    205            zclGeneral_RegisterCmdCallbacks( ONOFFLIGHT0_ENDPOINT, &zclOnOffLight0_CmdCallbacks );
+   \   00004D                ; Setup parameters for call to function zclGeneral_RegisterCmdCallbacks
+   \   00004D   7A..         MOV     R2,#zclOnOffLight0_CmdCallbacks & 0xff
+   \   00004F   7B..         MOV     R3,#(zclOnOffLight0_CmdCallbacks >> 8) & 0xff
+   \   000051   7910         MOV     R1,#0x10
+   \   000053   12....       LCALL   ??zclGeneral_RegisterCmdCallbacks?relay
+    206            zclGeneral_RegisterCmdCallbacks( ONOFFLIGHT1_ENDPOINT, &zclOnOffLight1_CmdCallbacks );
+   \   000056                ; Setup parameters for call to function zclGeneral_RegisterCmdCallbacks
+   \   000056   7A..         MOV     R2,#zclOnOffLight1_CmdCallbacks & 0xff
+   \   000058   7B..         MOV     R3,#(zclOnOffLight1_CmdCallbacks >> 8) & 0xff
+   \   00005A   7911         MOV     R1,#0x11
+   \   00005C   12....       LCALL   ??zclGeneral_RegisterCmdCallbacks?relay
+    207          
+    208            // Register the application's attribute list
+    209            zcl_registerAttrList( ONOFFLIGHT0_ENDPOINT, ONOFFLIGHT_MAX_ATTRIBUTES, zclOnOffLight0_Attrs );
+   \   00005F                ; Setup parameters for call to function zcl_registerAttrList
+   \   00005F   7C..         MOV     R4,#zclOnOffLight0_Attrs & 0xff
+   \   000061   7D..         MOV     R5,#(zclOnOffLight0_Attrs >> 8) & 0xff
+   \   000063   7A0C         MOV     R2,#0xc
+   \   000065   7910         MOV     R1,#0x10
+   \   000067   12....       LCALL   ??zcl_registerAttrList?relay
+    210            zcl_registerAttrList( ONOFFLIGHT1_ENDPOINT, ONOFFLIGHT_MAX_ATTRIBUTES, zclOnOffLight1_Attrs );  
+   \   00006A                ; Setup parameters for call to function zcl_registerAttrList
+   \   00006A   7C..         MOV     R4,#zclOnOffLight1_Attrs & 0xff
+   \   00006C   7D..         MOV     R5,#(zclOnOffLight1_Attrs >> 8) & 0xff
+   \   00006E   7A0C         MOV     R2,#0xc
+   \   000070   7911         MOV     R1,#0x11
+   \   000072   12....       LCALL   ??zcl_registerAttrList?relay
+    211          
+    212            // Register the Application to receive the unprocessed Foundation command/response messages
+    213            zcl_registerForMsg( zclOnOffLight_TaskID );
+   \   000075                ; Setup parameters for call to function zcl_registerForMsg
+   \   000075   90....       MOV     DPTR,#zclOnOffLight_TaskID
+   \   000078   E0           MOVX    A,@DPTR
+   \   000079   F9           MOV     R1,A
+   \   00007A   12....       LCALL   ??zcl_registerForMsg?relay
+    214            
+    215            // Register for all key events - This app will handle all key events
+    216            RegisterForKeys( zclOnOffLight_TaskID );
+   \   00007D                ; Setup parameters for call to function RegisterForKeys
+   \   00007D   90....       MOV     DPTR,#zclOnOffLight_TaskID
+   \   000080   E0           MOVX    A,@DPTR
+   \   000081   F9           MOV     R1,A
+   \   000082   12....       LCALL   ??RegisterForKeys?relay
+    217            
+    218            zclDeviceInfoInit();
+   \   000085                ; Setup parameters for call to function zclDeviceInfoInit
+   \   000085   12....       LCALL   ??zclDeviceInfoInit?relay
+    219            zclLightControlInit();
+   \   000088                ; Setup parameters for call to function zclLightControlInit
+   \   000088   12....       LCALL   ??zclLightControlInit?relay
+    220          }
+   \   00008B   02....       LJMP    ??Subroutine7_0 & 0xFFFF
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ??Subroutine7_0:
+   \   000000   7F01         MOV     R7,#0x1
+   \   000002   02....       LJMP    ?BANKED_LEAVE_XDATA
+    221          
+    222          /*********************************************************************
+    223           * @fn          zclSample_event_loop
+    224           *
+    225           * @brief       Event Loop Processor for zclGeneral.
+    226           *
+    227           * @param       none
+    228           *
+    229           * @return      none
+    230           */
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+    231          uint16 zclOnOffLight_event_loop( uint8 task_id, uint16 events )
+   \                     zclOnOffLight_event_loop:
+    232          {
+   \   000000   74F4         MOV     A,#-0xc
+   \   000002   12....       LCALL   ?BANKED_ENTER_XDATA
+   \   000005                ; Saved register size: 12
+   \   000005                ; Auto size: 0
+   \   000005   EA           MOV     A,R2
+   \   000006   FE           MOV     R6,A
+   \   000007   EB           MOV     A,R3
+   \   000008   FF           MOV     R7,A
+    233            afIncomingMSGPacket_t *MSGpkt;
+    234            
+    235            (void)task_id;  // Intentionally unreferenced parameter
+    236          
+    237            if ( events & SYS_EVENT_MSG )
+   \   000009   5480         ANL     A,#0x80
+   \   00000B   7067         JNZ     ??zclOnOffLight_event_loop_0
+    238            {
+    239              while ( (MSGpkt = (afIncomingMSGPacket_t *)osal_msg_receive( zclOnOffLight_TaskID )) )
+    240              {
+    241                switch ( MSGpkt->hdr.event )
+    242                {
+    243                case AF_INCOMING_MSG_CMD:
+    244                  Device_App_MessageMSGCB(MSGpkt);
+    245                  break;
+    246                case ZCL_INCOMING_MSG:
+    247                  // Incoming ZCL Foundation command/response messages
+    248                  zclOnOffLight_ProcessIncomingMsg( (zclIncomingMsg_t *)MSGpkt );
+    249                  break;
+    250                case KEY_CHANGE:
+    251                  zclOnOffLight_HandleKeys( ((keyChange_t *)MSGpkt)->state, ((keyChange_t *)MSGpkt)->keys );
+    252                  break;
+    253                case ZDO_STATE_CHANGE:
+    254                  zclDevice_NwkState = (devStates_t)(MSGpkt->hdr.status);
+    255                  if (zclDevice_NwkState == DEV_ROUTER ) {
+    256                    NLME_PermitJoiningRequest(0x00);//上电关闭网络允许加入
+    257                    osal_start_timerEx(zclOnOffLight_TaskID, 
+    258                                       ZCL_DEVICE_INFO_SEND_EVENT,
+    259                                       ZCL_DEVICE_SEND_INIF_TIME_10S);
+    260                    zclDevice_RejoinCounter = 0;
+    261                    g_u8JoinNwkOnce = 1;
+    262                  }else{
+    263          
+    264                  }
+    265                  //LED_ON();//LED
+    266                  break;
+    267                default:
+    268                  break;
+    269                }
+    270          
+    271                // Release the memory
+    272                osal_msg_deallocate( (uint8 *)MSGpkt );
+    273              }
+    274          
+    275              // return unprocessed events
+    276              return (events ^ SYS_EVENT_MSG);
+    277            }
+    278            
+    279          //  if (events & ZCL_DEVICE_REJOIN_EVENT) {
+    280          //    ZDApp_StartJoiningCycle();
+    281          //  }
+    282            
+    283            if ( events & ONOFFLIGHT_IDENTIFY_TIMEOUT_EVT )
+   \   00000D   EE           MOV     A,R6
+   \   00000E   A2E0         MOV     C,0xE0 /* A   */.0
+   \   000010   4003         JC      $+5
+   \   000012   02....       LJMP    ??zclOnOffLight_event_loop_1 & 0xFFFF
+    284            {
+    285              if ( zclOnOffLight_IdentifyTime > 0 )
+   \   000015   90....       MOV     DPTR,#zclOnOffLight_IdentifyTime
+   \   000018   12....       LCALL   ??Subroutine6_0 & 0xFFFF
+   \                     ??CrossCallReturnLabel_6:
+   \   00001B   E8           MOV     A,R0
+   \   00001C   49           ORL     A,R1
+   \   00001D   7003         JNZ     $+5
+   \   00001F   02....       LJMP    ??zclOnOffLight_event_loop_2 & 0xFFFF
+    286                zclOnOffLight_IdentifyTime--;
+   \   000022   90....       MOV     DPTR,#zclOnOffLight_IdentifyTime
+   \   000025   E0           MOVX    A,@DPTR
+   \   000026   24FF         ADD     A,#-0x1
+   \   000028   F0           MOVX    @DPTR,A
+   \   000029   A3           INC     DPTR
+   \   00002A   E0           MOVX    A,@DPTR
+   \   00002B   34FF         ADDC    A,#-0x1
+   \   00002D   F0           MOVX    @DPTR,A
+    287              zclOnOffLight_ProcessIdentifyTimeChange();
+   \   00002E   18           DEC     R0
+   \   00002F   F9           MOV     R1,A
+   \   000030   E8           MOV     A,R0
+   \   000031   49           ORL     A,R1
+   \   000032   7003         JNZ     $+5
+   \   000034   02....       LJMP    ??zclOnOffLight_event_loop_2 & 0xFFFF
+   \   000037                ; Setup parameters for call to function osal_start_timerEx
+   \   000037   12....       LCALL   ?Subroutine1 & 0xFFFF
+    288              
+    289              //return ( events ^ ONOFFLIGHT_IDENTIFY_TIMEOUT_EVT );
+    290            }
+   \                     ??CrossCallReturnLabel_17:
+   \   00003A   02....       LJMP    ??zclOnOffLight_event_loop_1 & 0xFFFF
+   \                     ??zclOnOffLight_event_loop_3:
+   \   00003D   A3           INC     DPTR
+   \   00003E   E0           MOVX    A,@DPTR
+   \   00003F   90....       MOV     DPTR,#zclDevice_NwkState
+   \   000042   F0           MOVX    @DPTR,A
+   \   000043   6407         XRL     A,#0x7
+   \   000045   7026         JNZ     ??zclOnOffLight_event_loop_4
+   \   000047                ; Setup parameters for call to function NLME_PermitJoiningRequest
+   \   000047   7900         MOV     R1,#0x0
+   \   000049   12....       LCALL   ??NLME_PermitJoiningRequest?relay
+   \   00004C                ; Setup parameters for call to function osal_rand
+   \   00004C   12....       LCALL   ??osal_rand?relay
+   \   00004F                ; Setup parameters for call to function osal_start_timerEx
+   \   00004F   EA           MOV     A,R2
+   \   000050   75F014       MOV     B,#0x14
+   \   000053   A4           MUL     AB
+   \   000054   24A8         ADD     A,#-0x58
+   \   000056   FC           MOV     R4,A
+   \   000057   E5F0         MOV     A,B
+   \   000059   3461         ADDC    A,#0x61
+   \   00005B   FD           MOV     R5,A
+   \   00005C   7A00         MOV     R2,#0x0
+   \   00005E   7B01         MOV     R3,#0x1
+   \   000060   12....       LCALL   ??Subroutine9_0 & 0xFFFF
+   \                     ??CrossCallReturnLabel_13:
+   \   000063   90....       MOV     DPTR,#zclDevice_RejoinCounter
+   \   000066   E4           CLR     A
+   \   000067   F0           MOVX    @DPTR,A
+   \   000068   90....       MOV     DPTR,#g_u8JoinNwkOnce
+   \   00006B   04           INC     A
+   \   00006C   F0           MOVX    @DPTR,A
+   \                     ??zclOnOffLight_event_loop_4:
+   \   00006D                ; Setup parameters for call to function osal_msg_deallocate
+   \   00006D   AA..         MOV     R2,?V0 + 0
+   \   00006F   AB..         MOV     R3,?V0 + 1
+   \   000071   12....       LCALL   ??osal_msg_deallocate?relay
+   \                     ??zclOnOffLight_event_loop_0:
+   \   000074                ; Setup parameters for call to function osal_msg_receive
+   \   000074   90....       MOV     DPTR,#zclOnOffLight_TaskID
+   \   000077   E0           MOVX    A,@DPTR
+   \   000078   F9           MOV     R1,A
+   \   000079   12....       LCALL   ??osal_msg_receive?relay
+   \   00007C   8A..         MOV     ?V0 + 0,R2
+   \   00007E   8B..         MOV     ?V0 + 1,R3
+   \   000080   EA           MOV     A,R2
+   \   000081   45..         ORL     A,?V0 + 1
+   \   000083   604F         JZ      ??zclOnOffLight_event_loop_5
+   \   000085   8A82         MOV     DPL,R2
+   \   000087   8B83         MOV     DPH,R3
+   \   000089   E0           MOVX    A,@DPTR
+   \   00008A   24E6         ADD     A,#-0x1a
+   \   00008C   600A         JZ      ??zclOnOffLight_event_loop_6
+   \   00008E   24E6         ADD     A,#-0x1a
+   \   000090   600B         JZ      ??zclOnOffLight_event_loop_7
+   \   000092   2463         ADD     A,#0x63
+   \   000094   60A7         JZ      ??zclOnOffLight_event_loop_3
+   \   000096   80D5         SJMP    ??zclOnOffLight_event_loop_4
+   \                     ??zclOnOffLight_event_loop_6:
+   \   000098                ; Setup parameters for call to function Device_App_MessageMSGCB
+   \   000098   12....       LCALL   ??Device_App_MessageMSGCB?relay
+   \   00009B   80D0         SJMP    ??zclOnOffLight_event_loop_4
+   \                     ??zclOnOffLight_event_loop_7:
+   \   00009D   A3           INC     DPTR
+   \   00009E   A3           INC     DPTR
+   \   00009F   A3           INC     DPTR
+   \   0000A0   A3           INC     DPTR
+   \   0000A1   A3           INC     DPTR
+   \   0000A2   A3           INC     DPTR
+   \   0000A3   A3           INC     DPTR
+   \   0000A4   E0           MOVX    A,@DPTR
+   \   0000A5   14           DEC     A
+   \   0000A6   6011         JZ      ??zclOnOffLight_event_loop_8
+   \   0000A8   24FD         ADD     A,#-0x3
+   \   0000AA   7018         JNZ     ??zclOnOffLight_event_loop_9
+   \   0000AC   12....       LCALL   ?Subroutine2 & 0xFFFF
+   \                     ??CrossCallReturnLabel_0:
+   \   0000AF   6013         JZ      ??zclOnOffLight_event_loop_9
+   \                     ??zclOnOffLight_event_loop_10:
+   \   0000B1   08           INC     R0
+   \   0000B2   E8           MOV     A,R0
+   \   0000B3   C3           CLR     C
+   \   0000B4   99           SUBB    A,R1
+   \   0000B5   500D         JNC     ??zclOnOffLight_event_loop_9
+   \   0000B7   80F8         SJMP    ??zclOnOffLight_event_loop_10
+   \                     ??zclOnOffLight_event_loop_8:
+   \   0000B9   12....       LCALL   ?Subroutine2 & 0xFFFF
+   \                     ??CrossCallReturnLabel_1:
+   \   0000BC   6006         JZ      ??zclOnOffLight_event_loop_9
+   \                     ??zclOnOffLight_event_loop_11:
+   \   0000BE   08           INC     R0
+   \   0000BF   E8           MOV     A,R0
+   \   0000C0   C3           CLR     C
+   \   0000C1   99           SUBB    A,R1
+   \   0000C2   40FA         JC      ??zclOnOffLight_event_loop_11
+   \                     ??zclOnOffLight_event_loop_9:
+   \   0000C4   12....       LCALL   ?Subroutine5 & 0xFFFF
+   \                     ??CrossCallReturnLabel_4:
+   \   0000C7   FA           MOV     R2,A
+   \   0000C8   A3           INC     DPTR
+   \   0000C9   E0           MOVX    A,@DPTR
+   \   0000CA   FB           MOV     R3,A
+   \   0000CB   EA           MOV     A,R2
+   \   0000CC   4B           ORL     A,R3
+   \   0000CD   609E         JZ      ??zclOnOffLight_event_loop_4
+   \   0000CF                ; Setup parameters for call to function osal_mem_free
+   \   0000CF   12....       LCALL   ??osal_mem_free?relay
+   \   0000D2   8099         SJMP    ??zclOnOffLight_event_loop_4
+   \                     ??zclOnOffLight_event_loop_5:
+   \   0000D4   EE           MOV     A,R6
+   \   0000D5   FA           MOV     R2,A
+   \   0000D6   EF           MOV     A,R7
+   \   0000D7   6480         XRL     A,#0x80
+   \   0000D9   FB           MOV     R3,A
+   \   0000DA   02....       LJMP    ??zclOnOffLight_event_loop_12 & 0xFFFF
+   \                     ??zclOnOffLight_event_loop_2:
+   \   0000DD                ; Setup parameters for call to function osal_stop_timerEx
+   \   0000DD   7A01         MOV     R2,#0x1
+   \   0000DF   7B00         MOV     R3,#0x0
+   \   0000E1   90....       MOV     DPTR,#zclOnOffLight_TaskID
+   \   0000E4   E0           MOVX    A,@DPTR
+   \   0000E5   F9           MOV     R1,A
+   \   0000E6   12....       LCALL   ??osal_stop_timerEx?relay
+    291            
+    292              if (events & ZCL_DEVICE_SEND_ONOFF_STATE_EVENT) 
+   \                     ??zclOnOffLight_event_loop_1:
+   \   0000E9   EE           MOV     A,R6
+   \   0000EA   5402         ANL     A,#0x2
+   \   0000EC   600B         JZ      ??zclOnOffLight_event_loop_13
+    293            {
+    294                zclLightReportEvent(ONOFFLIGHT_ENDPONT_0xF0, &zclOnOffLight0_OnOff);  
+   \   0000EE                ; Setup parameters for call to function zclLightReportEvent
+   \   0000EE   7C..         MOV     R4,#zclOnOffLight0_OnOff & 0xff
+   \   0000F0   7D..         MOV     R5,#(zclOnOffLight0_OnOff >> 8) & 0xff
+   \   0000F2   7AF0         MOV     R2,#-0x10
+   \   0000F4   7B00         MOV     R3,#0x0
+   \   0000F6   12....       LCALL   ??zclLightReportEvent?relay
+    295            }
+    296            
+    297            
+    298            if (events & ZCL_DEVICE_HEARTBEAT_EVENT)
+   \                     ??zclOnOffLight_event_loop_13:
+   \   0000F9   EF           MOV     A,R7
+   \   0000FA   5402         ANL     A,#0x2
+   \   0000FC   F5..         MOV     ?V0 + 1,A
+   \   0000FE   6003         JZ      ??zclOnOffLight_event_loop_14
+    299            {
+    300              zclSendHeartbeat();
+   \   000100                ; Setup parameters for call to function zclSendHeartbeat
+   \   000100   12....       LCALL   ??zclSendHeartbeat?relay
+    301              //    if(afStatus_SUCCESS != zclSendHeartbeat())
+    302              //    {
+    303              //       SystemResetSoft();
+    304              //    }
+    305            }
+    306            
+    307            if (events & ZCL_DEVICE_EXIT_NETWORK_EVENT) {
+   \                     ??zclOnOffLight_event_loop_14:
+   \   000103   EF           MOV     A,R7
+   \   000104   5410         ANL     A,#0x10
+   \   000106   6026         JZ      ??CrossCallReturnLabel_14
+    308              if( !ledcontrol ){
+   \   000108   90....       MOV     DPTR,#ledcontrol
+   \   00010B   E0           MOVX    A,@DPTR
+   \   00010C   7020         JNZ     ??CrossCallReturnLabel_14
+    309                abno_led ++;
+   \   00010E   90....       MOV     DPTR,#abno_led
+   \   000111   E0           MOVX    A,@DPTR
+   \   000112   04           INC     A
+   \   000113   F0           MOVX    @DPTR,A
+    310                if((abno_led) % 2 == 0)
+   \   000114   A2E0         MOV     C,0xE0 /* A   */.0
+   \   000116   4004         JC      ??zclOnOffLight_event_loop_15
+    311                {
+    312                  LED_RED_OFF();
+   \   000118   C297         CLR     0x90.7
+   \   00011A   8002         SJMP    ??zclOnOffLight_event_loop_16
+    313                }else{
+    314                  LED_RED_ON();
+   \                     ??zclOnOffLight_event_loop_15:
+   \   00011C   D297         SETB    0x90.7
+    315                }
+    316                
+    317                if(abno_led >= 255)
+   \                     ??zclOnOffLight_event_loop_16:
+   \   00011E   F4           CPL     A
+   \   00011F   7002         JNZ     ??zclOnOffLight_event_loop_17
+    318                  abno_led = 0;
+   \   000121   E4           CLR     A
+   \   000122   F0           MOVX    @DPTR,A
+    319                osal_start_timerEx(zclOnOffLight_TaskID, 
+    320                                   ZCL_DEVICE_EXIT_NETWORK_EVENT,
+    321                                   2000);
+   \                     ??zclOnOffLight_event_loop_17:
+   \   000123                ; Setup parameters for call to function osal_start_timerEx
+   \   000123   7CD0         MOV     R4,#-0x30
+   \   000125   7D07         MOV     R5,#0x7
+   \   000127   7A00         MOV     R2,#0x0
+   \   000129   7B10         MOV     R3,#0x10
+   \   00012B   12....       LCALL   ??Subroutine9_0 & 0xFFFF
+    322              }
+    323            }
+    324            
+    325            if (events & ZCL_DEVICE_INIT_DONE_EVENT) {
+   \                     ??CrossCallReturnLabel_14:
+   \   00012E   EE           MOV     A,R6
+   \   00012F   5408         ANL     A,#0x8
+   \   000131   601C         JZ      ??CrossCallReturnLabel_15
+    326              zclDevice_InitDone = 1;
+   \   000133   90....       MOV     DPTR,#zclDevice_InitDone
+   \   000136   7401         MOV     A,#0x1
+   \   000138   F0           MOVX    @DPTR,A
+    327              LED_RED_OFF();
+   \   000139   C297         CLR     0x90.7
+    328              zclLightControlTouchPanelEnable();
+   \   00013B                ; Setup parameters for call to function zclLightControlTouchPanelEnable
+   \   00013B   12....       LCALL   ??zclLightControlTouchPanelEnable?relay
+    329              if( !ledcontrol ){
+   \   00013E   90....       MOV     DPTR,#ledcontrol
+   \   000141   E0           MOVX    A,@DPTR
+   \   000142   700B         JNZ     ??CrossCallReturnLabel_15
+    330                osal_start_timerEx(zclOnOffLight_TaskID,
+    331                                   ZCL_DEVICE_EXIT_NETWORK_EVENT,
+    332                                   1000);
+   \   000144                ; Setup parameters for call to function osal_start_timerEx
+   \   000144   7CE8         MOV     R4,#-0x18
+   \   000146   7D03         MOV     R5,#0x3
+   \   000148   7A00         MOV     R2,#0x0
+   \   00014A   7B10         MOV     R3,#0x10
+   \   00014C   12....       LCALL   ??Subroutine9_0 & 0xFFFF
+    333              }
+    334              //return (events ^ ZCL_DEVICE_INIT_DONE_EVENT);
+    335            }
+    336            if (events & ZCL_DEVICE_INFO_SEND_EVENT) {
+   \                     ??CrossCallReturnLabel_15:
+   \   00014F   EF           MOV     A,R7
+   \   000150   5401         ANL     A,#0x1
+   \   000152   6003         JZ      ??zclOnOffLight_event_loop_18
+    337              zclSendDeviceInfo();
+   \   000154                ; Setup parameters for call to function zclSendDeviceInfo
+   \   000154   12....       LCALL   ??zclSendDeviceInfo?relay
+    338            }
+    339            
+    340            if (events & ZCL_DEVICE_HEARTBEAT_EVENT) {
+   \                     ??zclOnOffLight_event_loop_18:
+   \   000157   E5..         MOV     A,?V0 + 1
+   \   000159   6003         JZ      ??zclOnOffLight_event_loop_19
+    341              zclSendHeartbeat();
+   \   00015B                ; Setup parameters for call to function zclSendHeartbeat
+   \   00015B   12....       LCALL   ??zclSendHeartbeat?relay
+    342            }
+    343            
+    344            if (events & ZCL_DEVICE_TOUCHPANEL_EVENT) {
+   \                     ??zclOnOffLight_event_loop_19:
+   \   00015E   EE           MOV     A,R6
+   \   00015F   5410         ANL     A,#0x10
+   \   000161   6017         JZ      ??CrossCallReturnLabel_16
+    345              zclTouchPanelEvent();
+   \   000163                ; Setup parameters for call to function zclTouchPanelEvent
+   \   000163   12....       LCALL   ??zclTouchPanelEvent?relay
+    346              if(g_u8restFlag == 0)
+   \   000166   90....       MOV     DPTR,#g_u8restFlag
+   \   000169   E0           MOVX    A,@DPTR
+   \   00016A   700E         JNZ     ??CrossCallReturnLabel_16
+    347              {
+    348                g_u8restFlag = 1;
+   \   00016C   7401         MOV     A,#0x1
+   \   00016E   F0           MOVX    @DPTR,A
+    349                osal_start_timerEx(zclOnOffLight_TaskID, 
+    350                                   ZCL_DEVICE_RESET_EVENT,
+    351                                   3000);
+   \   00016F                ; Setup parameters for call to function osal_start_timerEx
+   \   00016F   7CB8         MOV     R4,#-0x48
+   \   000171   7D0B         MOV     R5,#0xb
+   \   000173   7A00         MOV     R2,#0x0
+   \   000175   7B04         MOV     R3,#0x4
+   \   000177   12....       LCALL   ??Subroutine9_0 & 0xFFFF
+    352              }
+    353              //return (events ^ ZCL_DEVICE_LIGHT0_TOUCHPANEL_EVENT);
+    354            }
+    355            if (events & ZCL_DEVICE_RESTORE_INTERRUPT_EVENT) {
+   \                     ??CrossCallReturnLabel_16:
+   \   00017A   EE           MOV     A,R6
+   \   00017B   5420         ANL     A,#0x20
+   \   00017D   6003         JZ      ??zclOnOffLight_event_loop_20
+    356              zclRestoreInterruptEvent();
+   \   00017F                ; Setup parameters for call to function zclRestoreInterruptEvent
+   \   00017F   12....       LCALL   ??zclRestoreInterruptEvent?relay
+    357              //return (events ^ ZCL_DEVICE_LIGHT1_TOUCHPANEL_EVENT);
+    358            }
+    359            
+    360            if (events & ZCL_DEVICE_RESET_EVENT) {
+   \                     ??zclOnOffLight_event_loop_20:
+   \   000182   EF           MOV     A,R7
+   \   000183   5404         ANL     A,#0x4
+   \   000185   6003         JZ      ??zclOnOffLight_event_loop_21
+    361              
+    362              zclFactoryResetEvent();
+   \   000187                ; Setup parameters for call to function zclFactoryResetEvent
+   \   000187   12....       LCALL   ??zclFactoryResetEvent?relay
+    363            }
+    364            
+    365            if(events & ZCL_DEVICE_SOFT_RESTART_EVENT)
+   \                     ??zclOnOffLight_event_loop_21:
+   \   00018A   EE           MOV     A,R6
+   \   00018B   5440         ANL     A,#0x40
+   \   00018D   6026         JZ      ??CrossCallReturnLabel_11
+    366            {
+    367              if(zcl_Led_Blink >= 60)
+   \   00018F   90....       MOV     DPTR,#zcl_Led_Blink
+   \   000192   E0           MOVX    A,@DPTR
+   \   000193   C3           CLR     C
+   \   000194   943C         SUBB    A,#0x3c
+   \   000196   4007         JC      ??zclOnOffLight_event_loop_22
+    368              {
+    369                zclFactoryReset(TRUE);
+   \   000198                ; Setup parameters for call to function zclFactoryReset
+   \   000198   7901         MOV     R1,#0x1
+   \   00019A   12....       LCALL   ??zclFactoryReset?relay
+   \   00019D   8016         SJMP    ??CrossCallReturnLabel_11
+    370              }
+    371              else
+    372              {
+    373                if(zcl_Led_Blink %2 == 0)
+   \                     ??zclOnOffLight_event_loop_22:
+   \   00019F   E0           MOVX    A,@DPTR
+   \   0001A0   A2E0         MOV     C,0xE0 /* A   */.0
+   \   0001A2   4004         JC      ??zclOnOffLight_event_loop_23
+    374                {
+    375                  LED_RED_OFF();
+   \   0001A4   C297         CLR     0x90.7
+   \   0001A6   8002         SJMP    ??zclOnOffLight_event_loop_24
+    376                } else {
+    377                  LED_RED_ON();
+   \                     ??zclOnOffLight_event_loop_23:
+   \   0001A8   D297         SETB    0x90.7
+    378                }
+    379                zcl_Led_Blink++;
+   \                     ??zclOnOffLight_event_loop_24:
+   \   0001AA   04           INC     A
+   \   0001AB   F0           MOVX    @DPTR,A
+    380                osal_start_timerEx(zclOnOffLight_TaskID, 
+    381                                   ZCL_DEVICE_SOFT_RESTART_EVENT,
+    382                                   ZCL_FACTORY_RESET_HINT);
+   \   0001AC                ; Setup parameters for call to function osal_start_timerEx
+   \   0001AC   7CC8         MOV     R4,#-0x38
+   \   0001AE   7D00         MOV     R5,#0x0
+   \   0001B0   7A40         MOV     R2,#0x40
+   \   0001B2   12....       LCALL   ??Subroutine8_0 & 0xFFFF
+    383              }
+    384            }
+    385            
+    386            // Discard unknown events
+    387            return 0;
+   \                     ??CrossCallReturnLabel_11:
+   \   0001B5   7A00         MOV     R2,#0x0
+   \   0001B7   7B00         MOV     R3,#0x0
+   \                     ??zclOnOffLight_event_loop_12:
+   \   0001B9   7F04         MOV     R7,#0x4
+   \   0001BB   02....       LJMP    ?BANKED_LEAVE_XDATA
+   \   0001BE                REQUIRE _A_P1
+    388          }
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ?Subroutine2:
+   \   000000   12....       LCALL   ?Subroutine5 & 0xFFFF
+   \                     ??CrossCallReturnLabel_5:
+   \   000003   F8           MOV     R0,A
+   \   000004   A3           INC     DPTR
+   \   000005   E0           MOVX    A,@DPTR
+   \   000006   F9           MOV     R1,A
+   \   000007   8882         MOV     DPL,R0
+   \   000009   8983         MOV     DPH,R1
+   \   00000B   7800         MOV     R0,#0x0
+   \   00000D   E0           MOVX    A,@DPTR
+   \   00000E   F9           MOV     R1,A
+   \   00000F   22           RET
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ?Subroutine5:
+   \   000000   EA           MOV     A,R2
+   \   000001   2417         ADD     A,#0x17
+   \   000003   F582         MOV     DPL,A
+   \   000005   EB           MOV     A,R3
+   \   000006   3400         ADDC    A,#0x0
+   \   000008   F583         MOV     DPH,A
+   \   00000A   E0           MOVX    A,@DPTR
+   \   00000B   22           RET
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ??Subroutine6_0:
+   \   000000   E0           MOVX    A,@DPTR
+   \   000001   F8           MOV     R0,A
+   \   000002   A3           INC     DPTR
+   \   000003   E0           MOVX    A,@DPTR
+   \   000004   F9           MOV     R1,A
+   \   000005   22           RET
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ?Subroutine1:
+   \   000000   7CE8         MOV     R4,#-0x18
+   \   000002   7D03         MOV     R5,#0x3
+   \   000004   7A01         MOV     R2,#0x1
+   \   000006                REQUIRE ??Subroutine8_0
+   \   000006                ; // Fall through to label ??Subroutine8_0
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ??Subroutine8_0:
+   \   000000   7B00         MOV     R3,#0x0
+   \   000002                REQUIRE ??Subroutine9_0
+   \   000002                ; // Fall through to label ??Subroutine9_0
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ??Subroutine9_0:
+   \   000000   90....       MOV     DPTR,#zclOnOffLight_TaskID
+   \   000003   E0           MOVX    A,@DPTR
+   \   000004   F9           MOV     R1,A
+   \   000005   12....       LCALL   ??osal_start_timerEx?relay
+   \   000008   22           RET
+    389          
+    390          /*********************************************************************
+    391           * @fn      zclOnOffLight_HandleKeys
+    392           *
+    393           * @brief   Handles all key events for this device.
+    394           *
+    395           * @param   shift - true if in shift/alt.
+    396           * @param   keys - bit field for key events. Valid entries:
+    397           *                 HAL_KEY_SW_4
+    398           *                 HAL_KEY_SW_3
+    399           *                 HAL_KEY_SW_2
+    400           *                 HAL_KEY_SW_1
+    401           *
+    402           * @return  none
+    403           */
+    404          static void zclOnOffLight_HandleKeys( byte shift, byte keys )
+    405          {
+    406           // zAddrType_t dstAddr;
+    407            
+    408            (void)shift;  // Intentionally unreferenced parameter
+    409          
+    410            if ( keys & HAL_KEY_SW_2 )
+    411            {
+    412            }
+    413          
+    414            if ( keys & HAL_KEY_SW_3 )
+    415            {
+    416            }
+    417          
+    418            if ( keys & HAL_KEY_SW_4 )
+    419            {
+    420            }
+    421          }
+    422          
+    423          /*********************************************************************
+    424           * @fn      zclOnOffLight_ProcessIdentifyTimeChange
+    425           *
+    426           * @brief   Called to process any change to the IdentifyTime attribute.
+    427           *
+    428           * @param   none
+    429           *
+    430           * @return  none
+    431           */
+    432          static void zclOnOffLight_ProcessIdentifyTimeChange( void )
+    433          {
+    434            if ( zclOnOffLight_IdentifyTime > 0 )
+    435            {
+    436              osal_start_timerEx( zclOnOffLight_TaskID, ONOFFLIGHT_IDENTIFY_TIMEOUT_EVT, 1000 );
+    437            }
+    438            else
+    439            {
+    440              osal_stop_timerEx( zclOnOffLight_TaskID, ONOFFLIGHT_IDENTIFY_TIMEOUT_EVT );
+    441            }
+    442          }
+    443          
+    444          /*********************************************************************
+    445           * @fn      zclOnOffLight_BasicResetCB
+    446           *
+    447           * @brief   Callback from the ZCL General Cluster Library
+    448           *          to set all the Basic Cluster attributes to default values.
+    449           *
+    450           * @param   none
+    451           *
+    452           * @return  none
+    453           */
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+    454          static void zclOnOffLight_BasicResetCB( void )
+   \                     zclOnOffLight_BasicResetCB:
+    455          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+    456            // Reset all attributes to default values
+    457          }
+   \   000000   02....       LJMP    ?BRET
+    458          
+    459          /*********************************************************************
+    460           * @fn      zclOnOffLight_IdentifyCB
+    461           *
+    462           * @brief   Callback from the ZCL General Cluster Library when
+    463           *          it received an Identity Command for this application.
+    464           *
+    465           * @param   srcAddr - source address and endpoint of the response message
+    466           * @param   identifyTime - the number of seconds to identify yourself
+    467           *
+    468           * @return  none
+    469           */
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+    470          static void zclOnOffLight_IdentifyCB( zclIdentify_t *pCmd )
+   \                     zclOnOffLight_IdentifyCB:
+    471          {
+   \   000000   C082         PUSH    DPL
+   \   000002   C083         PUSH    DPH
+   \   000004                ; Saved register size: 2
+   \   000004                ; Auto size: 0
+    472            zclOnOffLight_IdentifyTime = pCmd->identifyTime;
+   \   000004   8A82         MOV     DPL,R2
+   \   000006   8B83         MOV     DPH,R3
+   \   000008   A3           INC     DPTR
+   \   000009   A3           INC     DPTR
+   \   00000A   12....       LCALL   ??Subroutine6_0 & 0xFFFF
+   \                     ??CrossCallReturnLabel_7:
+   \   00000D   90....       MOV     DPTR,#zclOnOffLight_IdentifyTime
+   \   000010   E8           MOV     A,R0
+   \   000011   F0           MOVX    @DPTR,A
+   \   000012   A3           INC     DPTR
+   \   000013   E9           MOV     A,R1
+   \   000014   F0           MOVX    @DPTR,A
+    473            zclOnOffLight_ProcessIdentifyTimeChange();
+   \   000015   E8           MOV     A,R0
+   \   000016   49           ORL     A,R1
+   \   000017   6005         JZ      ??zclOnOffLight_IdentifyCB_0
+   \   000019                ; Setup parameters for call to function osal_start_timerEx
+   \   000019   12....       LCALL   ?Subroutine1 & 0xFFFF
+   \                     ??CrossCallReturnLabel_10:
+   \   00001C   800C         SJMP    ??zclOnOffLight_IdentifyCB_1
+   \                     ??zclOnOffLight_IdentifyCB_0:
+   \   00001E                ; Setup parameters for call to function osal_stop_timerEx
+   \   00001E   7A01         MOV     R2,#0x1
+   \   000020   7B00         MOV     R3,#0x0
+   \   000022   90....       MOV     DPTR,#zclOnOffLight_TaskID
+   \   000025   E0           MOVX    A,@DPTR
+   \   000026   F9           MOV     R1,A
+   \   000027   12....       LCALL   ??osal_stop_timerEx?relay
+    474          }
+   \                     ??zclOnOffLight_IdentifyCB_1:
+   \   00002A   D083         POP     DPH
+   \   00002C   D082         POP     DPL
+   \   00002E   02....       LJMP    ?BRET
+    475          
+    476          /*********************************************************************
+    477           * @fn      zclOnOffLight_IdentifyQueryRspCB
+    478           *
+    479           * @brief   Callback from the ZCL General Cluster Library when
+    480           *          it received an Identity Query Response Command for this application.
+    481           *
+    482           * @param   srcAddr - requestor's address
+    483           * @param   timeout - number of seconds to identify yourself (valid for query response)
+    484           *
+    485           * @return  none
+    486           */
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+    487          static void zclOnOffLight_IdentifyQueryRspCB(  zclIdentifyQueryRsp_t *pRsp )
+   \                     zclOnOffLight_IdentifyQueryRspCB:
+    488          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+    489            // Query Response (with timeout value)
+    490            (void)pRsp;
+    491          }
+   \   000000   02....       LJMP    ?BRET
+    492          
+    493          
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+    494          static void zclOnOffLight0_OnOffCB(uint8 cmd )
+   \                     zclOnOffLight0_OnOffCB:
+    495          {
+   \   000000   74F7         MOV     A,#-0x9
+   \   000002   12....       LCALL   ?BANKED_ENTER_XDATA
+   \   000005                ; Saved register size: 9
+   \   000005                ; Auto size: 0
+   \   000005   E9           MOV     A,R1
+   \   000006   FE           MOV     R6,A
+    496            zclOnOffLight_OnOffCB(0, cmd);
+   \   000007   7401         MOV     A,#0x1
+   \   000009   6E           XRL     A,R6
+   \   00000A   6012         JZ      ??zclOnOffLight0_OnOffCB_0
+   \   00000C   EE           MOV     A,R6
+   \   00000D   6006         JZ      ??zclOnOffLight0_OnOffCB_1
+   \   00000F   90....       MOV     DPTR,#zclOnOffLight0_OnOff
+   \   000012   E0           MOVX    A,@DPTR
+   \   000013   6009         JZ      ??zclOnOffLight0_OnOffCB_0
+   \                     ??zclOnOffLight0_OnOffCB_1:
+   \   000015   90....       MOV     DPTR,#zclOnOffLight0_OnOff
+   \   000018   E4           CLR     A
+   \   000019   F0           MOVX    @DPTR,A
+   \   00001A   C294         CLR     0x90.4
+   \   00001C   8008         SJMP    ??zclOnOffLight0_OnOffCB_2
+   \                     ??zclOnOffLight0_OnOffCB_0:
+   \   00001E   90....       MOV     DPTR,#zclOnOffLight0_OnOff
+   \   000021   7401         MOV     A,#0x1
+   \   000023   F0           MOVX    @DPTR,A
+   \   000024   D294         SETB    0x90.4
+   \                     ??zclOnOffLight0_OnOffCB_2:
+   \   000026                ; Setup parameters for call to function zclLightReportEvent
+   \   000026   7C..         MOV     R4,#zclOnOffLight0_OnOff & 0xff
+   \   000028   7D..         MOV     R5,#(zclOnOffLight0_OnOff >> 8) & 0xff
+   \   00002A   7A10         MOV     R2,#0x10
+   \   00002C                REQUIRE ?Subroutine0
+   \   00002C                REQUIRE _A_P1
+   \   00002C                ; // Fall through to label ?Subroutine0
+    497          }
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ?Subroutine0:
+   \   000000   7B00         MOV     R3,#0x0
+   \   000002   12....       LCALL   ??zclLightReportEvent?relay
+   \   000005                REQUIRE ??Subroutine7_0
+   \   000005                ; // Fall through to label ??Subroutine7_0
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+    498          static void zclOnOffLight1_OnOffCB(uint8 cmd )
+   \                     zclOnOffLight1_OnOffCB:
+    499          {
+   \   000000   74F7         MOV     A,#-0x9
+   \   000002   12....       LCALL   ?BANKED_ENTER_XDATA
+   \   000005                ; Saved register size: 9
+   \   000005                ; Auto size: 0
+   \   000005   E9           MOV     A,R1
+   \   000006   FE           MOV     R6,A
+    500            zclOnOffLight_OnOffCB(1, cmd);
+   \   000007   7401         MOV     A,#0x1
+   \   000009   6E           XRL     A,R6
+   \   00000A   6012         JZ      ??zclOnOffLight1_OnOffCB_0
+   \   00000C   EE           MOV     A,R6
+   \   00000D   6006         JZ      ??zclOnOffLight1_OnOffCB_1
+   \   00000F   90....       MOV     DPTR,#zclOnOffLight1_OnOff
+   \   000012   E0           MOVX    A,@DPTR
+   \   000013   6009         JZ      ??zclOnOffLight1_OnOffCB_0
+   \                     ??zclOnOffLight1_OnOffCB_1:
+   \   000015   90....       MOV     DPTR,#zclOnOffLight1_OnOff
+   \   000018   E4           CLR     A
+   \   000019   F0           MOVX    @DPTR,A
+   \   00001A   C295         CLR     0x90.5
+   \   00001C   8008         SJMP    ??zclOnOffLight1_OnOffCB_2
+   \                     ??zclOnOffLight1_OnOffCB_0:
+   \   00001E   90....       MOV     DPTR,#zclOnOffLight1_OnOff
+   \   000021   7401         MOV     A,#0x1
+   \   000023   F0           MOVX    @DPTR,A
+   \   000024   D295         SETB    0x90.5
+   \                     ??zclOnOffLight1_OnOffCB_2:
+   \   000026                ; Setup parameters for call to function zclLightReportEvent
+   \   000026   7C..         MOV     R4,#zclOnOffLight1_OnOff & 0xff
+   \   000028   7D..         MOV     R5,#(zclOnOffLight1_OnOff >> 8) & 0xff
+   \   00002A   7A11         MOV     R2,#0x11
+   \   00002C   80..         SJMP    ?Subroutine0
+   \   00002E                REQUIRE _A_P1
+    501          }
+    502          /*********************************************************************
+    503           * @fn      zclOnOffLight_OnOffCB
+    504           *
+    505           * @brief   Callback from the ZCL General Cluster Library when
+    506           *          it received an On/Off Command for this application.
+    507           *
+    508           * @param   cmd - COMMAND_ON, COMMAND_OFF or COMMAND_TOGGLE
+    509           *
+    510           * @return  none
+    511           */
+    512          static void zclOnOffLight_OnOffCB(uint8 light, uint8 cmd )
+    513          {
+    514            uint8 *zclOnOffLight_OnOff;
+    515            
+    516            if (light == 0)
+    517              zclOnOffLight_OnOff = &zclOnOffLight0_OnOff;
+    518            else
+    519              zclOnOffLight_OnOff = &zclOnOffLight1_OnOff;
+    520          
+    521            if ( cmd == COMMAND_ON ) {
+    522              *zclOnOffLight_OnOff = LIGHT_ON;
+    523            } else if ( cmd == COMMAND_OFF ) {
+    524              *zclOnOffLight_OnOff = LIGHT_OFF;
+    525            } else {
+    526              if ( *zclOnOffLight_OnOff == LIGHT_OFF )
+    527                *zclOnOffLight_OnOff = LIGHT_ON;
+    528              else
+    529                *zclOnOffLight_OnOff = LIGHT_OFF;
+    530            }
+    531          
+    532            if ( *zclOnOffLight_OnOff == LIGHT_ON ) {
+    533              if (light == 0)
+    534                LIGHT_TURN_ON_LIGHT0();
+    535              else
+    536                LIGHT_TURN_ON_LIGHT1();
+    537            } else {
+    538              if (light == 0)
+    539                LIGHT_TURN_OFF_LIGHT0();
+    540              else
+    541                LIGHT_TURN_OFF_LIGHT1();
+    542            }
+    543            
+    544            if (light == 0) {
+    545              zclLightReportEvent(ONOFFLIGHT0_ENDPOINT, &zclOnOffLight0_OnOff);
+    546            } else {
+    547              zclLightReportEvent(ONOFFLIGHT1_ENDPOINT, &zclOnOffLight1_OnOff);
+    548            }
+    549          }
+    550          
+    551          /****************************************************************************** 
+    552           * 
+    553           *  Functions for processing ZCL Foundation incoming Command/Response messages
+    554           *
+    555           *****************************************************************************/
+    556          
+    557          /*********************************************************************
+    558           * @fn      zclOnOffLight_ProcessIncomingMsg
+    559           *
+    560           * @brief   Process ZCL Foundation incoming message
+    561           *
+    562           * @param   pInMsg - pointer to the received message
+    563           *
+    564           * @return  none
+    565           */
+    566          static void zclOnOffLight_ProcessIncomingMsg( zclIncomingMsg_t *pInMsg)
+    567          {
+    568           
+    569            switch ( pInMsg->zclHdr.commandID )
+    570            {
+    571          #ifdef ZCL_READ
+    572              case ZCL_CMD_READ_RSP:
+    573                zclOnOffLight_ProcessInReadRspCmd( pInMsg );
+    574                break;
+    575          #endif
+    576          #ifdef ZCL_WRITE    
+    577              case ZCL_CMD_WRITE_RSP:
+    578                zclOnOffLight_ProcessInWriteRspCmd( pInMsg );
+    579                break;
+    580          #endif
+    581          #ifdef ZCL_REPORT
+    582              // See ZCL Test Applicaiton (zcl_testapp.c) for sample code on Attribute Reporting
+    583              case ZCL_CMD_CONFIG_REPORT:
+    584                //zclOnOffLight_ProcessInConfigReportCmd( pInMsg );
+    585                break;
+    586              
+    587              case ZCL_CMD_CONFIG_REPORT_RSP:
+    588                //zclOnOffLight_ProcessInConfigReportRspCmd( pInMsg );
+    589                break;
+    590              
+    591              case ZCL_CMD_READ_REPORT_CFG:
+    592                //zclOnOffLight_ProcessInReadReportCfgCmd( pInMsg );
+    593                break;
+    594              
+    595              case ZCL_CMD_READ_REPORT_CFG_RSP:
+    596                //zclOnOffLight_ProcessInReadReportCfgRspCmd( pInMsg );
+    597                break;
+    598              
+    599              case ZCL_CMD_REPORT:
+    600                //zclOnOffLight_ProcessInReportCmd( pInMsg );
+    601                break;
+    602          #endif   
+    603              case ZCL_CMD_DEFAULT_RSP:
+    604                zclOnOffLight_ProcessInDefaultRspCmd( pInMsg );
+    605                break;
+    606          #ifdef ZCL_DISCOVER     
+    607              case ZCL_CMD_DISCOVER_RSP:
+    608                zclOnOffLight_ProcessInDiscRspCmd( pInMsg );
+    609                break;
+    610          #endif  
+    611              default:
+    612                break;
+    613            }
+    614            
+    615            if ( pInMsg->attrCmd )
+    616              osal_mem_free( pInMsg->attrCmd );
+    617          }
+    618          
+    619          #ifdef ZCL_READ
+    620          /*********************************************************************
+    621           * @fn      zclOnOffLight_ProcessInReadRspCmd
+    622           *
+    623           * @brief   Process the "Profile" Read Response Command
+    624           *
+    625           * @param   pInMsg - incoming message to process
+    626           *
+    627           * @return  none
+    628           */
+    629          static uint8 zclOnOffLight_ProcessInReadRspCmd( zclIncomingMsg_t *pInMsg )
+    630          {
+    631            zclReadRspCmd_t *readRspCmd;
+    632            uint8 i;
+    633          
+    634            readRspCmd = (zclReadRspCmd_t *)pInMsg->attrCmd;
+    635            for (i = 0; i < readRspCmd->numAttr; i++)
+    636            {
+    637              // Notify the originator of the results of the original read attributes 
+    638              // attempt and, for each successfull request, the value of the requested 
+    639              // attribute
+    640            }
+    641          
+    642            return TRUE; 
+    643          }
+    644          #endif // ZCL_READ
+    645          
+    646          #ifdef ZCL_WRITE
+    647          /*********************************************************************
+    648           * @fn      zclOnOffLight_ProcessInWriteRspCmd
+    649           *
+    650           * @brief   Process the "Profile" Write Response Command
+    651           *
+    652           * @param   pInMsg - incoming message to process
+    653           *
+    654           * @return  none
+    655           */
+    656          static uint8 zclOnOffLight_ProcessInWriteRspCmd( zclIncomingMsg_t *pInMsg )
+    657          {
+    658            zclWriteRspCmd_t *writeRspCmd;
+    659            uint8 i;
+    660          
+    661            writeRspCmd = (zclWriteRspCmd_t *)pInMsg->attrCmd;
+    662            for (i = 0; i < writeRspCmd->numAttr; i++)
+    663            {
+    664              // Notify the device of the results of the its original write attributes
+    665              // command.
+    666            }
+    667          
+    668            return TRUE; 
+    669          }
+    670          #endif // ZCL_WRITE
+    671          
+    672          /*********************************************************************
+    673           * @fn      zclOnOffLight_ProcessInDefaultRspCmd
+    674           *
+    675           * @brief   Process the "Profile" Default Response Command
+    676           *
+    677           * @param   pInMsg - incoming message to process
+    678           *
+    679           * @return  none
+    680           */
+    681          static uint8 zclOnOffLight_ProcessInDefaultRspCmd( zclIncomingMsg_t *pInMsg )
+    682          {
+    683            // zclDefaultRspCmd_t *defaultRspCmd = (zclDefaultRspCmd_t *)pInMsg->attrCmd;
+    684             
+    685            // Device is notified of the Default Response command.
+    686            (void)pInMsg;
+    687            
+    688            return TRUE; 
+    689          }
+    690          
+    691          #ifdef ZCL_DISCOVER
+    692          /*********************************************************************
+    693           * @fn      zclOnOffLight_ProcessInDiscRspCmd
+    694           *
+    695           * @brief   Process the "Profile" Discover Response Command
+    696           *
+    697           * @param   pInMsg - incoming message to process
+    698           *
+    699           * @return  none
+    700           */
+    701          static uint8 zclOnOffLight_ProcessInDiscRspCmd( zclIncomingMsg_t *pInMsg )
+    702          {
+    703            zclDiscoverRspCmd_t *discoverRspCmd;
+    704            uint8 i;
+    705            
+    706            discoverRspCmd = (zclDiscoverRspCmd_t *)pInMsg->attrCmd;
+    707            for ( i = 0; i < discoverRspCmd->numAttr; i++ )
+    708            {
+    709              // Device is notified of the result of its attribute discovery command.
+    710            }
+    711            
+    712            return TRUE;
+    713          }
+    714          #endif // ZCL_DISCOVER
+    715          
+    716          
+    717          /****************************************************************************
+    718          ****************************************************************************/
+    719          
+    720          
+    721          /***************************************************************************
+    722          *****************************************************************************/
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ?Subroutine3:
+   \   000000   FB           MOV     R3,A
+   \   000001   8A82         MOV     DPL,R2
+   \   000003   8B83         MOV     DPH,R3
+   \   000005                REQUIRE ??Subroutine6_0
+   \   000005                ; // Fall through to label ??Subroutine6_0
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+    723          void Device_App_MessageMSGCB(afIncomingMSGPacket_t *pkt)
+   \                     Device_App_MessageMSGCB:
+    724          {
+   \   000000   74F6         MOV     A,#-0xa
+   \   000002   12....       LCALL   ?BANKED_ENTER_XDATA
+   \   000005                ; Saved register size: 10
+   \   000005                ; Auto size: 0
+    725            switch(pkt->clusterId)
+   \   000005   8A82         MOV     DPL,R2
+   \   000007   8B83         MOV     DPH,R3
+   \   000009   A3           INC     DPTR
+   \   00000A   A3           INC     DPTR
+   \   00000B   A3           INC     DPTR
+   \   00000C   A3           INC     DPTR
+   \   00000D   E0           MOVX    A,@DPTR
+   \   00000E   F5..         MOV     ?V0 + 0,A
+   \   000010   A3           INC     DPTR
+   \   000011   E0           MOVX    A,@DPTR
+   \   000012   F5..         MOV     ?V0 + 1,A
+   \   000014   78..         MOV     R0,#?V0 + 0
+   \   000016   12....       LCALL   ?US_SWITCH_SPARSE
+   \                     `?<Jumptable for Device_App_MessageMSGCB>_0`:
+   \   000019   0000         DW        0
+   \   00001B   0200         DW        2
+   \   00001D   0600         DW        6
+   \   00001F   ....         DW        ??Device_App_MessageMSGCB_0
+   \   000021   0009         DW        2304
+   \   000023   ....         DW        ??Device_App_MessageMSGCB_1
+   \   000025   ....         DW        ??CrossCallReturnLabel_12
+    726            {
+    727            case ZCL_CLUSTER_ID_PREMIT_JOIN_ZB_NET:
+    728              if(pkt->cmd.Data[0] == 0xFF)
+   \                     ??Device_App_MessageMSGCB_1:
+   \   000027   EA           MOV     A,R2
+   \   000028   2422         ADD     A,#0x22
+   \   00002A   FA           MOV     R2,A
+   \   00002B   EB           MOV     A,R3
+   \   00002C   3400         ADDC    A,#0x0
+   \   00002E   12....       LCALL   ?Subroutine3 & 0xFFFF
+   \                     ??CrossCallReturnLabel_8:
+   \   000031   8882         MOV     DPL,R0
+   \   000033   8983         MOV     DPH,R1
+   \   000035   E0           MOVX    A,@DPTR
+   \   000036   F4           CPL     A
+   \   000037   7003         JNZ     ??Device_App_MessageMSGCB_2
+    729              {
+    730                pkt->cmd.Data[0] = 120;    //pkt->cmd.Data[0] = 60;
+   \   000039   7478         MOV     A,#0x78
+   \   00003B   F0           MOVX    @DPTR,A
+    731              }
+    732              NLME_PermitJoiningRequest(pkt->cmd.Data[0]);
+   \                     ??Device_App_MessageMSGCB_2:
+   \   00003C                ; Setup parameters for call to function NLME_PermitJoiningRequest
+   \   00003C   12....       LCALL   ?Subroutine4 & 0xFFFF
+   \                     ??CrossCallReturnLabel_2:
+   \   00003F   E0           MOVX    A,@DPTR
+   \   000040   F9           MOV     R1,A
+   \   000041   12....       LCALL   ??NLME_PermitJoiningRequest?relay
+    733              break;
+   \   000044   8066         SJMP    ??CrossCallReturnLabel_12
+    734              
+    735            case ZCL_CLUSTER_ID_GEN_ON_OFF:
+    736              {
+    737                if(pkt->cmd.Data[3]== DEVICE_All || pkt->cmd.Data[3]== DEVICE_LIGHT)
+   \                     ??Device_App_MessageMSGCB_0:
+   \   000046   EA           MOV     A,R2
+   \   000047   2422         ADD     A,#0x22
+   \   000049   F8           MOV     R0,A
+   \   00004A   EB           MOV     A,R3
+   \   00004B   3400         ADDC    A,#0x0
+   \   00004D   F9           MOV     R1,A
+   \   00004E   E8           MOV     A,R0
+   \   00004F   FA           MOV     R2,A
+   \   000050   E9           MOV     A,R1
+   \   000051   12....       LCALL   ?Subroutine3 & 0xFFFF
+   \                     ??CrossCallReturnLabel_9:
+   \   000054   E8           MOV     A,R0
+   \   000055   2403         ADD     A,#0x3
+   \   000057   F582         MOV     DPL,A
+   \   000059   E9           MOV     A,R1
+   \   00005A   3400         ADDC    A,#0x0
+   \   00005C   F583         MOV     DPH,A
+   \   00005E   E0           MOVX    A,@DPTR
+   \   00005F   6004         JZ      ??Device_App_MessageMSGCB_3
+   \   000061   6401         XRL     A,#0x1
+   \   000063   7047         JNZ     ??CrossCallReturnLabel_12
+    738                {
+    739                  if(pkt->cmd.Data[2] == COMMAND_ON)
+   \                     ??Device_App_MessageMSGCB_3:
+   \   000065   E8           MOV     A,R0
+   \   000066   2402         ADD     A,#0x2
+   \   000068   F582         MOV     DPL,A
+   \   00006A   E9           MOV     A,R1
+   \   00006B   3400         ADDC    A,#0x0
+   \   00006D   F583         MOV     DPH,A
+   \   00006F   E0           MOVX    A,@DPTR
+   \   000070   6401         XRL     A,#0x1
+   \   000072   7006         JNZ     ??Device_App_MessageMSGCB_4
+    740                  {
+    741                    LIGHT_TURN_ON_LIGHT0();
+   \   000074   D294         SETB    0x90.4
+    742                    LIGHT_TURN_ON_LIGHT1();
+   \   000076   D295         SETB    0x90.5
+   \   000078   8007         SJMP    ??Device_App_MessageMSGCB_5
+    743                    //LIGHT_TURN_ON_LIGHT2();
+    744                  }
+    745                  else if(pkt->cmd.Data[2] == COMMAND_OFF)
+   \                     ??Device_App_MessageMSGCB_4:
+   \   00007A   E0           MOVX    A,@DPTR
+   \   00007B   7004         JNZ     ??Device_App_MessageMSGCB_5
+    746                  {
+    747                    LIGHT_TURN_OFF_LIGHT0();
+   \   00007D   C294         CLR     0x90.4
+    748                    LIGHT_TURN_OFF_LIGHT1();
+   \   00007F   C295         CLR     0x90.5
+    749                    //LIGHT_TURN_OFF_LIGHT2(); 
+    750                  }
+    751                  
+    752                  zclOnOffLight0_OnOff = pkt->cmd.Data[2];
+   \                     ??Device_App_MessageMSGCB_5:
+   \   000081   8A82         MOV     DPL,R2
+   \   000083   8B83         MOV     DPH,R3
+   \   000085   A3           INC     DPTR
+   \   000086   E0           MOVX    A,@DPTR
+   \   000087   F583         MOV     DPH,A
+   \   000089   8882         MOV     DPL,R0
+   \   00008B   A3           INC     DPTR
+   \   00008C   A3           INC     DPTR
+   \   00008D   E0           MOVX    A,@DPTR
+   \   00008E   90....       MOV     DPTR,#zclOnOffLight0_OnOff
+   \   000091   F0           MOVX    @DPTR,A
+    753                  zclOnOffLight1_OnOff = pkt->cmd.Data[2];
+   \   000092   12....       LCALL   ?Subroutine4 & 0xFFFF
+   \                     ??CrossCallReturnLabel_3:
+   \   000095   A3           INC     DPTR
+   \   000096   A3           INC     DPTR
+   \   000097   E0           MOVX    A,@DPTR
+   \   000098   90....       MOV     DPTR,#zclOnOffLight1_OnOff
+   \   00009B   F0           MOVX    @DPTR,A
+    754                  //zclOnOffLight2_OnOff = pkt->cmd.Data[2];
+    755                  
+    756                  osal_start_timerEx(zclOnOffLight_TaskID, 
+    757                                     ZCL_DEVICE_SEND_ONOFF_STATE_EVENT,
+    758                                     ZCL_DEVICE_SEND_INFO_TIME_3S);
+   \   00009C                ; Setup parameters for call to function osal_rand
+   \   00009C   12....       LCALL   ??osal_rand?relay
+   \   00009F                ; Setup parameters for call to function osal_start_timerEx
+   \   00009F   EA           MOV     A,R2
+   \   0000A0   24B8         ADD     A,#-0x48
+   \   0000A2   FC           MOV     R4,A
+   \   0000A3   E4           CLR     A
+   \   0000A4   340B         ADDC    A,#0xb
+   \   0000A6   FD           MOV     R5,A
+   \   0000A7   7A02         MOV     R2,#0x2
+   \   0000A9   12....       LCALL   ??Subroutine8_0 & 0xFFFF
+    759                }
+    760              }
+    761              break;
+    762            default:
+    763              break;
+    764            }
+    765          
+    766          }
+   \                     ??CrossCallReturnLabel_12:
+   \   0000AC   7F02         MOV     R7,#0x2
+   \   0000AE   02....       LJMP    ?BANKED_LEAVE_XDATA
+   \   0000B1                REQUIRE _A_P1
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ?Subroutine4:
+   \   000000   8A82         MOV     DPL,R2
+   \   000002   8B83         MOV     DPH,R3
+   \   000004   E0           MOVX    A,@DPTR
+   \   000005   F8           MOV     R0,A
+   \   000006   A3           INC     DPTR
+   \   000007   E0           MOVX    A,@DPTR
+   \   000008   F583         MOV     DPH,A
+   \   00000A   8882         MOV     DPL,R0
+   \   00000C   22           RET
+
+   \                                 In  segment XDATA_ID, align 1, keep-with-next
+   \                     `?<Initializer for zclDevice_JoinNetworkOk>`:
+   \   000000   06           DB 6
+
+   \                                 In  segment XDATA_ID, align 1, keep-with-next
+   \                     `?<Initializer for zclOnOffLight0_CmdCallbacks>`:
+   \   000000   ....         DW ??zclOnOffLight_BasicResetCB?relay
+   \   000002   ....         DW ??zclOnOffLight_IdentifyCB?relay
+   \   000004   ....         DW ??zclOnOffLight_IdentifyQueryRspCB?relay
+   \   000006   ....         DW ??zclOnOffLight0_OnOffCB?relay
+   \   000008   0000         DW 0H
+   \   00000A   0000         DW 0H
+   \   00000C   0000         DW 0H
+   \   00000E   0000         DW 0H
+   \   000010   0000         DW 0H
+   \   000012   0000         DW 0H
+   \   000014   0000         DW 0H
+   \   000016   0000         DW 0H
+   \   000018   0000         DW 0H
+   \   00001A   0000         DW 0H
+   \   00001C   0000         DB 0, 0
+
+   \                                 In  segment XDATA_ID, align 1, keep-with-next
+   \                     `?<Initializer for zclOnOffLight1_CmdCallbacks>`:
+   \   000000   ....         DW ??zclOnOffLight_BasicResetCB?relay
+   \   000002   ....         DW ??zclOnOffLight_IdentifyCB?relay
+   \   000004   ....         DW ??zclOnOffLight_IdentifyQueryRspCB?relay
+   \   000006   ....         DW ??zclOnOffLight1_OnOffCB?relay
+   \   000008   0000         DW 0H
+   \   00000A   0000         DW 0H
+   \   00000C   0000         DW 0H
+   \   00000E   0000         DW 0H
+   \   000010   0000         DW 0H
+   \   000012   0000         DW 0H
+   \   000014   0000         DW 0H
+   \   000016   0000         DW 0H
+   \   000018   0000         DW 0H
+   \   00001A   0000         DW 0H
+   \   00001C   0000         DB 0, 0
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??zclOnOffLight_Init?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    zclOnOffLight_Init
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??zclOnOffLight_event_loop?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    zclOnOffLight_event_loop
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??zclOnOffLight_BasicResetCB?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    zclOnOffLight_BasicResetCB
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??zclOnOffLight_IdentifyCB?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    zclOnOffLight_IdentifyCB
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??zclOnOffLight_IdentifyQueryRspCB?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    zclOnOffLight_IdentifyQueryRspCB
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??zclOnOffLight0_OnOffCB?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    zclOnOffLight0_OnOffCB
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??zclOnOffLight1_OnOffCB?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    zclOnOffLight1_OnOffCB
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??Device_App_MessageMSGCB?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    Device_App_MessageMSGCB
+    767          
+
+   Maximum stack usage in bytes:
+
+     Function                       ISTACK PSTACK XSTACK
+     --------                       ------ ------ ------
+     Device_App_MessageMSGCB            0      0     22
+       -> NLME_PermitJoiningRequest     0      0     20
+       -> osal_rand                     0      0     20
+       -> osal_start_timerEx            0      0     20
+     zclOnOffLight0_OnOffCB             0      0      9
+       -> zclLightReportEvent           0      0     18
+     zclOnOffLight1_OnOffCB             0      0      9
+       -> zclLightReportEvent           0      0     18
+     zclOnOffLight_BasicResetCB         0      0      0
+     zclOnOffLight_IdentifyCB           2      0      0
+       -> osal_start_timerEx            4      0      0
+       -> osal_stop_timerEx             4      0      0
+     zclOnOffLight_IdentifyQueryRspCB
+                                        0      0      0
+     zclOnOffLight_Init                 0      0      9
+       -> afRegister                    0      0     18
+       -> zclHA_Init                    0      0     18
+       -> zclHA_Init                    0      0     18
+       -> zclGeneral_RegisterCmdCallbacks
+                                        0      0     18
+       -> zclGeneral_RegisterCmdCallbacks
+                                        0      0     18
+       -> zcl_registerAttrList          0      0     18
+       -> zcl_registerAttrList          0      0     18
+       -> zcl_registerForMsg            0      0     18
+       -> RegisterForKeys               0      0     18
+       -> zclDeviceInfoInit             0      0     18
+       -> zclLightControlInit           0      0     18
+     zclOnOffLight_event_loop           0      0     12
+       -> osal_start_timerEx            0      0     24
+       -> NLME_PermitJoiningRequest     0      0     24
+       -> osal_rand                     0      0     24
+       -> osal_start_timerEx            0      0     24
+       -> osal_msg_deallocate           0      0     24
+       -> osal_msg_receive              0      0     24
+       -> Device_App_MessageMSGCB       0      0     24
+       -> osal_mem_free                 0      0     24
+       -> osal_stop_timerEx             0      0     24
+       -> zclLightReportEvent           0      0     24
+       -> zclSendHeartbeat              0      0     24
+       -> osal_start_timerEx            0      0     24
+       -> zclLightControlTouchPanelEnable
+                                        0      0     24
+       -> osal_start_timerEx            0      0     24
+       -> zclSendDeviceInfo             0      0     24
+       -> zclSendHeartbeat              0      0     24
+       -> zclTouchPanelEvent            0      0     24
+       -> osal_start_timerEx            0      0     24
+       -> zclRestoreInterruptEvent      0      0     24
+       -> zclFactoryResetEvent          0      0     24
+       -> zclFactoryReset               0      0     24
+       -> osal_start_timerEx            0      0     24
+
+
+   Segment part sizes:
+
+     Function/Label                                 Bytes
+     --------------                                 -----
+     _A_P1                                             1
+     zclOnOffLight_TaskID                              1
+     zclDevice_NwkState                                1
+     zclDevice_RejoinCounter                           1
+     zclDevice_JoinNetworkOk                           1
+     zclDevice_InitDone                                1
+     zcl_Led_Blink                                     1
+     DeviceApp_epDesc                                  6
+     g_u8JoinNwkOnce                                   1
+     g_u8restFlag                                      1
+     abno_led                                          1
+     ledcontrol                                        1
+     zclOnOffLight0_CmdCallbacks                      30
+     zclOnOffLight1_CmdCallbacks                      30
+     zclOnOffLight_Init                              142
+     ??Subroutine7_0                                   5
+     zclOnOffLight_event_loop                        446
+     ?Subroutine2                                     16
+     ?Subroutine5                                     12
+     ??Subroutine6_0                                   6
+     ?Subroutine1                                      6
+     ??Subroutine8_0                                   2
+     ??Subroutine9_0                                   9
+     zclOnOffLight_BasicResetCB                        3
+     zclOnOffLight_IdentifyCB                         49
+     zclOnOffLight_IdentifyQueryRspCB
+                                                       3
+     zclOnOffLight0_OnOffCB                           44
+     ?Subroutine0                                      5
+     zclOnOffLight1_OnOffCB                           46
+     ?Subroutine3                                      5
+     Device_App_MessageMSGCB                         177
+     ?Subroutine4                                     13
+     ?<Initializer for zclDevice_JoinNetworkOk>        1
+     ?<Initializer for zclOnOffLight0_CmdCallbacks>   30
+     ?<Initializer for zclOnOffLight1_CmdCallbacks>   30
+     ??zclOnOffLight_Init?relay                        6
+     ??zclOnOffLight_event_loop?relay                  6
+     ??zclOnOffLight_BasicResetCB?relay                6
+     ??zclOnOffLight_IdentifyCB?relay                  6
+     ??zclOnOffLight_IdentifyQueryRspCB?relay          6
+     ??zclOnOffLight0_OnOffCB?relay                    6
+     ??zclOnOffLight1_OnOffCB?relay                    6
+     ??Device_App_MessageMSGCB?relay                   6
+
+ 
+ 989 bytes in segment BANKED_CODE
+  48 bytes in segment BANK_RELAYS
+   1 byte  in segment SFR_AN
+  61 bytes in segment XDATA_I
+  61 bytes in segment XDATA_ID
+  15 bytes in segment XDATA_Z
+ 
+ 1 098 bytes of CODE  memory
+     0 bytes of DATA  memory (+ 1 byte shared)
+    76 bytes of XDATA memory
+
+Errors: none
+Warnings: none

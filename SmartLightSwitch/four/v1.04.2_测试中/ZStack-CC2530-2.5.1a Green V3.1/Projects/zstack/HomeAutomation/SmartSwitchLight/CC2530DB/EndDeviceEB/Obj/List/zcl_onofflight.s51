@@ -1,0 +1,4172 @@
+///////////////////////////////////////////////////////////////////////////////
+//                                                                            /
+// IAR C/C++ Compiler V8.10.1.10194/W32 for 8051        16/Dec/2016  14:19:19 /
+// Copyright 2004-2011 IAR Systems AB.                                        /
+//                                                                            /
+//    Core               =  plain                                             /
+//    Code model         =  banked                                            /
+//    Data model         =  large                                             /
+//    Calling convention =  xdata reentrant                                   /
+//    Constant location  =  data_rom                                          /
+//    Dptr setup         =  1,16                                              /
+//    Source file        =  D:\YHY zigbee proiect\SmartLightSwitch\four       /
+//                          key\v1.01.0\ZStack-CC2530-2.5.1a\ZStack-CC2530-2. /
+//                          5.1a\Projects\zstack\HomeAutomation\SmartSwitchLi /
+//                          ght\Source\zcl_onofflight.c                       /
+//    Command line       =  -f "D:\YHY zigbee proiect\SmartLightSwitch\four   /
+//                          key\v1.01.0\ZStack-CC2530-2.5.1a\ZStack-CC2530-2. /
+//                          5.1a\Projects\zstack\HomeAutomation\SmartSwitchLi /
+//                          ght\CC2530DB\..\Tools\CC2530DB\f8wEndev.cfg"      /
+//                          (-DCPU32MHZ -DROOT=__near_func                    /
+//                          -DMAC_CFG_TX_DATA_MAX=3 -DMAC_CFG_TX_MAX=6        /
+//                          -DMAC_CFG_RX_MAX=3 -DHAL_PA_LNA -DHAL_KEY=FALSE   /
+//                          -DHAL_LED=FALSE -DHAL_LCD=FALSE -DHAL_ADC=FALSE   /
+//                          -DNV_RESTORE -DNV_INIT) -f "D:\YHY zigbee         /
+//                          proiect\SmartLightSwitch\four                     /
+//                          key\v1.01.0\ZStack-CC2530-2.5.1a\ZStack-CC2530-2. /
+//                          5.1a\Projects\zstack\HomeAutomation\SmartSwitchLi /
+//                          ght\CC2530DB\..\Tools\CC2530DB\f8wConfig.cfg"     /
+//                          (-DZIGBEEPRO -DSECURE=1 -DZG_SECURE_DYNAMIC=0     /
+//                          -DREFLECTOR -DDEFAULT_CHANLIST=0x04000000         /
+//                          -DZDAPP_CONFIG_PAN_ID=0xFFFF                      /
+//                          -DNWK_START_DELAY=100 -DEXTENDED_JOINING_RANDOM_M /
+//                          ASK=0x007F -DBEACON_REQUEST_DELAY=1000            /
+//                          -DBEACON_REQ_DELAY_MASK=0x00FF                    /
+//                          -DLINK_STATUS_JITTER_MASK=0x007F                  /
+//                          -DROUTE_EXPIRY_TIME=30 -DAPSC_ACK_WAIT_DURATION_P /
+//                          OLLED=3000 -DNWK_INDIRECT_MSG_TIMEOUT=7           /
+//                          -DMAX_RREQ_ENTRIES=8 -DAPSC_MAX_FRAME_RETRIES=3   /
+//                          -DNWK_MAX_DATA_RETRIES=2                          /
+//                          -DMAX_POLL_FAILURE_RETRIES=2 -DMAX_BCAST=9        /
+//                          -DAPS_MAX_GROUPS=16 -DMAX_RTG_ENTRIES=40          /
+//                          -DNWK_MAX_BINDING_ENTRIES=4                       /
+//                          -DMAX_BINDING_CLUSTER_IDS=4                       /
+//                          -DDEFAULT_KEY={0x58,0x69,0x6E,0x67,0x48,0x75,     /
+//                          0x6F,0x59,0x75,0x61,0x6E,0x53,0x6D,0x61,0x72,     /
+//                          0x74} -DMAC_MAX_FRAME_SIZE=116                    /
+//                          -DZDNWKMGR_MIN_TRANSMISSIONS=20 "-DCONST=const    /
+//                          __code" -DGENERIC=__generic                       /
+//                          -DRFD_RCVC_ALWAYS_ON=TRUE -DPOLL_RATE=0           /
+//                          -DQUEUED_POLL_RATE=0 -DRESPONSE_POLL_RATE=0       /
+//                          -DREJOIN_POLL_RATE=440) -f "D:\YHY zigbee         /
+//                          proiect\SmartLightSwitch\four                     /
+//                          key\v1.01.0\ZStack-CC2530-2.5.1a\ZStack-CC2530-2. /
+//                          5.1a\Projects\zstack\HomeAutomation\SmartSwitchLi /
+//                          ght\CC2530DB\..\Tools\CC2530DB\f8wZCL.cfg"        /
+//                          (-DZCL_READ -DZCL_WRITE -DZCL_REPORT -DZCL_BASIC  /
+//                          -DZCL_IDENTIFY -DZCL_ON_OFF -DZCL_KEY_ESTABLISH   /
+//                          -DZCL_KEY_ESTABLISHMENT_KEY_GENERATE_TIMEOUT=4    /
+//                          -DZCL_KEY_ESTABLISHMENT_MAC_GENERATE_TIMEOUT=10   /
+//                          -DZCL_KEY_ESTABLISHMENT_EKEY_GENERATE_TIMEOUT=10  /
+//                          -DZCL_LOAD_CONTROL -DZCL_SIMPLE_METERING          /
+//                          -DZCL_PRICING -DZCL_MESSAGE -DZCL_TUNNELING       /
+//                          -DZCL_TOU) -DZCL_DEVICE_MGMT "D:\YHY zigbee       /
+//                          proiect\SmartLightSwitch\four                     /
+//                          key\v1.01.0\ZStack-CC2530-2.5.1a\ZStack-CC2530-2. /
+//                          5.1a\Projects\zstack\HomeAutomation\SmartSwitchLi /
+//                          ght\Source\zcl_onofflight.c" -lC "D:\YHY zigbee   /
+//                          proiect\SmartLightSwitch\four                     /
+//                          key\v1.01.0\ZStack-CC2530-2.5.1a\ZStack-CC2530-2. /
+//                          5.1a\Projects\zstack\HomeAutomation\SmartSwitchLi /
+//                          ght\CC2530DB\EndDeviceEB\List\" -lA "D:\YHY       /
+//                          zigbee proiect\SmartLightSwitch\four              /
+//                          key\v1.01.0\ZStack-CC2530-2.5.1a\ZStack-CC2530-2. /
+//                          5.1a\Projects\zstack\HomeAutomation\SmartSwitchLi /
+//                          ght\CC2530DB\EndDeviceEB\List\" --diag_suppress   /
+//                          Pe001,Pa010 -o "D:\YHY zigbee                     /
+//                          proiect\SmartLightSwitch\four                     /
+//                          key\v1.01.0\ZStack-CC2530-2.5.1a\ZStack-CC2530-2. /
+//                          5.1a\Projects\zstack\HomeAutomation\SmartSwitchLi /
+//                          ght\CC2530DB\EndDeviceEB\Obj\" -e --debug         /
+//                          --core=plain --dptr=16,1 --data_model=large       /
+//                          --code_model=banked --calling_convention=xdata_re /
+//                          entrant --place_constants=data_rom                /
+//                          --nr_virtual_regs 16 -I "D:\YHY zigbee            /
+//                          proiect\SmartLightSwitch\four                     /
+//                          key\v1.01.0\ZStack-CC2530-2.5.1a\ZStack-CC2530-2. /
+//                          5.1a\Projects\zstack\HomeAutomation\SmartSwitchLi /
+//                          ght\CC2530DB\" -I "D:\YHY zigbee                  /
+//                          proiect\SmartLightSwitch\four                     /
+//                          key\v1.01.0\ZStack-CC2530-2.5.1a\ZStack-CC2530-2. /
+//                          5.1a\Projects\zstack\HomeAutomation\SmartSwitchLi /
+//                          ght\CC2530DB\..\Source\" -I "D:\YHY zigbee        /
+//                          proiect\SmartLightSwitch\four                     /
+//                          key\v1.01.0\ZStack-CC2530-2.5.1a\ZStack-CC2530-2. /
+//                          5.1a\Projects\zstack\HomeAutomation\SmartSwitchLi /
+//                          ght\CC2530DB\..\..\Source\" -I "D:\YHY zigbee     /
+//                          proiect\SmartLightSwitch\four                     /
+//                          key\v1.01.0\ZStack-CC2530-2.5.1a\ZStack-CC2530-2. /
+//                          5.1a\Projects\zstack\HomeAutomation\SmartSwitchLi /
+//                          ght\CC2530DB\..\..\..\ZMain\TI2530DB\" -I         /
+//                          "D:\YHY zigbee proiect\SmartLightSwitch\four      /
+//                          key\v1.01.0\ZStack-CC2530-2.5.1a\ZStack-CC2530-2. /
+//                          5.1a\Projects\zstack\HomeAutomation\SmartSwitchLi /
+//                          ght\CC2530DB\..\..\..\..\..\Components\hal\includ /
+//                          e\" -I "D:\YHY zigbee proiect\SmartLightSwitch\fo /
+//                          ur key\v1.01.0\ZStack-CC2530-2.5.1a\ZStack-CC2530 /
+//                          -2.5.1a\Projects\zstack\HomeAutomation\SmartSwitc /
+//                          hLight\CC2530DB\..\..\..\..\..\Components\hal\tar /
+//                          get\CC2530EB\" -I "D:\YHY zigbee                  /
+//                          proiect\SmartLightSwitch\four                     /
+//                          key\v1.01.0\ZStack-CC2530-2.5.1a\ZStack-CC2530-2. /
+//                          5.1a\Projects\zstack\HomeAutomation\SmartSwitchLi /
+//                          ght\CC2530DB\..\..\..\..\..\Components\mac\includ /
+//                          e\" -I "D:\YHY zigbee proiect\SmartLightSwitch\fo /
+//                          ur key\v1.01.0\ZStack-CC2530-2.5.1a\ZStack-CC2530 /
+//                          -2.5.1a\Projects\zstack\HomeAutomation\SmartSwitc /
+//                          hLight\CC2530DB\..\..\..\..\..\Components\mac\hig /
+//                          h_level\" -I "D:\YHY zigbee                       /
+//                          proiect\SmartLightSwitch\four                     /
+//                          key\v1.01.0\ZStack-CC2530-2.5.1a\ZStack-CC2530-2. /
+//                          5.1a\Projects\zstack\HomeAutomation\SmartSwitchLi /
+//                          ght\CC2530DB\..\..\..\..\..\Components\mac\low_le /
+//                          vel\srf04\" -I "D:\YHY zigbee                     /
+//                          proiect\SmartLightSwitch\four                     /
+//                          key\v1.01.0\ZStack-CC2530-2.5.1a\ZStack-CC2530-2. /
+//                          5.1a\Projects\zstack\HomeAutomation\SmartSwitchLi /
+//                          ght\CC2530DB\..\..\..\..\..\Components\mac\low_le /
+//                          vel\srf04\single_chip\" -I "D:\YHY zigbee         /
+//                          proiect\SmartLightSwitch\four                     /
+//                          key\v1.01.0\ZStack-CC2530-2.5.1a\ZStack-CC2530-2. /
+//                          5.1a\Projects\zstack\HomeAutomation\SmartSwitchLi /
+//                          ght\CC2530DB\..\..\..\..\..\Components\mt\" -I    /
+//                          "D:\YHY zigbee proiect\SmartLightSwitch\four      /
+//                          key\v1.01.0\ZStack-CC2530-2.5.1a\ZStack-CC2530-2. /
+//                          5.1a\Projects\zstack\HomeAutomation\SmartSwitchLi /
+//                          ght\CC2530DB\..\..\..\..\..\Components\osal\inclu /
+//                          de\" -I "D:\YHY zigbee proiect\SmartLightSwitch\f /
+//                          our key\v1.01.0\ZStack-CC2530-2.5.1a\ZStack-CC253 /
+//                          0-2.5.1a\Projects\zstack\HomeAutomation\SmartSwit /
+//                          chLight\CC2530DB\..\..\..\..\..\Components\servic /
+//                          es\saddr\" -I "D:\YHY zigbee                      /
+//                          proiect\SmartLightSwitch\four                     /
+//                          key\v1.01.0\ZStack-CC2530-2.5.1a\ZStack-CC2530-2. /
+//                          5.1a\Projects\zstack\HomeAutomation\SmartSwitchLi /
+//                          ght\CC2530DB\..\..\..\..\..\Components\services\s /
+//                          data\" -I "D:\YHY zigbee                          /
+//                          proiect\SmartLightSwitch\four                     /
+//                          key\v1.01.0\ZStack-CC2530-2.5.1a\ZStack-CC2530-2. /
+//                          5.1a\Projects\zstack\HomeAutomation\SmartSwitchLi /
+//                          ght\CC2530DB\..\..\..\..\..\Components\stack\af\" /
+//                           -I "D:\YHY zigbee proiect\SmartLightSwitch\four  /
+//                          key\v1.01.0\ZStack-CC2530-2.5.1a\ZStack-CC2530-2. /
+//                          5.1a\Projects\zstack\HomeAutomation\SmartSwitchLi /
+//                          ght\CC2530DB\..\..\..\..\..\Components\stack\nwk\ /
+//                          " -I "D:\YHY zigbee proiect\SmartLightSwitch\four /
+//                           key\v1.01.0\ZStack-CC2530-2.5.1a\ZStack-CC2530-2 /
+//                          .5.1a\Projects\zstack\HomeAutomation\SmartSwitchL /
+//                          ight\CC2530DB\..\..\..\..\..\Components\stack\sap /
+//                          i\" -I "D:\YHY zigbee proiect\SmartLightSwitch\fo /
+//                          ur key\v1.01.0\ZStack-CC2530-2.5.1a\ZStack-CC2530 /
+//                          -2.5.1a\Projects\zstack\HomeAutomation\SmartSwitc /
+//                          hLight\CC2530DB\..\..\..\..\..\Components\stack\s /
+//                          ec\" -I "D:\YHY zigbee proiect\SmartLightSwitch\f /
+//                          our key\v1.01.0\ZStack-CC2530-2.5.1a\ZStack-CC253 /
+//                          0-2.5.1a\Projects\zstack\HomeAutomation\SmartSwit /
+//                          chLight\CC2530DB\..\..\..\..\..\Components\stack\ /
+//                          sys\" -I "D:\YHY zigbee                           /
+//                          proiect\SmartLightSwitch\four                     /
+//                          key\v1.01.0\ZStack-CC2530-2.5.1a\ZStack-CC2530-2. /
+//                          5.1a\Projects\zstack\HomeAutomation\SmartSwitchLi /
+//                          ght\CC2530DB\..\..\..\..\..\Components\stack\zcl\ /
+//                          " -I "D:\YHY zigbee proiect\SmartLightSwitch\four /
+//                           key\v1.01.0\ZStack-CC2530-2.5.1a\ZStack-CC2530-2 /
+//                          .5.1a\Projects\zstack\HomeAutomation\SmartSwitchL /
+//                          ight\CC2530DB\..\..\..\..\..\Components\stack\zdo /
+//                          \" -I "D:\YHY zigbee proiect\SmartLightSwitch\fou /
+//                          r key\v1.01.0\ZStack-CC2530-2.5.1a\ZStack-CC2530- /
+//                          2.5.1a\Projects\zstack\HomeAutomation\SmartSwitch /
+//                          Light\CC2530DB\..\..\..\..\..\Components\zmac\"   /
+//                          -I "D:\YHY zigbee proiect\SmartLightSwitch\four   /
+//                          key\v1.01.0\ZStack-CC2530-2.5.1a\ZStack-CC2530-2. /
+//                          5.1a\Projects\zstack\HomeAutomation\SmartSwitchLi /
+//                          ght\CC2530DB\..\..\..\..\..\Components\zmac\f8w\" /
+//                           -Oh --require_prototypes                         /
+//    List file          =  D:\YHY zigbee proiect\SmartLightSwitch\four       /
+//                          key\v1.01.0\ZStack-CC2530-2.5.1a\ZStack-CC2530-2. /
+//                          5.1a\Projects\zstack\HomeAutomation\SmartSwitchLi /
+//                          ght\CC2530DB\EndDeviceEB\List\zcl_onofflight.s51  /
+//                                                                            /
+//                                                                            /
+///////////////////////////////////////////////////////////////////////////////
+
+        NAME zcl_onofflight
+
+        RTMODEL "__SystemLibrary", "CLib"
+        RTMODEL "__calling_convention", "xdata_reentrant"
+        RTMODEL "__code_model", "banked"
+        RTMODEL "__core", "plain"
+        RTMODEL "__data_model", "large"
+        RTMODEL "__dptr_size", "16"
+        RTMODEL "__extended_stack", "disabled"
+        RTMODEL "__location_for_constants", "data"
+        RTMODEL "__number_of_dptrs", "1"
+        RTMODEL "__rt_version", "1"
+
+        RSEG DOVERLAY:DATA:NOROOT(0)
+        RSEG IOVERLAY:IDATA:NOROOT(0)
+        RSEG ISTACK:IDATA:NOROOT(0)
+        RSEG PSTACK:XDATA:NOROOT(0)
+        RSEG XSTACK:XDATA:NOROOT(0)
+
+        EXTERN ?BANKED_ENTER_XDATA
+        EXTERN ?BANKED_LEAVE_XDATA
+        EXTERN ?BDISPATCH
+        EXTERN ?BRET
+        EXTERN ?UC_SWITCH_SPARSE
+        EXTERN ?US_SWITCH_SPARSE
+        EXTERN ?V0
+        EXTERN __INIT_XDATA_I
+        EXTERN __INIT_XDATA_Z
+
+        PUBLIC ??Device_App_MessageMSGCB?relay
+        FUNCTION ??Device_App_MessageMSGCB?relay,0203H
+        FUNCTION ??zclOnOffLight0_OnOffCB?relay,0203H
+        FUNCTION ??zclOnOffLight1_OnOffCB?relay,0203H
+        FUNCTION ??zclOnOffLight2_OnOffCB?relay,0203H
+        FUNCTION ??zclOnOffLight3_OnOffCB?relay,0203H
+        FUNCTION ??zclOnOffLight_BasicResetCB?relay,0203H
+        FUNCTION ??zclOnOffLight_IdentifyCB?relay,0203H
+        FUNCTION ??zclOnOffLight_IdentifyQueryRspCB?relay,0203H
+        PUBLIC ??zclOnOffLight_Init?relay
+        FUNCTION ??zclOnOffLight_Init?relay,0203H
+        FUNCTION ??zclOnOffLight_OnOffCB?relay,0203H
+        PUBLIC ??zclOnOffLight_event_loop?relay
+        FUNCTION ??zclOnOffLight_event_loop?relay,0203H
+        PUBLIC DeviceApp_epDesc
+        PUBLIC Device_App_MessageMSGCB
+        FUNCTION Device_App_MessageMSGCB,0a1203H
+        ARGFRAME XSTACK, 12, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        LOCFRAME XSTACK, 10, STACK
+        PUBWEAK _A_P0
+        PUBWEAK _A_P1
+        PUBLIC abno_led
+        PUBLIC flashledflag
+        PUBLIC g_u8JoinNwkOnce
+        PUBLIC g_u8restFlag
+        PUBLIC ledcontrol
+        PUBLIC valu
+        PUBLIC zclDevice_InitDone
+        PUBLIC zclDevice_JoinNetworkOk
+        PUBLIC zclDevice_NwkState
+        PUBLIC zclDevice_RejoinCounter
+        FUNCTION zclOnOffLight0_OnOffCB,021603H
+        ARGFRAME XSTACK, 0, STACK
+        LOCFRAME XSTACK, 9, STACK
+        FUNCTION zclOnOffLight1_OnOffCB,021603H
+        ARGFRAME XSTACK, 0, STACK
+        LOCFRAME XSTACK, 9, STACK
+        FUNCTION zclOnOffLight2_OnOffCB,021603H
+        ARGFRAME XSTACK, 0, STACK
+        LOCFRAME XSTACK, 9, STACK
+        FUNCTION zclOnOffLight3_OnOffCB,021603H
+        ARGFRAME XSTACK, 0, STACK
+        LOCFRAME XSTACK, 9, STACK
+        FUNCTION zclOnOffLight_BasicResetCB,0603H
+        ARGFRAME XSTACK, 0, STACK
+        FUNCTION zclOnOffLight_IdentifyCB,021603H
+        ARGFRAME XSTACK, 0, STACK
+        LOCFRAME ISTACK, 2, STACK
+        FUNCTION zclOnOffLight_IdentifyQueryRspCB,0603H
+        ARGFRAME XSTACK, 0, STACK
+        PUBLIC zclOnOffLight_Init
+        FUNCTION zclOnOffLight_Init,021203H
+        ARGFRAME XSTACK, 0, STACK
+        LOCFRAME XSTACK, 9, STACK
+        FUNCTION zclOnOffLight_OnOffCB,021203H
+        ARGFRAME XSTACK, 9, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        LOCFRAME XSTACK, 9, STACK
+        PUBLIC zclOnOffLight_TaskID
+        PUBLIC zclOnOffLight_event_loop
+        FUNCTION zclOnOffLight_event_loop,0a1203H
+        ARGFRAME XSTACK, 0, STACK
+        LOCFRAME XSTACK, 12, STACK
+        PUBLIC zcl_Led_Blink
+        
+        CFI Names cfiNames0
+        CFI StackFrame CFA_SP SP IDATA
+        CFI StackFrame CFA_PSP16 PSP16 XDATA
+        CFI StackFrame CFA_XSP16 XSP16 XDATA
+        CFI StaticOverlayFrame CFA_IOVERLAY IOVERLAY
+        CFI StaticOverlayFrame CFA_DOVERLAY DOVERLAY
+        CFI Resource `PSW.CY`:1, `B.BR0`:1, `B.BR1`:1, `B.BR2`:1, `B.BR3`:1
+        CFI Resource `B.BR4`:1, `B.BR5`:1, `B.BR6`:1, `B.BR7`:1, `VB.BR8`:1
+        CFI Resource `VB.BR9`:1, `VB.BR10`:1, `VB.BR11`:1, `VB.BR12`:1
+        CFI Resource `VB.BR13`:1, `VB.BR14`:1, `VB.BR15`:1, VB:8, B:8, A:8
+        CFI Resource PSW:8, DPL0:8, DPH0:8, R0:8, R1:8, R2:8, R3:8, R4:8, R5:8
+        CFI Resource R6:8, R7:8, V0:8, V1:8, V2:8, V3:8, V4:8, V5:8, V6:8, V7:8
+        CFI Resource V8:8, V9:8, V10:8, V11:8, V12:8, V13:8, V14:8, V15:8, SP:8
+        CFI Resource PSPH:8, PSPL:8, PSP16:16, XSPH:8, XSPL:8, XSP16:16
+        CFI VirtualResource ?RET:24
+        CFI Resource ?BRET_EXT:8
+        CFI VirtualResource ?RET_HIGH:8, ?RET_LOW:8
+        CFI ResourceParts PSP16 PSPH, PSPL
+        CFI ResourceParts XSP16 XSPH, XSPL
+        CFI ResourceParts ?RET ?BRET_EXT, ?RET_HIGH, ?RET_LOW
+        CFI EndNames cfiNames0
+        
+        CFI Common cfiCommon0 Using cfiNames0
+        CFI CodeAlign 1
+        CFI DataAlign -1
+        CFI ReturnAddress ?RET CODE
+        CFI CFA_DOVERLAY Used
+        CFI CFA_IOVERLAY Used
+        CFI CFA_SP SP+-3
+        CFI CFA_PSP16 PSP16+0
+        CFI CFA_XSP16 XSP16+0
+        CFI `PSW.CY` SameValue
+        CFI `B.BR0` SameValue
+        CFI `B.BR1` SameValue
+        CFI `B.BR2` SameValue
+        CFI `B.BR3` SameValue
+        CFI `B.BR4` SameValue
+        CFI `B.BR5` SameValue
+        CFI `B.BR6` SameValue
+        CFI `B.BR7` SameValue
+        CFI `VB.BR8` SameValue
+        CFI `VB.BR9` SameValue
+        CFI `VB.BR10` SameValue
+        CFI `VB.BR11` SameValue
+        CFI `VB.BR12` SameValue
+        CFI `VB.BR13` SameValue
+        CFI `VB.BR14` SameValue
+        CFI `VB.BR15` SameValue
+        CFI VB SameValue
+        CFI B Undefined
+        CFI A Undefined
+        CFI PSW SameValue
+        CFI DPL0 SameValue
+        CFI DPH0 SameValue
+        CFI R0 Undefined
+        CFI R1 Undefined
+        CFI R2 Undefined
+        CFI R3 Undefined
+        CFI R4 Undefined
+        CFI R5 Undefined
+        CFI R6 SameValue
+        CFI R7 SameValue
+        CFI V0 SameValue
+        CFI V1 SameValue
+        CFI V2 SameValue
+        CFI V3 SameValue
+        CFI V4 SameValue
+        CFI V5 SameValue
+        CFI V6 SameValue
+        CFI V7 SameValue
+        CFI V8 SameValue
+        CFI V9 SameValue
+        CFI V10 SameValue
+        CFI V11 SameValue
+        CFI V12 SameValue
+        CFI V13 SameValue
+        CFI V14 SameValue
+        CFI V15 SameValue
+        CFI PSPH Undefined
+        CFI PSPL Undefined
+        CFI XSPH Undefined
+        CFI XSPL Undefined
+        CFI ?RET Concat
+        CFI ?BRET_EXT Frame(CFA_SP, 3)
+        CFI ?RET_HIGH Frame(CFA_SP, 2)
+        CFI ?RET_LOW Frame(CFA_SP, 1)
+        CFI EndCommon cfiCommon0
+        
+        
+        CFI Common cfiCommon1 Using cfiNames0
+        CFI CodeAlign 1
+        CFI DataAlign -1
+        CFI ReturnAddress ?RET CODE
+        CFI CFA_DOVERLAY Used
+        CFI CFA_IOVERLAY Used
+        CFI CFA_SP SP+-2
+        CFI CFA_PSP16 PSP16+0
+        CFI CFA_XSP16 XSP16+0
+        CFI `PSW.CY` SameValue
+        CFI `B.BR0` SameValue
+        CFI `B.BR1` SameValue
+        CFI `B.BR2` SameValue
+        CFI `B.BR3` SameValue
+        CFI `B.BR4` SameValue
+        CFI `B.BR5` SameValue
+        CFI `B.BR6` SameValue
+        CFI `B.BR7` SameValue
+        CFI `VB.BR8` SameValue
+        CFI `VB.BR9` SameValue
+        CFI `VB.BR10` SameValue
+        CFI `VB.BR11` SameValue
+        CFI `VB.BR12` SameValue
+        CFI `VB.BR13` SameValue
+        CFI `VB.BR14` SameValue
+        CFI `VB.BR15` SameValue
+        CFI VB SameValue
+        CFI B SameValue
+        CFI A SameValue
+        CFI PSW SameValue
+        CFI DPL0 SameValue
+        CFI DPH0 SameValue
+        CFI R0 SameValue
+        CFI R1 SameValue
+        CFI R2 SameValue
+        CFI R3 SameValue
+        CFI R4 SameValue
+        CFI R5 SameValue
+        CFI R6 SameValue
+        CFI R7 SameValue
+        CFI V0 SameValue
+        CFI V1 SameValue
+        CFI V2 SameValue
+        CFI V3 SameValue
+        CFI V4 SameValue
+        CFI V5 SameValue
+        CFI V6 SameValue
+        CFI V7 SameValue
+        CFI V8 SameValue
+        CFI V9 SameValue
+        CFI V10 SameValue
+        CFI V11 SameValue
+        CFI V12 SameValue
+        CFI V13 SameValue
+        CFI V14 SameValue
+        CFI V15 SameValue
+        CFI PSPH Undefined
+        CFI PSPL Undefined
+        CFI XSPH Undefined
+        CFI XSPL Undefined
+        CFI ?RET Concat
+        CFI ?BRET_EXT SameValue
+        CFI ?RET_HIGH Frame(CFA_SP, 2)
+        CFI ?RET_LOW Frame(CFA_SP, 1)
+        CFI EndCommon cfiCommon1
+        
+afRegister          SYMBOL "afRegister"
+zclHA_Init          SYMBOL "zclHA_Init"
+zclGeneral_RegisterCmdCallbacks SYMBOL "zclGeneral_RegisterCmdCallbacks"
+zcl_registerAttrList SYMBOL "zcl_registerAttrList"
+zcl_registerForMsg  SYMBOL "zcl_registerForMsg"
+RegisterForKeys     SYMBOL "RegisterForKeys"
+zclDeviceInfoInit   SYMBOL "zclDeviceInfoInit"
+zclLightControlInit SYMBOL "zclLightControlInit"
+zclSendHeartbeat    SYMBOL "zclSendHeartbeat"
+zclLightReportEvent SYMBOL "zclLightReportEvent"
+osal_start_timerEx  SYMBOL "osal_start_timerEx"
+osal_msg_deallocate SYMBOL "osal_msg_deallocate"
+osal_msg_receive    SYMBOL "osal_msg_receive"
+osal_mem_free       SYMBOL "osal_mem_free"
+HalUARTWrite        SYMBOL "HalUARTWrite"
+NLME_PermitJoiningRequest SYMBOL "NLME_PermitJoiningRequest"
+osal_rand           SYMBOL "osal_rand"
+osal_stop_timerEx   SYMBOL "osal_stop_timerEx"
+zclLightControlTouchPanelEnable SYMBOL "zclLightControlTouchPanelEnable"
+zclSendDeviceInfo   SYMBOL "zclSendDeviceInfo"
+zclTouchPanelEvent  SYMBOL "zclTouchPanelEvent"
+zclRestoreInterruptEvent SYMBOL "zclRestoreInterruptEvent"
+zclFactoryResetEvent SYMBOL "zclFactoryResetEvent"
+zclFactoryReset     SYMBOL "zclFactoryReset"
+??HalUARTWrite?relay SYMBOL "?relay", HalUARTWrite
+??NLME_PermitJoiningRequest?relay SYMBOL "?relay", NLME_PermitJoiningRequest
+??RegisterForKeys?relay SYMBOL "?relay", RegisterForKeys
+??afRegister?relay  SYMBOL "?relay", afRegister
+??osal_mem_free?relay SYMBOL "?relay", osal_mem_free
+??osal_msg_deallocate?relay SYMBOL "?relay", osal_msg_deallocate
+??osal_msg_receive?relay SYMBOL "?relay", osal_msg_receive
+??osal_rand?relay   SYMBOL "?relay", osal_rand
+??osal_start_timerEx?relay SYMBOL "?relay", osal_start_timerEx
+??osal_stop_timerEx?relay SYMBOL "?relay", osal_stop_timerEx
+??zclDeviceInfoInit?relay SYMBOL "?relay", zclDeviceInfoInit
+??zclFactoryReset?relay SYMBOL "?relay", zclFactoryReset
+??zclFactoryResetEvent?relay SYMBOL "?relay", zclFactoryResetEvent
+??zclGeneral_RegisterCmdCallbacks?relay SYMBOL "?relay", zclGeneral_RegisterCmdCallbacks
+??zclHA_Init?relay  SYMBOL "?relay", zclHA_Init
+??zclLightControlInit?relay SYMBOL "?relay", zclLightControlInit
+??zclLightControlTouchPanelEnable?relay SYMBOL "?relay", zclLightControlTouchPanelEnable
+??zclLightReportEvent?relay SYMBOL "?relay", zclLightReportEvent
+??zclRestoreInterruptEvent?relay SYMBOL "?relay", zclRestoreInterruptEvent
+??zclSendDeviceInfo?relay SYMBOL "?relay", zclSendDeviceInfo
+??zclSendHeartbeat?relay SYMBOL "?relay", zclSendHeartbeat
+??zclTouchPanelEvent?relay SYMBOL "?relay", zclTouchPanelEvent
+??zcl_registerAttrList?relay SYMBOL "?relay", zcl_registerAttrList
+??zcl_registerForMsg?relay SYMBOL "?relay", zcl_registerForMsg
+Device_App_MessageMSGCB SYMBOL "Device_App_MessageMSGCB"
+??Device_App_MessageMSGCB?relay SYMBOL "?relay", Device_App_MessageMSGCB
+zclOnOffLight_Init  SYMBOL "zclOnOffLight_Init"
+??zclOnOffLight_Init?relay SYMBOL "?relay", zclOnOffLight_Init
+zclOnOffLight_event_loop SYMBOL "zclOnOffLight_event_loop"
+??zclOnOffLight_event_loop?relay SYMBOL "?relay", zclOnOffLight_event_loop
+
+        EXTERN afRegister
+        FUNCTION afRegister,0202H
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 9, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        EXTERN zclHA_Init
+        FUNCTION zclHA_Init,0202H
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 9, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        EXTERN zclGeneral_RegisterCmdCallbacks
+        FUNCTION zclGeneral_RegisterCmdCallbacks,0202H
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 9, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        EXTERN zcl_registerAttrList
+        FUNCTION zcl_registerAttrList,0202H
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 9, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        EXTERN zcl_registerForMsg
+        FUNCTION zcl_registerForMsg,0202H
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 9, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        EXTERN RegisterForKeys
+        FUNCTION RegisterForKeys,0202H
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 9, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        EXTERN zclDeviceInfoInit
+        FUNCTION zclDeviceInfoInit,0202H
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 9, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        EXTERN zclLightControlInit
+        FUNCTION zclLightControlInit,0202H
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 9, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        EXTERN zclSendHeartbeat
+        FUNCTION zclSendHeartbeat,0202H
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 12, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        EXTERN zclLightReportEvent
+        FUNCTION zclLightReportEvent,0202H
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 12, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        EXTERN osal_start_timerEx
+        FUNCTION osal_start_timerEx,0202H
+        ARGFRAME ISTACK, 2, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 12, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        EXTERN osal_msg_deallocate
+        FUNCTION osal_msg_deallocate,0202H
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 12, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        EXTERN osal_msg_receive
+        FUNCTION osal_msg_receive,0202H
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 12, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        EXTERN osal_mem_free
+        FUNCTION osal_mem_free,0202H
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 12, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        EXTERN HalUARTWrite
+        FUNCTION HalUARTWrite,0202H
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 12, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        EXTERN NLME_PermitJoiningRequest
+        FUNCTION NLME_PermitJoiningRequest,0202H
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 12, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        EXTERN osal_rand
+        FUNCTION osal_rand,0202H
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 12, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        EXTERN osal_stop_timerEx
+        FUNCTION osal_stop_timerEx,0202H
+        ARGFRAME ISTACK, 2, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 12, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        EXTERN zclLightControlTouchPanelEnable
+        FUNCTION zclLightControlTouchPanelEnable,0202H
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 12, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        EXTERN zclSendDeviceInfo
+        FUNCTION zclSendDeviceInfo,0202H
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 12, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        EXTERN zclTouchPanelEvent
+        FUNCTION zclTouchPanelEvent,0202H
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 12, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        EXTERN zclRestoreInterruptEvent
+        FUNCTION zclRestoreInterruptEvent,0202H
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 12, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        EXTERN zclFactoryResetEvent
+        FUNCTION zclFactoryResetEvent,0202H
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 12, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        EXTERN zclFactoryReset
+        FUNCTION zclFactoryReset,0202H
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 12, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        EXTERN ??HalUARTWrite?relay
+        FUNCTION ??HalUARTWrite?relay,00H
+        EXTERN ??NLME_PermitJoiningRequest?relay
+        FUNCTION ??NLME_PermitJoiningRequest?relay,00H
+        EXTERN ??RegisterForKeys?relay
+        FUNCTION ??RegisterForKeys?relay,00H
+        EXTERN ??afRegister?relay
+        FUNCTION ??afRegister?relay,00H
+        EXTERN ??osal_mem_free?relay
+        FUNCTION ??osal_mem_free?relay,00H
+        EXTERN ??osal_msg_deallocate?relay
+        FUNCTION ??osal_msg_deallocate?relay,00H
+        EXTERN ??osal_msg_receive?relay
+        FUNCTION ??osal_msg_receive?relay,00H
+        EXTERN ??osal_rand?relay
+        FUNCTION ??osal_rand?relay,00H
+        EXTERN ??osal_start_timerEx?relay
+        FUNCTION ??osal_start_timerEx?relay,00H
+        EXTERN ??osal_stop_timerEx?relay
+        FUNCTION ??osal_stop_timerEx?relay,00H
+        EXTERN ??zclDeviceInfoInit?relay
+        FUNCTION ??zclDeviceInfoInit?relay,00H
+        EXTERN ??zclFactoryReset?relay
+        FUNCTION ??zclFactoryReset?relay,00H
+        EXTERN ??zclFactoryResetEvent?relay
+        FUNCTION ??zclFactoryResetEvent?relay,00H
+        EXTERN ??zclGeneral_RegisterCmdCallbacks?relay
+        FUNCTION ??zclGeneral_RegisterCmdCallbacks?relay,00H
+        EXTERN ??zclHA_Init?relay
+        FUNCTION ??zclHA_Init?relay,00H
+        EXTERN ??zclLightControlInit?relay
+        FUNCTION ??zclLightControlInit?relay,00H
+        EXTERN ??zclLightControlTouchPanelEnable?relay
+        FUNCTION ??zclLightControlTouchPanelEnable?relay,00H
+        EXTERN ??zclLightReportEvent?relay
+        FUNCTION ??zclLightReportEvent?relay,00H
+        EXTERN ??zclRestoreInterruptEvent?relay
+        FUNCTION ??zclRestoreInterruptEvent?relay,00H
+        EXTERN ??zclSendDeviceInfo?relay
+        FUNCTION ??zclSendDeviceInfo?relay,00H
+        EXTERN ??zclSendHeartbeat?relay
+        FUNCTION ??zclSendHeartbeat?relay,00H
+        EXTERN ??zclTouchPanelEvent?relay
+        FUNCTION ??zclTouchPanelEvent?relay,00H
+        EXTERN ??zcl_registerAttrList?relay
+        FUNCTION ??zcl_registerAttrList?relay,00H
+        EXTERN ??zcl_registerForMsg?relay
+        FUNCTION ??zcl_registerForMsg?relay,00H
+        EXTERN zclOnOffLight0_Attrs
+        EXTERN zclOnOffLight0_OnOff
+        EXTERN zclOnOffLight0_SimpleDesc
+        EXTERN zclOnOffLight1_Attrs
+        EXTERN zclOnOffLight1_OnOff
+        EXTERN zclOnOffLight1_SimpleDesc
+        EXTERN zclOnOffLight2_Attrs
+        EXTERN zclOnOffLight2_OnOff
+        EXTERN zclOnOffLight2_SimpleDesc
+        EXTERN zclOnOffLight3_Attrs
+        EXTERN zclOnOffLight3_OnOff
+        EXTERN zclOnOffLight3_SimpleDesc
+        EXTERN zclOnOffLight_IdentifyTime
+
+// D:\YHY zigbee proiect\SmartLightSwitch\four key\v1.01.0\ZStack-CC2530-2.5.1a\ZStack-CC2530-2.5.1a\Projects\zstack\HomeAutomation\SmartSwitchLight\Source\zcl_onofflight.c
+//    1 /**************************************************************************************************
+//    2   Filename:       zcl_sampleLight.c
+//    3   Revised:        $Date: 2009-03-18 15:56:27 -0700 (Wed, 18 Mar 2009) $
+//    4   Revision:       $Revision: 19453 $
+//    5 
+//    6 
+//    7   Description:    Zigbee Cluster Library - sample device application.
+//    8 
+//    9 
+//   10   Copyright 2006-2009 Texas Instruments Incorporated. All rights reserved.
+//   11 
+//   12   IMPORTANT: Your use of this Software is limited to those specific rights
+//   13   granted under the terms of a software license agreement between the user
+//   14   who downloaded the software, his/her employer (which must be your employer)
+//   15   and Texas Instruments Incorporated (the "License").  You may not use this
+//   16   Software unless you agree to abide by the terms of the License. The License
+//   17   limits your use, and you acknowledge, that the Software may not be modified,
+//   18   copied or distributed unless embedded on a Texas Instruments microcontroller
+//   19   or used solely and exclusively in conjunction with a Texas Instruments radio
+//   20   frequency transceiver, which is integrated into your product.  Other than for
+//   21   the foregoing purpose, you may not use, reproduce, copy, prepare derivative
+//   22   works of, modify, distribute, perform, display or sell this Software and/or
+//   23   its documentation for any purpose.
+//   24 
+//   25   YOU FURTHER ACKNOWLEDGE AND AGREE THAT THE SOFTWARE AND DOCUMENTATION ARE
+//   26   PROVIDED “AS IS?WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED, 
+//   27   INCLUDING WITHOUT LIMITATION, ANY WARRANTY OF MERCHANTABILITY, TITLE, 
+//   28   NON-INFRINGEMENT AND FITNESS FOR A PARTICULAR PURPOSE. IN NO EVENT SHALL
+//   29   TEXAS INSTRUMENTS OR ITS LICENSORS BE LIABLE OR OBLIGATED UNDER CONTRACT,
+//   30   NEGLIGENCE, STRICT LIABILITY, CONTRIBUTION, BREACH OF WARRANTY, OR OTHER
+//   31   LEGAL EQUITABLE THEORY ANY DIRECT OR INDIRECT DAMAGES OR EXPENSES
+//   32   INCLUDING BUT NOT LIMITED TO ANY INCIDENTAL, SPECIAL, INDIRECT, PUNITIVE
+//   33   OR CONSEQUENTIAL DAMAGES, LOST PROFITS OR LOST DATA, COST OF PROCUREMENT
+//   34   OF SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
+//   35   (INCLUDING BUT NOT LIMITED TO ANY DEFENSE THEREOF), OR OTHER SIMILAR COSTS.
+//   36 
+//   37   Should you have any questions regarding your right to use this Software,
+//   38   contact Texas Instruments Incorporated at www.TI.com. 
+//   39 **************************************************************************************************/
+//   40 
+//   41 /*********************************************************************
+//   42   This device will be like a Light device.  This application is not
+//   43   intended to be a Light device, but will use the device description
+//   44   to implement this sample code.
+//   45 *********************************************************************/
+//   46 
+//   47 /*********************************************************************
+//   48  * INCLUDES
+//   49  */
+//   50 #include "ZComDef.h"
+//   51 #include "OSAL.h"
+//   52 #include "AF.h"
+//   53 #include "ZDApp.h"
+//   54 
+//   55 #include "zcl.h"
+//   56 #include "zcl_general.h"
+//   57 #include "zcl_ha.h"
+//   58 
+//   59 #include "zcl_onofflight.h"
+//   60 
+//   61 #include "onboard.h"
+
+        ASEGN SFR_AN:DATA:NOROOT,080H
+// union <unnamed> volatile __sfr _A_P0
+_A_P0:
+        DATA8
+        DS 1
+
+        ASEGN SFR_AN:DATA:NOROOT,090H
+// union <unnamed> volatile __sfr _A_P1
+_A_P1:
+        DATA8
+        DS 1
+//   62 
+//   63 /* HAL */
+//   64 #include "hal_lcd.h"
+//   65 #include "hal_led.h"
+//   66 #include "hal_key.h"
+//   67 
+//   68 #include "zcl_light_control.h"
+//   69 #include "zcl_device_info.h"
+//   70 
+//   71 /*********************************************************************
+//   72  * MACROS
+//   73  */
+//   74 
+//   75 /*********************************************************************
+//   76  * CONSTANTS
+//   77  */
+//   78 /*********************************************************************
+//   79  * TYPEDEFS
+//   80  */
+//   81 
+//   82 /*********************************************************************
+//   83  * GLOBAL VARIABLES
+//   84  */
+
+        RSEG XDATA_Z:XDATA:NOROOT(0)
+        DATA8
+//   85 byte zclOnOffLight_TaskID;
+zclOnOffLight_TaskID:
+        DS 1
+        REQUIRE __INIT_XDATA_Z
+
+        RSEG XDATA_Z:XDATA:NOROOT(0)
+        DATA8
+//   86 devStates_t zclDevice_NwkState;
+zclDevice_NwkState:
+        DS 1
+        REQUIRE __INIT_XDATA_Z
+
+        RSEG XDATA_Z:XDATA:NOROOT(0)
+        DATA8
+//   87 uint8 zclDevice_RejoinCounter = 0;
+zclDevice_RejoinCounter:
+        DS 1
+        REQUIRE __INIT_XDATA_Z
+
+        RSEG XDATA_I:XDATA:NOROOT(0)
+//   88 int8 zclDevice_JoinNetworkOk = 8;
+zclDevice_JoinNetworkOk:
+        DATA8
+        DS 1
+        REQUIRE `?<Initializer for zclDevice_JoinNetworkOk>`
+        REQUIRE __INIT_XDATA_I
+
+        RSEG XDATA_Z:XDATA:NOROOT(0)
+        DATA8
+//   89 int8 zclDevice_InitDone = 0;
+zclDevice_InitDone:
+        DS 1
+        REQUIRE __INIT_XDATA_Z
+
+        RSEG XDATA_Z:XDATA:NOROOT(0)
+        DATA8
+//   90 uint8 zcl_Led_Blink = 0;
+zcl_Led_Blink:
+        DS 1
+        REQUIRE __INIT_XDATA_Z
+
+        RSEG XDATA_Z:XDATA:NOROOT(0)
+        DATA8
+//   91 endPointDesc_t DeviceApp_epDesc;
+DeviceApp_epDesc:
+        DS 6
+        REQUIRE __INIT_XDATA_Z
+
+        RSEG XDATA_Z:XDATA:NOROOT(0)
+        DATA8
+//   92 uint8 g_u8JoinNwkOnce = 0;
+g_u8JoinNwkOnce:
+        DS 1
+        REQUIRE __INIT_XDATA_Z
+
+        RSEG XDATA_Z:XDATA:NOROOT(0)
+        DATA8
+//   93 uint8 g_u8restFlag = 0;
+g_u8restFlag:
+        DS 1
+        REQUIRE __INIT_XDATA_Z
+
+        RSEG XDATA_Z:XDATA:NOROOT(0)
+        DATA8
+//   94 uint8 abno_led = 0;
+abno_led:
+        DS 1
+        REQUIRE __INIT_XDATA_Z
+
+        RSEG XDATA_Z:XDATA:NOROOT(0)
+        DATA8
+//   95 uint8 flashledflag = 0;
+flashledflag:
+        DS 1
+        REQUIRE __INIT_XDATA_Z
+
+        RSEG XDATA_Z:XDATA:NOROOT(0)
+        DATA8
+//   96 uint8 valu = 0;
+valu:
+        DS 1
+        REQUIRE __INIT_XDATA_Z
+
+        RSEG XDATA_Z:XDATA:NOROOT(0)
+        DATA8
+//   97 uint8 ledcontrol = 0;
+ledcontrol:
+        DS 1
+        REQUIRE __INIT_XDATA_Z
+//   98 /*********************************************************************
+//   99  * GLOBAL FUNCTIONS
+//  100  */
+//  101 
+//  102 /*********************************************************************
+//  103  * LOCAL VARIABLES
+//  104  */
+//  105 //static afAddrType_t zclOnOffLight_DstAddr;
+//  106 
+//  107 /*********************************************************************
+//  108  * LOCAL FUNCTIONS
+//  109  */
+//  110 static void zclOnOffLight_HandleKeys( byte shift, byte keys );
+//  111 static void zclOnOffLight_BasicResetCB( void );
+//  112 static void zclOnOffLight_IdentifyCB( zclIdentify_t *pCmd );
+//  113 static void zclOnOffLight_IdentifyQueryRspCB( zclIdentifyQueryRsp_t *pRsp );
+//  114 static void zclOnOffLight0_OnOffCB(uint8 cmd );
+//  115 static void zclOnOffLight1_OnOffCB(uint8 cmd );
+//  116 static void zclOnOffLight2_OnOffCB(uint8 cmd );
+//  117 static void zclOnOffLight3_OnOffCB(uint8 cmd );
+//  118 static void zclOnOffLight_OnOffCB(uint8 light, uint8 cmd );
+//  119 static void zclOnOffLight_ProcessIdentifyTimeChange( void );
+//  120 static void PrintfNetState( devStates_t NwkState );
+//  121 
+//  122 // Functions to process ZCL Foundation incoming Command/Response messages 
+//  123 static void zclOnOffLight_ProcessIncomingMsg( zclIncomingMsg_t *msg );
+//  124 #ifdef ZCL_READ
+//  125 static uint8 zclOnOffLight_ProcessInReadRspCmd( zclIncomingMsg_t *pInMsg );
+//  126 #endif
+//  127 #ifdef ZCL_WRITE
+//  128 static uint8 zclOnOffLight_ProcessInWriteRspCmd( zclIncomingMsg_t *pInMsg );
+//  129 #endif
+//  130 static uint8 zclOnOffLight_ProcessInDefaultRspCmd( zclIncomingMsg_t *pInMsg );
+//  131 #ifdef ZCL_DISCOVER
+//  132 static uint8 zclOnOffLight_ProcessInDiscRspCmd( zclIncomingMsg_t *pInMsg );
+//  133 #endif
+//  134 
+//  135 /*********************************************************************
+//  136  * ZCL General Profile Callback table
+//  137  */
+
+        RSEG XDATA_I:XDATA:NOROOT(0)
+//  138 static zclGeneral_AppCallbacks_t zclOnOffLight0_CmdCallbacks =
+zclOnOffLight0_CmdCallbacks:
+        DATA8
+        DS 30
+        REQUIRE `?<Initializer for zclOnOffLight0_CmdCallbacks>`
+        REQUIRE __INIT_XDATA_I
+//  139 {
+//  140   zclOnOffLight_BasicResetCB,              // Basic Cluster Reset command
+//  141   zclOnOffLight_IdentifyCB,                // Identify command  
+//  142   zclOnOffLight_IdentifyQueryRspCB,        // Identify Query Response command
+//  143   zclOnOffLight0_OnOffCB,                   // On/Off cluster command
+//  144   NULL,                                     // Level Control Move to Level command
+//  145   NULL,                                     // Level Control Move command
+//  146   NULL,                                     // Level Control Step command
+//  147   NULL,                                     // Group Response commands
+//  148   NULL,                                     // Scene Store Request command
+//  149   NULL,                                     // Scene Recall Request command
+//  150   NULL,                                     // Scene Response command
+//  151   NULL,                                     // Alarm (Response) command
+//  152   NULL,                                     // RSSI Location commands
+//  153   NULL,                                     // RSSI Location Response commands
+//  154 };
+
+        RSEG XDATA_I:XDATA:NOROOT(0)
+//  155 static zclGeneral_AppCallbacks_t zclOnOffLight1_CmdCallbacks =
+zclOnOffLight1_CmdCallbacks:
+        DATA8
+        DS 30
+        REQUIRE `?<Initializer for zclOnOffLight1_CmdCallbacks>`
+        REQUIRE __INIT_XDATA_I
+//  156 {
+//  157   zclOnOffLight_BasicResetCB,              // Basic Cluster Reset command
+//  158   zclOnOffLight_IdentifyCB,                // Identify command  
+//  159   zclOnOffLight_IdentifyQueryRspCB,        // Identify Query Response command
+//  160   zclOnOffLight1_OnOffCB,                   // On/Off cluster command
+//  161   NULL,                                     // Level Control Move to Level command
+//  162   NULL,                                     // Level Control Move command
+//  163   NULL,                                     // Level Control Step command
+//  164   NULL,                                     // Group Response commands
+//  165   NULL,                                     // Scene Store Request command
+//  166   NULL,                                     // Scene Recall Request command
+//  167   NULL,                                     // Scene Response command
+//  168   NULL,                                     // Alarm (Response) command
+//  169   NULL,                                     // RSSI Location commands
+//  170   NULL,                                     // RSSI Location Response commands
+//  171 };
+
+        RSEG XDATA_I:XDATA:NOROOT(0)
+//  172 static zclGeneral_AppCallbacks_t zclOnOffLight2_CmdCallbacks =
+zclOnOffLight2_CmdCallbacks:
+        DATA8
+        DS 30
+        REQUIRE `?<Initializer for zclOnOffLight2_CmdCallbacks>`
+        REQUIRE __INIT_XDATA_I
+//  173 {
+//  174   zclOnOffLight_BasicResetCB,              // Basic Cluster Reset command
+//  175   zclOnOffLight_IdentifyCB,                // Identify command  
+//  176   zclOnOffLight_IdentifyQueryRspCB,        // Identify Query Response command
+//  177   zclOnOffLight2_OnOffCB,                   // On/Off cluster command
+//  178   NULL,                                     // Level Control Move to Level command
+//  179   NULL,                                     // Level Control Move command
+//  180   NULL,                                     // Level Control Step command
+//  181   NULL,                                     // Group Response commands
+//  182   NULL,                                     // Scene Store Request command
+//  183   NULL,                                     // Scene Recall Request command
+//  184   NULL,                                     // Scene Response command
+//  185   NULL,                                     // Alarm (Response) command
+//  186   NULL,                                     // RSSI Location commands
+//  187   NULL,                                     // RSSI Location Response commands
+//  188 };
+
+        RSEG XDATA_I:XDATA:NOROOT(0)
+//  189 static zclGeneral_AppCallbacks_t zclOnOffLight3_CmdCallbacks =
+zclOnOffLight3_CmdCallbacks:
+        DATA8
+        DS 30
+        REQUIRE `?<Initializer for zclOnOffLight3_CmdCallbacks>`
+        REQUIRE __INIT_XDATA_I
+//  190 {
+//  191   zclOnOffLight_BasicResetCB,              // Basic Cluster Reset command
+//  192   zclOnOffLight_IdentifyCB,                // Identify command  
+//  193   zclOnOffLight_IdentifyQueryRspCB,        // Identify Query Response command
+//  194   zclOnOffLight3_OnOffCB,                   // On/Off cluster command
+//  195   NULL,                                     // Level Control Move to Level command
+//  196   NULL,                                     // Level Control Move command
+//  197   NULL,                                     // Level Control Step command
+//  198   NULL,                                     // Group Response commands
+//  199   NULL,                                     // Scene Store Request command
+//  200   NULL,                                     // Scene Recall Request command
+//  201   NULL,                                     // Scene Response command
+//  202   NULL,                                     // Alarm (Response) command
+//  203   NULL,                                     // RSSI Location commands
+//  204   NULL,                                     // RSSI Location Response commands
+//  205 };
+//  206 /*********************************************************************
+//  207  * @fn          zclOnOffLight_Init
+//  208  *
+//  209  * @brief       Initialization function for the zclGeneral layer.
+//  210  *
+//  211  * @param       none
+//  212  *
+//  213  * @return      none
+//  214  */
+
+        RSEG BANKED_CODE:CODE:NOROOT(0)
+//  215 void zclOnOffLight_Init( byte task_id )
+zclOnOffLight_Init:
+        CFI Block cfiBlock0 Using cfiCommon0
+        CFI Function zclOnOffLight_Init
+        CODE
+//  216 {
+        FUNCALL zclOnOffLight_Init, afRegister
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 9, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 9, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL zclOnOffLight_Init, zclHA_Init
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 9, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 9, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL zclOnOffLight_Init, zclHA_Init
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 9, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 9, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL zclOnOffLight_Init, zclHA_Init
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 9, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 9, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL zclOnOffLight_Init, zclHA_Init
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 9, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 9, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL zclOnOffLight_Init, zclGeneral_RegisterCmdCallbacks
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 9, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 9, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL zclOnOffLight_Init, zclGeneral_RegisterCmdCallbacks
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 9, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 9, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL zclOnOffLight_Init, zclGeneral_RegisterCmdCallbacks
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 9, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 9, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL zclOnOffLight_Init, zclGeneral_RegisterCmdCallbacks
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 9, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 9, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL zclOnOffLight_Init, zcl_registerAttrList
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 9, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 9, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL zclOnOffLight_Init, zcl_registerAttrList
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 9, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 9, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL zclOnOffLight_Init, zcl_registerAttrList
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 9, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 9, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL zclOnOffLight_Init, zcl_registerAttrList
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 9, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 9, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL zclOnOffLight_Init, zcl_registerForMsg
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 9, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 9, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL zclOnOffLight_Init, RegisterForKeys
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 9, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 9, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL zclOnOffLight_Init, zclDeviceInfoInit
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 9, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 9, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL zclOnOffLight_Init, zclLightControlInit
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 9, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 9, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        MOV     A,#-0x9
+        LCALL   ?BANKED_ENTER_XDATA
+        CFI DPH0 load(1, XDATA, add(CFA_XSP16, literal(-1)))
+        CFI DPL0 load(1, XDATA, add(CFA_XSP16, literal(-2)))
+        CFI ?BRET_EXT load(1, XDATA, add(CFA_XSP16, literal(-3)))
+        CFI ?RET_HIGH load(1, XDATA, add(CFA_XSP16, literal(-4)))
+        CFI ?RET_LOW load(1, XDATA, add(CFA_XSP16, literal(-5)))
+        CFI R7 load(1, XDATA, add(CFA_XSP16, literal(-6)))
+        CFI V0 load(1, XDATA, add(CFA_XSP16, literal(-7)))
+        CFI VB load(1, XDATA, add(CFA_XSP16, literal(-8)))
+        CFI R6 load(1, XDATA, add(CFA_XSP16, literal(-9)))
+        CFI CFA_SP SP+0
+        CFI CFA_XSP16 add(XSP16, 9)
+        ; Saved register size: 9
+        ; Auto size: 0
+        MOV     A,R1
+//  217   zclOnOffLight_TaskID = task_id;
+        MOV     DPTR,#zclOnOffLight_TaskID
+        MOVX    @DPTR,A
+//  218   zclDevice_JoinNetworkOk = 6;
+        MOV     DPTR,#zclDevice_JoinNetworkOk
+        MOV     A,#0x6
+        MOVX    @DPTR,A
+//  219   zclDevice_NwkState = DEV_INIT;
+        MOV     DPTR,#zclDevice_NwkState
+        MOV     A,#0x1
+        MOVX    @DPTR,A
+//  220   zclDevice_InitDone = 0;
+        MOV     DPTR,#zclDevice_InitDone
+        CLR     A
+        MOVX    @DPTR,A
+//  221   zclDevice_RejoinCounter = 0;
+        MOV     DPTR,#zclDevice_RejoinCounter
+        MOVX    @DPTR,A
+//  222   // Set destination address to indirect
+//  223   //zclOnOffLight_DstAddr.addrMode = (afAddrMode_t)AddrNotPresent;
+//  224   //zclOnOffLight_DstAddr.endPoint = 0;
+//  225   //zclOnOffLight_DstAddr.addr.shortAddr = 0;
+//  226     
+//  227   DeviceApp_epDesc.endPoint = 0xF0;
+        MOV     DPTR,#DeviceApp_epDesc
+        MOV     A,#-0x10
+        MOVX    @DPTR,A
+//  228   DeviceApp_epDesc.task_id = &zclOnOffLight_TaskID;
+        INC     DPTR
+        MOV     A,#zclOnOffLight_TaskID & 0xff
+        MOVX    @DPTR,A
+        INC     DPTR
+        MOV     A,#(zclOnOffLight_TaskID >> 8) & 0xff
+        MOVX    @DPTR,A
+//  229   DeviceApp_epDesc.simpleDesc
+//  230             = (SimpleDescriptionFormat_t *)&zclOnOffLight0_SimpleDesc;
+        INC     DPTR
+        MOV     A,#zclOnOffLight0_SimpleDesc & 0xff
+        MOVX    @DPTR,A
+        INC     DPTR
+        MOV     A,#(zclOnOffLight0_SimpleDesc >> 8) & 0xff
+        MOVX    @DPTR,A
+//  231   DeviceApp_epDesc.latencyReq = noLatencyReqs;
+        INC     DPTR
+        CLR     A
+        MOVX    @DPTR,A
+//  232 
+//  233   // Register the endpoint description with the AF
+//  234   afRegister( &DeviceApp_epDesc );
+        ; Setup parameters for call to function afRegister
+        MOV     R2,#DeviceApp_epDesc & 0xff
+        MOV     R3,#(DeviceApp_epDesc >> 8) & 0xff
+        LCALL   ??afRegister?relay
+//  235 
+//  236   // This app is part of the Home Automation Profile
+//  237   zclHA_Init( &zclOnOffLight0_SimpleDesc );
+        ; Setup parameters for call to function zclHA_Init
+        MOV     R2,#zclOnOffLight0_SimpleDesc & 0xff
+        MOV     R3,#(zclOnOffLight0_SimpleDesc >> 8) & 0xff
+        LCALL   ??zclHA_Init?relay
+//  238   zclHA_Init( &zclOnOffLight1_SimpleDesc );
+        ; Setup parameters for call to function zclHA_Init
+        MOV     R2,#zclOnOffLight1_SimpleDesc & 0xff
+        MOV     R3,#(zclOnOffLight1_SimpleDesc >> 8) & 0xff
+        LCALL   ??zclHA_Init?relay
+//  239   zclHA_Init( &zclOnOffLight2_SimpleDesc );
+        ; Setup parameters for call to function zclHA_Init
+        MOV     R2,#zclOnOffLight2_SimpleDesc & 0xff
+        MOV     R3,#(zclOnOffLight2_SimpleDesc >> 8) & 0xff
+        LCALL   ??zclHA_Init?relay
+//  240   zclHA_Init( &zclOnOffLight3_SimpleDesc );
+        ; Setup parameters for call to function zclHA_Init
+        MOV     R2,#zclOnOffLight3_SimpleDesc & 0xff
+        MOV     R3,#(zclOnOffLight3_SimpleDesc >> 8) & 0xff
+        LCALL   ??zclHA_Init?relay
+//  241 
+//  242   // Register the ZCL General Cluster Library callback functions
+//  243   zclGeneral_RegisterCmdCallbacks( ONOFFLIGHT0_ENDPOINT, &zclOnOffLight0_CmdCallbacks );
+        ; Setup parameters for call to function zclGeneral_RegisterCmdCallbacks
+        MOV     R2,#zclOnOffLight0_CmdCallbacks & 0xff
+        MOV     R3,#(zclOnOffLight0_CmdCallbacks >> 8) & 0xff
+        MOV     R1,#0x10
+        LCALL   ??zclGeneral_RegisterCmdCallbacks?relay
+//  244   zclGeneral_RegisterCmdCallbacks( ONOFFLIGHT1_ENDPOINT, &zclOnOffLight1_CmdCallbacks );
+        ; Setup parameters for call to function zclGeneral_RegisterCmdCallbacks
+        MOV     R2,#zclOnOffLight1_CmdCallbacks & 0xff
+        MOV     R3,#(zclOnOffLight1_CmdCallbacks >> 8) & 0xff
+        MOV     R1,#0x11
+        LCALL   ??zclGeneral_RegisterCmdCallbacks?relay
+//  245   zclGeneral_RegisterCmdCallbacks( ONOFFLIGHT2_ENDPOINT, &zclOnOffLight2_CmdCallbacks );
+        ; Setup parameters for call to function zclGeneral_RegisterCmdCallbacks
+        MOV     R2,#zclOnOffLight2_CmdCallbacks & 0xff
+        MOV     R3,#(zclOnOffLight2_CmdCallbacks >> 8) & 0xff
+        MOV     R1,#0x12
+        LCALL   ??zclGeneral_RegisterCmdCallbacks?relay
+//  246   zclGeneral_RegisterCmdCallbacks( ONOFFLIGHT3_ENDPOINT, &zclOnOffLight3_CmdCallbacks );
+        ; Setup parameters for call to function zclGeneral_RegisterCmdCallbacks
+        MOV     R2,#zclOnOffLight3_CmdCallbacks & 0xff
+        MOV     R3,#(zclOnOffLight3_CmdCallbacks >> 8) & 0xff
+        MOV     R1,#0x13
+        LCALL   ??zclGeneral_RegisterCmdCallbacks?relay
+//  247   
+//  248   // Register the application's attribute list
+//  249   zcl_registerAttrList( ONOFFLIGHT0_ENDPOINT, ONOFFLIGHT_MAX_ATTRIBUTES, zclOnOffLight0_Attrs );
+        ; Setup parameters for call to function zcl_registerAttrList
+        MOV     R4,#zclOnOffLight0_Attrs & 0xff
+        MOV     R5,#(zclOnOffLight0_Attrs >> 8) & 0xff
+        MOV     R2,#0xc
+        MOV     R1,#0x10
+        LCALL   ??zcl_registerAttrList?relay
+//  250   zcl_registerAttrList( ONOFFLIGHT1_ENDPOINT, ONOFFLIGHT_MAX_ATTRIBUTES, zclOnOffLight1_Attrs );  
+        ; Setup parameters for call to function zcl_registerAttrList
+        MOV     R4,#zclOnOffLight1_Attrs & 0xff
+        MOV     R5,#(zclOnOffLight1_Attrs >> 8) & 0xff
+        MOV     R2,#0xc
+        MOV     R1,#0x11
+        LCALL   ??zcl_registerAttrList?relay
+//  251   zcl_registerAttrList( ONOFFLIGHT2_ENDPOINT, ONOFFLIGHT_MAX_ATTRIBUTES, zclOnOffLight2_Attrs );  
+        ; Setup parameters for call to function zcl_registerAttrList
+        MOV     R4,#zclOnOffLight2_Attrs & 0xff
+        MOV     R5,#(zclOnOffLight2_Attrs >> 8) & 0xff
+        MOV     R2,#0xc
+        MOV     R1,#0x12
+        LCALL   ??zcl_registerAttrList?relay
+//  252   zcl_registerAttrList( ONOFFLIGHT3_ENDPOINT, ONOFFLIGHT_MAX_ATTRIBUTES, zclOnOffLight3_Attrs );  
+        ; Setup parameters for call to function zcl_registerAttrList
+        MOV     R4,#zclOnOffLight3_Attrs & 0xff
+        MOV     R5,#(zclOnOffLight3_Attrs >> 8) & 0xff
+        MOV     R2,#0xc
+        MOV     R1,#0x13
+        LCALL   ??zcl_registerAttrList?relay
+//  253   
+//  254   // Register the Application to receive the unprocessed Foundation command/response messages
+//  255   zcl_registerForMsg( zclOnOffLight_TaskID );
+        ; Setup parameters for call to function zcl_registerForMsg
+        MOV     DPTR,#zclOnOffLight_TaskID
+        MOVX    A,@DPTR
+        MOV     R1,A
+        LCALL   ??zcl_registerForMsg?relay
+//  256   
+//  257   // Register for all key events - This app will handle all key events
+//  258   RegisterForKeys( zclOnOffLight_TaskID );
+        ; Setup parameters for call to function RegisterForKeys
+        MOV     DPTR,#zclOnOffLight_TaskID
+        MOVX    A,@DPTR
+        MOV     R1,A
+        LCALL   ??RegisterForKeys?relay
+//  259  
+//  260   zclDeviceInfoInit();
+        ; Setup parameters for call to function zclDeviceInfoInit
+        LCALL   ??zclDeviceInfoInit?relay
+//  261   zclLightControlInit();
+        ; Setup parameters for call to function zclLightControlInit
+        LCALL   ??zclLightControlInit?relay
+//  262 }
+        LJMP    ??Subroutine8_0 & 0xFFFF
+        CFI EndBlock cfiBlock0
+//  263 
+//  264 /*********************************************************************
+//  265  * @fn          zclSample_event_loop
+//  266  *
+//  267  * @brief       Event Loop Processor for zclGeneral.
+//  268  *
+//  269  * @param       none
+//  270  *
+//  271  * @return      none
+//  272  */
+
+        RSEG BANKED_CODE:CODE:NOROOT(0)
+//  273 uint16 zclOnOffLight_event_loop( uint8 task_id, uint16 events )
+zclOnOffLight_event_loop:
+        CFI Block cfiBlock1 Using cfiCommon0
+        CFI Function zclOnOffLight_event_loop
+        CODE
+//  274 {
+        FUNCALL zclOnOffLight_event_loop, zclSendHeartbeat
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 12, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 12, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL zclOnOffLight_event_loop, zclLightReportEvent
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 12, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 12, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL zclOnOffLight_event_loop, osal_start_timerEx
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 12, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 12, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL zclOnOffLight_event_loop, osal_msg_deallocate
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 12, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 12, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL zclOnOffLight_event_loop, osal_msg_receive
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 12, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 12, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL zclOnOffLight_event_loop, Device_App_MessageMSGCB
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 12, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 12, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL zclOnOffLight_event_loop, osal_mem_free
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 12, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 12, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL zclOnOffLight_event_loop, HalUARTWrite
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 12, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 12, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL zclOnOffLight_event_loop, NLME_PermitJoiningRequest
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 12, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 12, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL zclOnOffLight_event_loop, osal_rand
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 12, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 12, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL zclOnOffLight_event_loop, osal_start_timerEx
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 12, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 12, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL zclOnOffLight_event_loop, osal_start_timerEx
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 12, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 12, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL zclOnOffLight_event_loop, osal_start_timerEx
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 12, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 12, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL zclOnOffLight_event_loop, osal_stop_timerEx
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 12, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 12, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL zclOnOffLight_event_loop, zclLightControlTouchPanelEnable
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 12, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 12, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL zclOnOffLight_event_loop, zclSendDeviceInfo
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 12, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 12, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL zclOnOffLight_event_loop, zclSendHeartbeat
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 12, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 12, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL zclOnOffLight_event_loop, zclTouchPanelEvent
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 12, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 12, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL zclOnOffLight_event_loop, osal_start_timerEx
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 12, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 12, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL zclOnOffLight_event_loop, zclRestoreInterruptEvent
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 12, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 12, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL zclOnOffLight_event_loop, zclFactoryResetEvent
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 12, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 12, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL zclOnOffLight_event_loop, zclFactoryReset
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 12, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 12, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL zclOnOffLight_event_loop, osal_start_timerEx
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 12, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 12, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        MOV     A,#-0xc
+        LCALL   ?BANKED_ENTER_XDATA
+        CFI DPH0 load(1, XDATA, add(CFA_XSP16, literal(-1)))
+        CFI DPL0 load(1, XDATA, add(CFA_XSP16, literal(-2)))
+        CFI ?BRET_EXT load(1, XDATA, add(CFA_XSP16, literal(-3)))
+        CFI ?RET_HIGH load(1, XDATA, add(CFA_XSP16, literal(-4)))
+        CFI ?RET_LOW load(1, XDATA, add(CFA_XSP16, literal(-5)))
+        CFI R7 load(1, XDATA, add(CFA_XSP16, literal(-6)))
+        CFI V3 load(1, XDATA, add(CFA_XSP16, literal(-7)))
+        CFI V2 load(1, XDATA, add(CFA_XSP16, literal(-8)))
+        CFI V1 load(1, XDATA, add(CFA_XSP16, literal(-9)))
+        CFI V0 load(1, XDATA, add(CFA_XSP16, literal(-10)))
+        CFI VB load(1, XDATA, add(CFA_XSP16, literal(-11)))
+        CFI R6 load(1, XDATA, add(CFA_XSP16, literal(-12)))
+        CFI CFA_SP SP+0
+        CFI CFA_XSP16 add(XSP16, 12)
+        ; Saved register size: 12
+        ; Auto size: 0
+        MOV     A,R2
+        MOV     R6,A
+        MOV     A,R3
+        MOV     R7,A
+//  275   afIncomingMSGPacket_t *MSGpkt;
+//  276   
+//  277   (void)task_id;  // Intentionally unreferenced parameter
+//  278 
+//  279   if ( events & SYS_EVENT_MSG )
+        ANL     A,#0x80
+        JNZ     ??zclOnOffLight_event_loop_0
+//  280   {
+//  281     while ( (MSGpkt = (afIncomingMSGPacket_t *)osal_msg_receive( zclOnOffLight_TaskID )) )
+//  282     {
+//  283       switch ( MSGpkt->hdr.event )
+//  284       {
+//  285       case AF_INCOMING_MSG_CMD:
+//  286         Device_App_MessageMSGCB(MSGpkt);
+//  287         break;
+//  288       case ZCL_INCOMING_MSG:
+//  289         // Incoming ZCL Foundation command/response messages
+//  290         zclOnOffLight_ProcessIncomingMsg( (zclIncomingMsg_t *)MSGpkt );
+//  291         break;
+//  292       case KEY_CHANGE:
+//  293         zclOnOffLight_HandleKeys( ((keyChange_t *)MSGpkt)->state, ((keyChange_t *)MSGpkt)->keys );
+//  294         break;
+//  295       case ZDO_STATE_CHANGE:
+//  296         PrintfNetState(zclDevice_NwkState);
+//  297         zclDevice_NwkState = (devStates_t)(MSGpkt->hdr.status);
+//  298         if (zclDevice_NwkState == DEV_ROUTER ) {
+//  299           NLME_PermitJoiningRequest(0x00);//
+//  300           osal_start_timerEx(zclOnOffLight_TaskID, 
+//  301                              ZCL_DEVICE_INFO_SEND_EVENT,
+//  302                              ZCL_DEVICE_SEND_INIF_TIME_20S);
+//  303           zclDevice_RejoinCounter = 0;
+//  304           g_u8JoinNwkOnce = 1;
+//  305           //abno_led = 0;
+//  306           //flashledflag = 1;
+//  307         }else {
+//  308           if( !ledcontrol ){
+//  309             osal_start_timerEx(zclOnOffLight_TaskID,
+//  310                                ZCL_DEVICE_EXIT_NETWORK_EVENT,
+//  311                                1000);
+//  312           }
+//  313         }
+//  314         break;
+//  315       default:
+//  316         break;
+//  317       }
+//  318 
+//  319       // Release the memory
+//  320       osal_msg_deallocate( (uint8 *)MSGpkt );
+//  321     }
+//  322     
+//  323     // return unprocessed events
+//  324     return (events ^ SYS_EVENT_MSG);
+//  325   }
+//  326   
+//  327   //  if (events & ZCL_DEVICE_REJOIN_EVENT) {
+//  328   //    ZDApp_StartJoiningCycle();
+//  329   //  }
+//  330   if (events & ZCL_DEVICE_HEARTBEAT_EVENT)
+        MOV     A,R7
+        ANL     A,#0x2
+        MOV     ?V0 + 1,A
+        JZ      ??zclOnOffLight_event_loop_1
+//  331   {
+//  332     zclSendHeartbeat();
+        ; Setup parameters for call to function zclSendHeartbeat
+        LCALL   ??zclSendHeartbeat?relay
+//  333 //    if(afStatus_SUCCESS != zclSendHeartbeat())
+//  334 //    {
+//  335 //      SystemResetSoft();
+//  336 //    }
+//  337   }
+//  338   
+//  339   if (events & ZCL_DEVICE_SEND_ONOFF_STATE_EVENT) 
+??zclOnOffLight_event_loop_1:
+        MOV     A,R6
+        ANL     A,#0x2
+        JZ      ??zclOnOffLight_event_loop_2
+//  340   {
+//  341     zclLightReportEvent(ONOFFLIGHT_ENDPONT_0xF0, &zclOnOffLight0_OnOff);  
+        ; Setup parameters for call to function zclLightReportEvent
+        MOV     R4,#zclOnOffLight0_OnOff & 0xff
+        MOV     R5,#(zclOnOffLight0_OnOff >> 8) & 0xff
+        MOV     R2,#-0x10
+        MOV     R3,#0x0
+        LCALL   ??zclLightReportEvent?relay
+//  342   }
+//  343   
+//  344   if (events & ZCL_DEVICE_EXIT_NETWORK_EVENT) {
+??zclOnOffLight_event_loop_2:
+        MOV     A,R7
+        ANL     A,#0x10
+        JNZ     $+5
+        LJMP    ??CrossCallReturnLabel_18 & 0xFFFF
+//  345     if( !ledcontrol ){
+        MOV     DPTR,#ledcontrol
+        MOVX    A,@DPTR
+        JZ      $+5
+        LJMP    ??CrossCallReturnLabel_18 & 0xFFFF
+//  346       abno_led ++;
+        MOV     DPTR,#abno_led
+        MOVX    A,@DPTR
+        INC     A
+        MOVX    @DPTR,A
+//  347     if((abno_led) % 2 == 0)
+        MOV     C,0xE0 /* A   */.0
+        JNC     $+5
+        LJMP    ??zclOnOffLight_event_loop_3 & 0xFFFF
+//  348     {
+//  349       LED_RED_ON();
+        SETB    0x90.7
+        LJMP    ??zclOnOffLight_event_loop_4 & 0xFFFF
+//  350     }else{
+??zclOnOffLight_event_loop_5:
+        MOV     DPTR,#ledcontrol
+        MOVX    A,@DPTR
+        JNZ     ??CrossCallReturnLabel_16
+        ; Setup parameters for call to function osal_start_timerEx
+        MOV     R4,#-0x18
+        MOV     R5,#0x3
+        MOV     R2,#0x0
+        MOV     R3,#0x10
+        LCALL   ??Subroutine10_0 & 0xFFFF
+??CrossCallReturnLabel_16:
+        ; Setup parameters for call to function osal_msg_deallocate
+        MOV     R2,?V0 + 0
+        MOV     R3,?V0 + 1
+        LCALL   ??osal_msg_deallocate?relay
+??zclOnOffLight_event_loop_0:
+        ; Setup parameters for call to function osal_msg_receive
+        MOV     DPTR,#zclOnOffLight_TaskID
+        MOVX    A,@DPTR
+        MOV     R1,A
+        LCALL   ??osal_msg_receive?relay
+        MOV     ?V0 + 0,R2
+        MOV     ?V0 + 1,R3
+        MOV     A,R2
+        ORL     A,?V0 + 1
+        JNZ     $+5
+        LJMP    ??zclOnOffLight_event_loop_6 & 0xFFFF
+        MOV     DPL,R2
+        MOV     DPH,R3
+        MOVX    A,@DPTR
+        ADD     A,#-0x1a
+        JZ      ??zclOnOffLight_event_loop_7
+        ADD     A,#-0x1a
+        JZ      ??zclOnOffLight_event_loop_8
+        ADD     A,#0x63
+        JZ      ??zclOnOffLight_event_loop_9
+        SJMP    ??CrossCallReturnLabel_16
+??zclOnOffLight_event_loop_7:
+        ; Setup parameters for call to function Device_App_MessageMSGCB
+        LCALL   ??Device_App_MessageMSGCB?relay
+        SJMP    ??CrossCallReturnLabel_16
+??zclOnOffLight_event_loop_8:
+        INC     DPTR
+        INC     DPTR
+        INC     DPTR
+        INC     DPTR
+        INC     DPTR
+        INC     DPTR
+        INC     DPTR
+        MOVX    A,@DPTR
+        DEC     A
+        JZ      ??zclOnOffLight_event_loop_10
+        ADD     A,#-0x3
+        JNZ     ??zclOnOffLight_event_loop_11
+        LCALL   ?Subroutine2 & 0xFFFF
+??CrossCallReturnLabel_3:
+        JZ      ??zclOnOffLight_event_loop_11
+??zclOnOffLight_event_loop_12:
+        INC     R0
+        MOV     A,R0
+        CLR     C
+        SUBB    A,R1
+        JNC     ??zclOnOffLight_event_loop_11
+        SJMP    ??zclOnOffLight_event_loop_12
+??zclOnOffLight_event_loop_10:
+        LCALL   ?Subroutine2 & 0xFFFF
+??CrossCallReturnLabel_4:
+        JZ      ??zclOnOffLight_event_loop_11
+??zclOnOffLight_event_loop_13:
+        INC     R0
+        MOV     A,R0
+        CLR     C
+        SUBB    A,R1
+        JC      ??zclOnOffLight_event_loop_13
+??zclOnOffLight_event_loop_11:
+        LCALL   ?Subroutine5 & 0xFFFF
+??CrossCallReturnLabel_5:
+        MOV     R2,A
+        INC     DPTR
+        MOVX    A,@DPTR
+        MOV     R3,A
+        MOV     A,R2
+        ORL     A,R3
+        JZ      ??CrossCallReturnLabel_16
+        ; Setup parameters for call to function osal_mem_free
+        LCALL   ??osal_mem_free?relay
+        SJMP    ??CrossCallReturnLabel_16
+??zclOnOffLight_event_loop_9:
+        MOV     DPTR,#zclDevice_NwkState
+        MOVX    A,@DPTR
+        MOV     ?V0 + 2,A
+        LCALL   ?UC_SWITCH_SPARSE
+`?<Jumptable for zclOnOffLight_event_loop>_0`:
+        DATA
+        DATA8
+        DATA
+        DATA8
+        DATA
+        DATA8
+        DB        1
+        DATA
+        DATA8
+        DATA
+        DATA8
+        DATA
+        DATA8
+        DB        0
+        DATA
+        DATA8
+        DATA
+        DATA8
+        DB        10
+        DATA
+        DATA16
+        DATA
+        DATA16
+        DATA
+        DATA16
+        DW        ??zclOnOffLight_event_loop_14
+        DATA
+        DATA8
+        DATA
+        DATA8
+        DATA
+        DATA8
+        DB        0
+        DATA
+        DATA16
+        DATA
+        DATA16
+        DW        ??zclOnOffLight_event_loop_15
+        CODE
+??zclOnOffLight_event_loop_14:
+        ; Setup parameters for call to function HalUARTWrite
+        MOV     R4,#0x1
+        MOV     R5,#0x0
+        MOV     R2,?V0 + 2
+        MOV     R3,#0x0
+        MOV     R1,#0x0
+        LCALL   ??HalUARTWrite?relay
+??zclOnOffLight_event_loop_15:
+        MOV     DPL,?V0 + 0
+        MOV     DPH,?V0 + 1
+        INC     DPTR
+        MOVX    A,@DPTR
+        MOV     DPTR,#zclDevice_NwkState
+        MOVX    @DPTR,A
+        XRL     A,#0x7
+        JZ      $+5
+        LJMP    ??zclOnOffLight_event_loop_5 & 0xFFFF
+        ; Setup parameters for call to function NLME_PermitJoiningRequest
+        MOV     R1,#0x0
+        LCALL   ??NLME_PermitJoiningRequest?relay
+        ; Setup parameters for call to function osal_rand
+        LCALL   ??osal_rand?relay
+        ; Setup parameters for call to function osal_start_timerEx
+        MOV     A,R2
+        MOV     B,#0x14
+        MUL     AB
+        ADD     A,#-0x38
+        MOV     R4,A
+        MOV     A,B
+        ADDC    A,#-0x51
+        MOV     R5,A
+        MOV     R2,#0x0
+        MOV     R3,#0x1
+        LCALL   ??Subroutine10_0 & 0xFFFF
+??CrossCallReturnLabel_17:
+        MOV     DPTR,#zclDevice_RejoinCounter
+        CLR     A
+        MOVX    @DPTR,A
+        MOV     DPTR,#g_u8JoinNwkOnce
+        INC     A
+        MOVX    @DPTR,A
+        LJMP    ??CrossCallReturnLabel_16 & 0xFFFF
+??zclOnOffLight_event_loop_6:
+        MOV     A,R6
+        MOV     R2,A
+        MOV     A,R7
+        XRL     A,#0x80
+        MOV     R3,A
+        LJMP    ??zclOnOffLight_event_loop_16 & 0xFFFF
+//  351       LED_RED_OFF();
+??zclOnOffLight_event_loop_3:
+        CLR     0x90.7
+//  352     }
+//  353     if(abno_led >= 255)
+??zclOnOffLight_event_loop_4:
+        CPL     A
+        JNZ     ??zclOnOffLight_event_loop_17
+//  354       abno_led = 0;
+        CLR     A
+        MOVX    @DPTR,A
+//  355     
+//  356     osal_start_timerEx(zclOnOffLight_TaskID, 
+//  357                        ZCL_DEVICE_EXIT_NETWORK_EVENT,
+//  358                        2000);
+??zclOnOffLight_event_loop_17:
+        ; Setup parameters for call to function osal_start_timerEx
+        MOV     R4,#-0x30
+        MOV     R5,#0x7
+        MOV     R2,#0x0
+        MOV     R3,#0x10
+        LCALL   ??Subroutine10_0 & 0xFFFF
+//  359     }
+//  360   }
+//  361   
+//  362   if ( events & ONOFFLIGHT_IDENTIFY_TIMEOUT_EVT )
+??CrossCallReturnLabel_18:
+        MOV     A,R6
+        MOV     C,0xE0 /* A   */.0
+        JNC     ??zclOnOffLight_event_loop_18
+//  363   {
+//  364     if ( zclOnOffLight_IdentifyTime > 0 )
+        MOV     DPTR,#zclOnOffLight_IdentifyTime
+        LCALL   ??Subroutine7_0 & 0xFFFF
+??CrossCallReturnLabel_9:
+        MOV     A,R0
+        ORL     A,R1
+        JZ      ??zclOnOffLight_event_loop_19
+//  365       zclOnOffLight_IdentifyTime--;
+        MOV     DPTR,#zclOnOffLight_IdentifyTime
+        MOVX    A,@DPTR
+        ADD     A,#-0x1
+        MOVX    @DPTR,A
+        INC     DPTR
+        MOVX    A,@DPTR
+        ADDC    A,#-0x1
+        MOVX    @DPTR,A
+//  366     zclOnOffLight_ProcessIdentifyTimeChange();
+        DEC     R0
+        MOV     R1,A
+        MOV     A,R0
+        ORL     A,R1
+        JZ      ??zclOnOffLight_event_loop_19
+        ; Setup parameters for call to function osal_start_timerEx
+        LCALL   ?Subroutine3 & 0xFFFF
+//  367     
+//  368     //return ( events ^ ONOFFLIGHT_IDENTIFY_TIMEOUT_EVT );
+//  369   }
+??CrossCallReturnLabel_20:
+        SJMP    ??zclOnOffLight_event_loop_18
+??zclOnOffLight_event_loop_19:
+        ; Setup parameters for call to function osal_stop_timerEx
+        MOV     R2,#0x1
+        MOV     R3,#0x0
+        MOV     DPTR,#zclOnOffLight_TaskID
+        MOVX    A,@DPTR
+        MOV     R1,A
+        LCALL   ??osal_stop_timerEx?relay
+//  370   
+//  371   if (events & ZCL_DEVICE_INIT_DONE_EVENT) {
+??zclOnOffLight_event_loop_18:
+        MOV     A,R6
+        ANL     A,#0x8
+        JZ      ??zclOnOffLight_event_loop_20
+//  372     zclDevice_InitDone = 1;
+        MOV     DPTR,#zclDevice_InitDone
+        MOV     A,#0x1
+        MOVX    @DPTR,A
+//  373     LED_RED_OFF();
+        CLR     0x90.7
+//  374     zclLightControlTouchPanelEnable();
+        ; Setup parameters for call to function zclLightControlTouchPanelEnable
+        LCALL   ??zclLightControlTouchPanelEnable?relay
+//  375     //return (events ^ ZCL_DEVICE_INIT_DONE_EVENT);
+//  376   }
+//  377   
+//  378   if (events & ZCL_DEVICE_INFO_SEND_EVENT) {
+??zclOnOffLight_event_loop_20:
+        MOV     A,R7
+        ANL     A,#0x1
+        JZ      ??zclOnOffLight_event_loop_21
+//  379     zclSendDeviceInfo();
+        ; Setup parameters for call to function zclSendDeviceInfo
+        LCALL   ??zclSendDeviceInfo?relay
+//  380   }
+//  381   
+//  382   if (events & ZCL_DEVICE_HEARTBEAT_EVENT) {
+??zclOnOffLight_event_loop_21:
+        MOV     A,?V0 + 1
+        JZ      ??zclOnOffLight_event_loop_22
+//  383     zclSendHeartbeat();
+        ; Setup parameters for call to function zclSendHeartbeat
+        LCALL   ??zclSendHeartbeat?relay
+//  384   }
+//  385   
+//  386   if (events & ZCL_DEVICE_TOUCHPANEL_EVENT) {
+??zclOnOffLight_event_loop_22:
+        MOV     A,R6
+        ANL     A,#0x10
+        JZ      ??CrossCallReturnLabel_19
+//  387     zclTouchPanelEvent();
+        ; Setup parameters for call to function zclTouchPanelEvent
+        LCALL   ??zclTouchPanelEvent?relay
+//  388     if(g_u8restFlag == 0)
+        MOV     DPTR,#g_u8restFlag
+        MOVX    A,@DPTR
+        JNZ     ??CrossCallReturnLabel_19
+//  389     {
+//  390       g_u8restFlag = 1;
+        MOV     A,#0x1
+        MOVX    @DPTR,A
+//  391       osal_start_timerEx(zclOnOffLight_TaskID, 
+//  392                          ZCL_DEVICE_RESET_EVENT,
+//  393                          3000);
+        ; Setup parameters for call to function osal_start_timerEx
+        MOV     R4,#-0x48
+        MOV     R5,#0xb
+        MOV     R2,#0x0
+        MOV     R3,#0x4
+        LCALL   ??Subroutine10_0 & 0xFFFF
+//  394     }
+//  395     //return (events ^ ZCL_DEVICE_LIGHT0_TOUCHPANEL_EVENT);
+//  396   }
+//  397   if (events & ZCL_DEVICE_RESTORE_INTERRUPT_EVENT) {
+??CrossCallReturnLabel_19:
+        MOV     A,R6
+        ANL     A,#0x20
+        JZ      ??zclOnOffLight_event_loop_23
+//  398     zclRestoreInterruptEvent();
+        ; Setup parameters for call to function zclRestoreInterruptEvent
+        LCALL   ??zclRestoreInterruptEvent?relay
+//  399     //return (events ^ ZCL_DEVICE_LIGHT1_TOUCHPANEL_EVENT);
+//  400   }
+//  401   
+//  402   if (events & ZCL_DEVICE_RESET_EVENT) {
+??zclOnOffLight_event_loop_23:
+        MOV     A,R7
+        ANL     A,#0x4
+        JZ      ??zclOnOffLight_event_loop_24
+//  403     zclFactoryResetEvent();
+        ; Setup parameters for call to function zclFactoryResetEvent
+        LCALL   ??zclFactoryResetEvent?relay
+//  404   }
+//  405   
+//  406   if(events & ZCL_DEVICE_SOFT_RESTART_EVENT)
+??zclOnOffLight_event_loop_24:
+        MOV     A,R6
+        ANL     A,#0x40
+        JZ      ??CrossCallReturnLabel_14
+//  407   {
+//  408     if(zcl_Led_Blink >= 60)
+        MOV     DPTR,#zcl_Led_Blink
+        MOVX    A,@DPTR
+        CLR     C
+        SUBB    A,#0x3c
+        JC      ??zclOnOffLight_event_loop_25
+//  409     {
+//  410       zclFactoryReset(TRUE);
+        ; Setup parameters for call to function zclFactoryReset
+        MOV     R1,#0x1
+        LCALL   ??zclFactoryReset?relay
+        SJMP    ??CrossCallReturnLabel_14
+//  411     }
+//  412     else
+//  413     {
+//  414       if(zcl_Led_Blink %2 == 0)
+??zclOnOffLight_event_loop_25:
+        MOVX    A,@DPTR
+        MOV     C,0xE0 /* A   */.0
+        JC      ??zclOnOffLight_event_loop_26
+//  415       {
+//  416         LED_RED_OFF();
+        CLR     0x90.7
+        SJMP    ??zclOnOffLight_event_loop_27
+//  417       } else {
+//  418         LED_RED_ON();
+??zclOnOffLight_event_loop_26:
+        SETB    0x90.7
+//  419       }
+//  420       zcl_Led_Blink++;
+??zclOnOffLight_event_loop_27:
+        INC     A
+        MOVX    @DPTR,A
+//  421       osal_start_timerEx(zclOnOffLight_TaskID, 
+//  422                          ZCL_DEVICE_SOFT_RESTART_EVENT,
+//  423                          ZCL_FACTORY_RESET_HINT);
+        ; Setup parameters for call to function osal_start_timerEx
+        MOV     R4,#-0x38
+        MOV     R5,#0x0
+        MOV     R2,#0x40
+        LCALL   ??Subroutine9_0 & 0xFFFF
+//  424     }
+//  425   }
+//  426   
+//  427   // Discard unknown events
+//  428   return 0;
+??CrossCallReturnLabel_14:
+        MOV     R2,#0x0
+        MOV     R3,#0x0
+??zclOnOffLight_event_loop_16:
+        MOV     R7,#0x4
+        LJMP    ?BANKED_LEAVE_XDATA
+        CFI EndBlock cfiBlock1
+        REQUIRE _A_P1
+//  429 }
+
+        RSEG BANKED_CODE:CODE:NOROOT(0)
+?Subroutine2:
+        CFI Block cfiCond2 Using cfiCommon0
+        CFI NoFunction
+        CFI Conditional ??CrossCallReturnLabel_3
+        CFI R6 load(1, XDATA, add(CFA_XSP16, literal(-12)))
+        CFI VB load(1, XDATA, add(CFA_XSP16, literal(-11)))
+        CFI V0 load(1, XDATA, add(CFA_XSP16, literal(-10)))
+        CFI V1 load(1, XDATA, add(CFA_XSP16, literal(-9)))
+        CFI V2 load(1, XDATA, add(CFA_XSP16, literal(-8)))
+        CFI V3 load(1, XDATA, add(CFA_XSP16, literal(-7)))
+        CFI R7 load(1, XDATA, add(CFA_XSP16, literal(-6)))
+        CFI ?RET_LOW load(1, XDATA, add(CFA_XSP16, literal(-5)))
+        CFI ?RET_HIGH load(1, XDATA, add(CFA_XSP16, literal(-4)))
+        CFI ?BRET_EXT load(1, XDATA, add(CFA_XSP16, literal(-3)))
+        CFI DPL0 load(1, XDATA, add(CFA_XSP16, literal(-2)))
+        CFI DPH0 load(1, XDATA, add(CFA_XSP16, literal(-1)))
+        CFI CFA_SP SP+0
+        CFI CFA_XSP16 add(XSP16, 12)
+        CFI Block cfiCond3 Using cfiCommon0
+        CFI (cfiCond3) NoFunction
+        CFI (cfiCond3) Conditional ??CrossCallReturnLabel_4
+        CFI (cfiCond3) R6 load(1, XDATA, add(CFA_XSP16, literal(-12)))
+        CFI (cfiCond3) VB load(1, XDATA, add(CFA_XSP16, literal(-11)))
+        CFI (cfiCond3) V0 load(1, XDATA, add(CFA_XSP16, literal(-10)))
+        CFI (cfiCond3) V1 load(1, XDATA, add(CFA_XSP16, literal(-9)))
+        CFI (cfiCond3) V2 load(1, XDATA, add(CFA_XSP16, literal(-8)))
+        CFI (cfiCond3) V3 load(1, XDATA, add(CFA_XSP16, literal(-7)))
+        CFI (cfiCond3) R7 load(1, XDATA, add(CFA_XSP16, literal(-6)))
+        CFI (cfiCond3) ?RET_LOW load(1, XDATA, add(CFA_XSP16, literal(-5)))
+        CFI (cfiCond3) ?RET_HIGH load(1, XDATA, add(CFA_XSP16, literal(-4)))
+        CFI (cfiCond3) ?BRET_EXT load(1, XDATA, add(CFA_XSP16, literal(-3)))
+        CFI (cfiCond3) DPL0 load(1, XDATA, add(CFA_XSP16, literal(-2)))
+        CFI (cfiCond3) DPH0 load(1, XDATA, add(CFA_XSP16, literal(-1)))
+        CFI (cfiCond3) CFA_SP SP+0
+        CFI (cfiCond3) CFA_XSP16 add(XSP16, 12)
+        CFI Block cfiPicker4 Using cfiCommon1
+        CFI (cfiPicker4) NoFunction
+        CFI (cfiPicker4) Picker
+        LCALL   ?Subroutine5 & 0xFFFF
+??CrossCallReturnLabel_6:
+        MOV     R0,A
+        INC     DPTR
+        MOVX    A,@DPTR
+        MOV     R1,A
+        MOV     DPL,R0
+        MOV     DPH,R1
+        MOV     R0,#0x0
+        MOVX    A,@DPTR
+        MOV     R1,A
+        RET
+        CFI EndBlock cfiCond2
+        CFI EndBlock cfiCond3
+        CFI EndBlock cfiPicker4
+
+        RSEG BANKED_CODE:CODE:NOROOT(0)
+?Subroutine5:
+        CFI Block cfiCond5 Using cfiCommon0
+        CFI NoFunction
+        CFI Conditional ??CrossCallReturnLabel_5
+        CFI R6 load(1, XDATA, add(CFA_XSP16, literal(-12)))
+        CFI VB load(1, XDATA, add(CFA_XSP16, literal(-11)))
+        CFI V0 load(1, XDATA, add(CFA_XSP16, literal(-10)))
+        CFI V1 load(1, XDATA, add(CFA_XSP16, literal(-9)))
+        CFI V2 load(1, XDATA, add(CFA_XSP16, literal(-8)))
+        CFI V3 load(1, XDATA, add(CFA_XSP16, literal(-7)))
+        CFI R7 load(1, XDATA, add(CFA_XSP16, literal(-6)))
+        CFI ?RET_LOW load(1, XDATA, add(CFA_XSP16, literal(-5)))
+        CFI ?RET_HIGH load(1, XDATA, add(CFA_XSP16, literal(-4)))
+        CFI ?BRET_EXT load(1, XDATA, add(CFA_XSP16, literal(-3)))
+        CFI DPL0 load(1, XDATA, add(CFA_XSP16, literal(-2)))
+        CFI DPH0 load(1, XDATA, add(CFA_XSP16, literal(-1)))
+        CFI CFA_SP SP+0
+        CFI CFA_XSP16 add(XSP16, 12)
+        CFI Block cfiCond6 Using cfiCommon0
+        CFI (cfiCond6) NoFunction
+        CFI (cfiCond6) Conditional ??CrossCallReturnLabel_6, ??CrossCallReturnLabel_3
+        CFI (cfiCond6) R6 load(1, XDATA, add(CFA_XSP16, literal(-12)))
+        CFI (cfiCond6) VB load(1, XDATA, add(CFA_XSP16, literal(-11)))
+        CFI (cfiCond6) V0 load(1, XDATA, add(CFA_XSP16, literal(-10)))
+        CFI (cfiCond6) V1 load(1, XDATA, add(CFA_XSP16, literal(-9)))
+        CFI (cfiCond6) V2 load(1, XDATA, add(CFA_XSP16, literal(-8)))
+        CFI (cfiCond6) V3 load(1, XDATA, add(CFA_XSP16, literal(-7)))
+        CFI (cfiCond6) R7 load(1, XDATA, add(CFA_XSP16, literal(-6)))
+        CFI (cfiCond6) ?RET_LOW load(1, XDATA, add(CFA_XSP16, literal(-5)))
+        CFI (cfiCond6) ?RET_HIGH load(1, XDATA, add(CFA_XSP16, literal(-4)))
+        CFI (cfiCond6) ?BRET_EXT load(1, XDATA, add(CFA_XSP16, literal(-3)))
+        CFI (cfiCond6) DPL0 load(1, XDATA, add(CFA_XSP16, literal(-2)))
+        CFI (cfiCond6) DPH0 load(1, XDATA, add(CFA_XSP16, literal(-1)))
+        CFI (cfiCond6) CFA_SP SP+0
+        CFI (cfiCond6) CFA_XSP16 add(XSP16, 12)
+        CFI Block cfiCond7 Using cfiCommon0
+        CFI (cfiCond7) NoFunction
+        CFI (cfiCond7) Conditional ??CrossCallReturnLabel_6, ??CrossCallReturnLabel_4
+        CFI (cfiCond7) R6 load(1, XDATA, add(CFA_XSP16, literal(-12)))
+        CFI (cfiCond7) VB load(1, XDATA, add(CFA_XSP16, literal(-11)))
+        CFI (cfiCond7) V0 load(1, XDATA, add(CFA_XSP16, literal(-10)))
+        CFI (cfiCond7) V1 load(1, XDATA, add(CFA_XSP16, literal(-9)))
+        CFI (cfiCond7) V2 load(1, XDATA, add(CFA_XSP16, literal(-8)))
+        CFI (cfiCond7) V3 load(1, XDATA, add(CFA_XSP16, literal(-7)))
+        CFI (cfiCond7) R7 load(1, XDATA, add(CFA_XSP16, literal(-6)))
+        CFI (cfiCond7) ?RET_LOW load(1, XDATA, add(CFA_XSP16, literal(-5)))
+        CFI (cfiCond7) ?RET_HIGH load(1, XDATA, add(CFA_XSP16, literal(-4)))
+        CFI (cfiCond7) ?BRET_EXT load(1, XDATA, add(CFA_XSP16, literal(-3)))
+        CFI (cfiCond7) DPL0 load(1, XDATA, add(CFA_XSP16, literal(-2)))
+        CFI (cfiCond7) DPH0 load(1, XDATA, add(CFA_XSP16, literal(-1)))
+        CFI (cfiCond7) CFA_SP SP+0
+        CFI (cfiCond7) CFA_XSP16 add(XSP16, 12)
+        CFI Block cfiPicker8 Using cfiCommon1
+        CFI (cfiPicker8) NoFunction
+        CFI (cfiPicker8) Picker
+        MOV     A,R2
+        ADD     A,#0x17
+        MOV     DPL,A
+        MOV     A,R3
+        ADDC    A,#0x0
+        MOV     DPH,A
+        MOVX    A,@DPTR
+        RET
+        CFI EndBlock cfiCond5
+        CFI EndBlock cfiCond6
+        CFI EndBlock cfiCond7
+        CFI EndBlock cfiPicker8
+//  430 
+//  431 /*********************************************************************
+//  432  * @fn      zclOnOffLight_HandleKeys
+//  433  *
+//  434  * @brief   Handles all key events for this device.
+//  435  *
+//  436  * @param   shift - true if in shift/alt.
+//  437  * @param   keys - bit field for key events. Valid entries:
+//  438  *                 HAL_KEY_SW_4
+//  439  *                 HAL_KEY_SW_3
+//  440  *                 HAL_KEY_SW_2
+//  441  *                 HAL_KEY_SW_1
+//  442  *
+//  443  * @return  none
+//  444  */
+//  445 static void zclOnOffLight_HandleKeys( byte shift, byte keys )
+//  446 {
+//  447  // zAddrType_t dstAddr;
+//  448   
+//  449   (void)shift;  // Intentionally unreferenced parameter
+//  450 
+//  451   if ( keys & HAL_KEY_SW_2 )
+//  452   {
+//  453   }
+//  454 
+//  455   if ( keys & HAL_KEY_SW_3 )
+//  456   {
+//  457   }
+//  458 
+//  459   if ( keys & HAL_KEY_SW_4 )
+//  460   {
+//  461   }
+//  462 }
+//  463 
+//  464 /*********************************************************************
+//  465  * @fn      zclOnOffLight_ProcessIdentifyTimeChange
+//  466  *
+//  467  * @brief   Called to process any change to the IdentifyTime attribute.
+//  468  *
+//  469  * @param   none
+//  470  *
+//  471  * @return  none
+//  472  */
+//  473 static void zclOnOffLight_ProcessIdentifyTimeChange( void )
+//  474 {
+//  475   if ( zclOnOffLight_IdentifyTime > 0 )
+//  476   {
+//  477     osal_start_timerEx( zclOnOffLight_TaskID, ONOFFLIGHT_IDENTIFY_TIMEOUT_EVT, 1000 );
+//  478   }
+//  479   else
+//  480   {
+//  481     osal_stop_timerEx( zclOnOffLight_TaskID, ONOFFLIGHT_IDENTIFY_TIMEOUT_EVT );
+//  482   }
+//  483 }
+//  484 
+//  485 /*********************************************************************
+//  486  * @fn      zclOnOffLight_BasicResetCB
+//  487  *
+//  488  * @brief   Callback from the ZCL General Cluster Library
+//  489  *          to set all the Basic Cluster attributes to default values.
+//  490  *
+//  491  * @param   none
+//  492  *
+//  493  * @return  none
+//  494  */
+
+        RSEG BANKED_CODE:CODE:NOROOT(0)
+//  495 static void zclOnOffLight_BasicResetCB( void )
+zclOnOffLight_BasicResetCB:
+        CFI Block cfiBlock9 Using cfiCommon0
+        CFI Function zclOnOffLight_BasicResetCB
+        CODE
+//  496 {
+        ; Saved register size: 0
+        ; Auto size: 0
+//  497   // Reset all attributes to default values
+//  498 }
+        LJMP    ?BRET
+        CFI EndBlock cfiBlock9
+//  499 
+//  500 /*********************************************************************
+//  501  * @fn      zclOnOffLight_IdentifyCB
+//  502  *
+//  503  * @brief   Callback from the ZCL General Cluster Library when
+//  504  *          it received an Identity Command for this application.
+//  505  *
+//  506  * @param   srcAddr - source address and endpoint of the response message
+//  507  * @param   identifyTime - the number of seconds to identify yourself
+//  508  *
+//  509  * @return  none
+//  510  */
+
+        RSEG BANKED_CODE:CODE:NOROOT(0)
+//  511 static void zclOnOffLight_IdentifyCB( zclIdentify_t *pCmd )
+zclOnOffLight_IdentifyCB:
+        CFI Block cfiBlock10 Using cfiCommon0
+        CFI Function zclOnOffLight_IdentifyCB
+        CODE
+//  512 {
+        FUNCALL zclOnOffLight_IdentifyCB, osal_start_timerEx
+        LOCFRAME ISTACK, 2, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 0, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 2, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 0, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL zclOnOffLight_IdentifyCB, osal_stop_timerEx
+        LOCFRAME ISTACK, 2, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 0, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 2, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 0, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        PUSH    DPL
+        CFI DPL0 Frame(CFA_SP, 4)
+        CFI CFA_SP SP+-4
+        PUSH    DPH
+        CFI DPH0 Frame(CFA_SP, 5)
+        CFI CFA_SP SP+-5
+        ; Saved register size: 2
+        ; Auto size: 0
+//  513   zclOnOffLight_IdentifyTime = pCmd->identifyTime;
+        MOV     DPL,R2
+        MOV     DPH,R3
+        INC     DPTR
+        INC     DPTR
+        LCALL   ??Subroutine7_0 & 0xFFFF
+??CrossCallReturnLabel_10:
+        MOV     DPTR,#zclOnOffLight_IdentifyTime
+        MOV     A,R0
+        MOVX    @DPTR,A
+        INC     DPTR
+        MOV     A,R1
+        MOVX    @DPTR,A
+//  514   zclOnOffLight_ProcessIdentifyTimeChange();
+        MOV     A,R0
+        ORL     A,R1
+        JZ      ??zclOnOffLight_IdentifyCB_0
+        ; Setup parameters for call to function osal_start_timerEx
+        LCALL   ?Subroutine3 & 0xFFFF
+??CrossCallReturnLabel_13:
+        SJMP    ??zclOnOffLight_IdentifyCB_1
+??zclOnOffLight_IdentifyCB_0:
+        ; Setup parameters for call to function osal_stop_timerEx
+        MOV     R2,#0x1
+        MOV     R3,#0x0
+        MOV     DPTR,#zclOnOffLight_TaskID
+        MOVX    A,@DPTR
+        MOV     R1,A
+        LCALL   ??osal_stop_timerEx?relay
+//  515 }
+??zclOnOffLight_IdentifyCB_1:
+        POP     DPH
+        CFI DPH0 SameValue
+        CFI CFA_SP SP+-4
+        POP     DPL
+        CFI DPL0 SameValue
+        CFI CFA_SP SP+-3
+        LJMP    ?BRET
+        CFI EndBlock cfiBlock10
+
+        RSEG BANKED_CODE:CODE:NOROOT(0)
+?Subroutine4:
+        CFI Block cfiCond11 Using cfiCommon0
+        CFI NoFunction
+        CFI Conditional ??CrossCallReturnLabel_11
+        CFI R6 load(1, XDATA, add(CFA_XSP16, literal(-10)))
+        CFI VB load(1, XDATA, add(CFA_XSP16, literal(-9)))
+        CFI V0 load(1, XDATA, add(CFA_XSP16, literal(-8)))
+        CFI V1 load(1, XDATA, add(CFA_XSP16, literal(-7)))
+        CFI R7 load(1, XDATA, add(CFA_XSP16, literal(-6)))
+        CFI ?RET_LOW load(1, XDATA, add(CFA_XSP16, literal(-5)))
+        CFI ?RET_HIGH load(1, XDATA, add(CFA_XSP16, literal(-4)))
+        CFI ?BRET_EXT load(1, XDATA, add(CFA_XSP16, literal(-3)))
+        CFI DPL0 load(1, XDATA, add(CFA_XSP16, literal(-2)))
+        CFI DPH0 load(1, XDATA, add(CFA_XSP16, literal(-1)))
+        CFI CFA_SP SP+0
+        CFI CFA_XSP16 add(XSP16, 10)
+        CFI Block cfiCond12 Using cfiCommon0
+        CFI (cfiCond12) NoFunction
+        CFI (cfiCond12) Conditional ??CrossCallReturnLabel_12
+        CFI (cfiCond12) R6 load(1, XDATA, add(CFA_XSP16, literal(-10)))
+        CFI (cfiCond12) VB load(1, XDATA, add(CFA_XSP16, literal(-9)))
+        CFI (cfiCond12) V0 load(1, XDATA, add(CFA_XSP16, literal(-8)))
+        CFI (cfiCond12) V1 load(1, XDATA, add(CFA_XSP16, literal(-7)))
+        CFI (cfiCond12) R7 load(1, XDATA, add(CFA_XSP16, literal(-6)))
+        CFI (cfiCond12) ?RET_LOW load(1, XDATA, add(CFA_XSP16, literal(-5)))
+        CFI (cfiCond12) ?RET_HIGH load(1, XDATA, add(CFA_XSP16, literal(-4)))
+        CFI (cfiCond12) ?BRET_EXT load(1, XDATA, add(CFA_XSP16, literal(-3)))
+        CFI (cfiCond12) DPL0 load(1, XDATA, add(CFA_XSP16, literal(-2)))
+        CFI (cfiCond12) DPH0 load(1, XDATA, add(CFA_XSP16, literal(-1)))
+        CFI (cfiCond12) CFA_SP SP+0
+        CFI (cfiCond12) CFA_XSP16 add(XSP16, 10)
+        CFI Block cfiPicker13 Using cfiCommon1
+        CFI (cfiPicker13) NoFunction
+        CFI (cfiPicker13) Picker
+        MOV     R3,A
+        MOV     DPL,R2
+        MOV     DPH,R3
+        CFI EndBlock cfiCond11
+        CFI EndBlock cfiCond12
+        CFI EndBlock cfiPicker13
+        REQUIRE ??Subroutine7_0
+        ; // Fall through to label ??Subroutine7_0
+
+        RSEG BANKED_CODE:CODE:NOROOT(0)
+??Subroutine7_0:
+        CFI Block cfiCond14 Using cfiCommon0
+        CFI NoFunction
+        CFI Conditional ??CrossCallReturnLabel_9
+        CFI R6 load(1, XDATA, add(CFA_XSP16, literal(-12)))
+        CFI VB load(1, XDATA, add(CFA_XSP16, literal(-11)))
+        CFI V0 load(1, XDATA, add(CFA_XSP16, literal(-10)))
+        CFI V1 load(1, XDATA, add(CFA_XSP16, literal(-9)))
+        CFI V2 load(1, XDATA, add(CFA_XSP16, literal(-8)))
+        CFI V3 load(1, XDATA, add(CFA_XSP16, literal(-7)))
+        CFI R7 load(1, XDATA, add(CFA_XSP16, literal(-6)))
+        CFI ?RET_LOW load(1, XDATA, add(CFA_XSP16, literal(-5)))
+        CFI ?RET_HIGH load(1, XDATA, add(CFA_XSP16, literal(-4)))
+        CFI ?BRET_EXT load(1, XDATA, add(CFA_XSP16, literal(-3)))
+        CFI DPL0 load(1, XDATA, add(CFA_XSP16, literal(-2)))
+        CFI DPH0 load(1, XDATA, add(CFA_XSP16, literal(-1)))
+        CFI CFA_SP SP+0
+        CFI CFA_XSP16 add(XSP16, 12)
+        CFI Block cfiCond15 Using cfiCommon0
+        CFI (cfiCond15) NoFunction
+        CFI (cfiCond15) Conditional ??CrossCallReturnLabel_10
+        CFI (cfiCond15) DPL0 Frame(CFA_SP, 4)
+        CFI (cfiCond15) DPH0 Frame(CFA_SP, 5)
+        CFI (cfiCond15) CFA_SP SP+-5
+        CFI Block cfiCond16 Using cfiCommon0
+        CFI (cfiCond16) NoFunction
+        CFI (cfiCond16) Conditional ??CrossCallReturnLabel_11
+        CFI (cfiCond16) R6 load(1, XDATA, add(CFA_XSP16, literal(-10)))
+        CFI (cfiCond16) VB load(1, XDATA, add(CFA_XSP16, literal(-9)))
+        CFI (cfiCond16) V0 load(1, XDATA, add(CFA_XSP16, literal(-8)))
+        CFI (cfiCond16) V1 load(1, XDATA, add(CFA_XSP16, literal(-7)))
+        CFI (cfiCond16) R7 load(1, XDATA, add(CFA_XSP16, literal(-6)))
+        CFI (cfiCond16) ?RET_LOW load(1, XDATA, add(CFA_XSP16, literal(-5)))
+        CFI (cfiCond16) ?RET_HIGH load(1, XDATA, add(CFA_XSP16, literal(-4)))
+        CFI (cfiCond16) ?BRET_EXT load(1, XDATA, add(CFA_XSP16, literal(-3)))
+        CFI (cfiCond16) DPL0 load(1, XDATA, add(CFA_XSP16, literal(-2)))
+        CFI (cfiCond16) DPH0 load(1, XDATA, add(CFA_XSP16, literal(-1)))
+        CFI (cfiCond16) CFA_SP SP+0
+        CFI (cfiCond16) CFA_XSP16 add(XSP16, 10)
+        CFI Block cfiCond17 Using cfiCommon0
+        CFI (cfiCond17) NoFunction
+        CFI (cfiCond17) Conditional ??CrossCallReturnLabel_12
+        CFI (cfiCond17) R6 load(1, XDATA, add(CFA_XSP16, literal(-10)))
+        CFI (cfiCond17) VB load(1, XDATA, add(CFA_XSP16, literal(-9)))
+        CFI (cfiCond17) V0 load(1, XDATA, add(CFA_XSP16, literal(-8)))
+        CFI (cfiCond17) V1 load(1, XDATA, add(CFA_XSP16, literal(-7)))
+        CFI (cfiCond17) R7 load(1, XDATA, add(CFA_XSP16, literal(-6)))
+        CFI (cfiCond17) ?RET_LOW load(1, XDATA, add(CFA_XSP16, literal(-5)))
+        CFI (cfiCond17) ?RET_HIGH load(1, XDATA, add(CFA_XSP16, literal(-4)))
+        CFI (cfiCond17) ?BRET_EXT load(1, XDATA, add(CFA_XSP16, literal(-3)))
+        CFI (cfiCond17) DPL0 load(1, XDATA, add(CFA_XSP16, literal(-2)))
+        CFI (cfiCond17) DPH0 load(1, XDATA, add(CFA_XSP16, literal(-1)))
+        CFI (cfiCond17) CFA_SP SP+0
+        CFI (cfiCond17) CFA_XSP16 add(XSP16, 10)
+        CFI Block cfiPicker18 Using cfiCommon1
+        CFI (cfiPicker18) NoFunction
+        CFI (cfiPicker18) Picker
+        MOVX    A,@DPTR
+        MOV     R0,A
+        INC     DPTR
+        MOVX    A,@DPTR
+        MOV     R1,A
+        RET
+        CFI EndBlock cfiCond14
+        CFI EndBlock cfiCond15
+        CFI EndBlock cfiCond16
+        CFI EndBlock cfiCond17
+        CFI EndBlock cfiPicker18
+//  516 
+//  517 /*********************************************************************
+//  518  * @fn      zclOnOffLight_IdentifyQueryRspCB
+//  519  *
+//  520  * @brief   Callback from the ZCL General Cluster Library when
+//  521  *          it received an Identity Query Response Command for this application.
+//  522  *
+//  523  * @param   srcAddr - requestor's address
+//  524  * @param   timeout - number of seconds to identify yourself (valid for query response)
+//  525  *
+//  526  * @return  none
+//  527  */
+
+        RSEG BANKED_CODE:CODE:NOROOT(0)
+//  528 static void zclOnOffLight_IdentifyQueryRspCB(  zclIdentifyQueryRsp_t *pRsp )
+zclOnOffLight_IdentifyQueryRspCB:
+        CFI Block cfiBlock19 Using cfiCommon0
+        CFI Function zclOnOffLight_IdentifyQueryRspCB
+        CODE
+//  529 {
+        ; Saved register size: 0
+        ; Auto size: 0
+//  530   // Query Response (with timeout value)
+//  531   (void)pRsp;
+//  532 }
+        LJMP    ?BRET
+        CFI EndBlock cfiBlock19
+//  533 
+
+        RSEG BANKED_CODE:CODE:NOROOT(0)
+//  534 static void zclOnOffLight0_OnOffCB(uint8 cmd )
+zclOnOffLight0_OnOffCB:
+        CFI Block cfiBlock20 Using cfiCommon0
+        CFI Function zclOnOffLight0_OnOffCB
+        CODE
+//  535 {
+        FUNCALL zclOnOffLight0_OnOffCB, zclOnOffLight_OnOffCB
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 9, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 9, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        MOV     A,#-0x9
+        LCALL   ?BANKED_ENTER_XDATA
+        CFI DPH0 load(1, XDATA, add(CFA_XSP16, literal(-1)))
+        CFI DPL0 load(1, XDATA, add(CFA_XSP16, literal(-2)))
+        CFI ?BRET_EXT load(1, XDATA, add(CFA_XSP16, literal(-3)))
+        CFI ?RET_HIGH load(1, XDATA, add(CFA_XSP16, literal(-4)))
+        CFI ?RET_LOW load(1, XDATA, add(CFA_XSP16, literal(-5)))
+        CFI R7 load(1, XDATA, add(CFA_XSP16, literal(-6)))
+        CFI V0 load(1, XDATA, add(CFA_XSP16, literal(-7)))
+        CFI VB load(1, XDATA, add(CFA_XSP16, literal(-8)))
+        CFI R6 load(1, XDATA, add(CFA_XSP16, literal(-9)))
+        CFI CFA_SP SP+0
+        CFI CFA_XSP16 add(XSP16, 9)
+        ; Saved register size: 9
+        ; Auto size: 0
+        MOV     A,R1
+//  536   zclOnOffLight_OnOffCB(0, cmd);
+        ; Setup parameters for call to function zclOnOffLight_OnOffCB
+        MOV     R2,A
+        MOV     R1,#0x0
+        SJMP    ?Subroutine0
+        CFI EndBlock cfiBlock20
+//  537 }
+
+        RSEG BANKED_CODE:CODE:NOROOT(0)
+//  538 static void zclOnOffLight1_OnOffCB(uint8 cmd )
+zclOnOffLight1_OnOffCB:
+        CFI Block cfiBlock21 Using cfiCommon0
+        CFI Function zclOnOffLight1_OnOffCB
+        CODE
+//  539 {
+        FUNCALL zclOnOffLight1_OnOffCB, zclOnOffLight_OnOffCB
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 9, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 9, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        MOV     A,#-0x9
+        LCALL   ?BANKED_ENTER_XDATA
+        CFI DPH0 load(1, XDATA, add(CFA_XSP16, literal(-1)))
+        CFI DPL0 load(1, XDATA, add(CFA_XSP16, literal(-2)))
+        CFI ?BRET_EXT load(1, XDATA, add(CFA_XSP16, literal(-3)))
+        CFI ?RET_HIGH load(1, XDATA, add(CFA_XSP16, literal(-4)))
+        CFI ?RET_LOW load(1, XDATA, add(CFA_XSP16, literal(-5)))
+        CFI R7 load(1, XDATA, add(CFA_XSP16, literal(-6)))
+        CFI V0 load(1, XDATA, add(CFA_XSP16, literal(-7)))
+        CFI VB load(1, XDATA, add(CFA_XSP16, literal(-8)))
+        CFI R6 load(1, XDATA, add(CFA_XSP16, literal(-9)))
+        CFI CFA_SP SP+0
+        CFI CFA_XSP16 add(XSP16, 9)
+        ; Saved register size: 9
+        ; Auto size: 0
+        MOV     A,R1
+//  540   zclOnOffLight_OnOffCB(1, cmd);
+        ; Setup parameters for call to function zclOnOffLight_OnOffCB
+        MOV     R2,A
+        MOV     R1,#0x1
+        SJMP    ?Subroutine0
+        CFI EndBlock cfiBlock21
+//  541 }
+
+        RSEG BANKED_CODE:CODE:NOROOT(0)
+//  542 static void zclOnOffLight2_OnOffCB(uint8 cmd )
+zclOnOffLight2_OnOffCB:
+        CFI Block cfiBlock22 Using cfiCommon0
+        CFI Function zclOnOffLight2_OnOffCB
+        CODE
+//  543 {
+        FUNCALL zclOnOffLight2_OnOffCB, zclOnOffLight_OnOffCB
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 9, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 9, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        MOV     A,#-0x9
+        LCALL   ?BANKED_ENTER_XDATA
+        CFI DPH0 load(1, XDATA, add(CFA_XSP16, literal(-1)))
+        CFI DPL0 load(1, XDATA, add(CFA_XSP16, literal(-2)))
+        CFI ?BRET_EXT load(1, XDATA, add(CFA_XSP16, literal(-3)))
+        CFI ?RET_HIGH load(1, XDATA, add(CFA_XSP16, literal(-4)))
+        CFI ?RET_LOW load(1, XDATA, add(CFA_XSP16, literal(-5)))
+        CFI R7 load(1, XDATA, add(CFA_XSP16, literal(-6)))
+        CFI V0 load(1, XDATA, add(CFA_XSP16, literal(-7)))
+        CFI VB load(1, XDATA, add(CFA_XSP16, literal(-8)))
+        CFI R6 load(1, XDATA, add(CFA_XSP16, literal(-9)))
+        CFI CFA_SP SP+0
+        CFI CFA_XSP16 add(XSP16, 9)
+        ; Saved register size: 9
+        ; Auto size: 0
+        MOV     A,R1
+//  544   zclOnOffLight_OnOffCB(2, cmd);
+        ; Setup parameters for call to function zclOnOffLight_OnOffCB
+        MOV     R2,A
+        MOV     R1,#0x2
+        SJMP    ?Subroutine0
+        CFI EndBlock cfiBlock22
+//  545 }
+
+        RSEG BANKED_CODE:CODE:NOROOT(0)
+//  546 static void zclOnOffLight3_OnOffCB(uint8 cmd )
+zclOnOffLight3_OnOffCB:
+        CFI Block cfiBlock23 Using cfiCommon0
+        CFI Function zclOnOffLight3_OnOffCB
+        CODE
+//  547 {
+        FUNCALL zclOnOffLight3_OnOffCB, zclOnOffLight_OnOffCB
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 9, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 9, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        MOV     A,#-0x9
+        LCALL   ?BANKED_ENTER_XDATA
+        CFI DPH0 load(1, XDATA, add(CFA_XSP16, literal(-1)))
+        CFI DPL0 load(1, XDATA, add(CFA_XSP16, literal(-2)))
+        CFI ?BRET_EXT load(1, XDATA, add(CFA_XSP16, literal(-3)))
+        CFI ?RET_HIGH load(1, XDATA, add(CFA_XSP16, literal(-4)))
+        CFI ?RET_LOW load(1, XDATA, add(CFA_XSP16, literal(-5)))
+        CFI R7 load(1, XDATA, add(CFA_XSP16, literal(-6)))
+        CFI V0 load(1, XDATA, add(CFA_XSP16, literal(-7)))
+        CFI VB load(1, XDATA, add(CFA_XSP16, literal(-8)))
+        CFI R6 load(1, XDATA, add(CFA_XSP16, literal(-9)))
+        CFI CFA_SP SP+0
+        CFI CFA_XSP16 add(XSP16, 9)
+        ; Saved register size: 9
+        ; Auto size: 0
+        MOV     A,R1
+//  548   zclOnOffLight_OnOffCB(3, cmd);
+        ; Setup parameters for call to function zclOnOffLight_OnOffCB
+        MOV     R2,A
+        MOV     R1,#0x3
+        CFI EndBlock cfiBlock23
+        REQUIRE ?Subroutine0
+        ; // Fall through to label ?Subroutine0
+//  549 }
+
+        RSEG BANKED_CODE:CODE:NOROOT(0)
+?Subroutine0:
+        CFI Block cfiBlock24 Using cfiCommon0
+        CFI NoFunction
+        CFI CFA_SP SP+0
+        CFI CFA_XSP16 add(XSP16, 9)
+        CFI VB load(1, XDATA, add(CFA_XSP16, literal(-8)))
+        CFI DPL0 load(1, XDATA, add(CFA_XSP16, literal(-2)))
+        CFI DPH0 load(1, XDATA, add(CFA_XSP16, literal(-1)))
+        CFI R6 load(1, XDATA, add(CFA_XSP16, literal(-9)))
+        CFI R7 load(1, XDATA, add(CFA_XSP16, literal(-6)))
+        CFI V0 load(1, XDATA, add(CFA_XSP16, literal(-7)))
+        CFI ?BRET_EXT load(1, XDATA, add(CFA_XSP16, literal(-3)))
+        CFI ?RET_HIGH load(1, XDATA, add(CFA_XSP16, literal(-4)))
+        CFI ?RET_LOW load(1, XDATA, add(CFA_XSP16, literal(-5)))
+        LCALL   ??zclOnOffLight_OnOffCB?relay
+        CFI EndBlock cfiBlock24
+        REQUIRE ??Subroutine8_0
+        ; // Fall through to label ??Subroutine8_0
+
+        RSEG BANKED_CODE:CODE:NOROOT(0)
+??Subroutine8_0:
+        CFI Block cfiBlock25 Using cfiCommon0
+        CFI NoFunction
+        CFI CFA_SP SP+0
+        CFI CFA_XSP16 add(XSP16, 9)
+        CFI VB load(1, XDATA, add(CFA_XSP16, literal(-8)))
+        CFI DPL0 load(1, XDATA, add(CFA_XSP16, literal(-2)))
+        CFI DPH0 load(1, XDATA, add(CFA_XSP16, literal(-1)))
+        CFI R6 load(1, XDATA, add(CFA_XSP16, literal(-9)))
+        CFI R7 load(1, XDATA, add(CFA_XSP16, literal(-6)))
+        CFI V0 load(1, XDATA, add(CFA_XSP16, literal(-7)))
+        CFI ?BRET_EXT load(1, XDATA, add(CFA_XSP16, literal(-3)))
+        CFI ?RET_HIGH load(1, XDATA, add(CFA_XSP16, literal(-4)))
+        CFI ?RET_LOW load(1, XDATA, add(CFA_XSP16, literal(-5)))
+        MOV     R7,#0x1
+        LJMP    ?BANKED_LEAVE_XDATA
+        CFI EndBlock cfiBlock25
+//  550 /*********************************************************************
+//  551  * @fn      zclOnOffLight_OnOffCB
+//  552  *
+//  553  * @brief   Callback from the ZCL General Cluster Library when
+//  554  *          it received an On/Off Command for this application.
+//  555  *
+//  556  * @param   cmd - COMMAND_ON, COMMAND_OFF or COMMAND_TOGGLE
+//  557  *
+//  558  * @return  none
+//  559  */
+
+        RSEG BANKED_CODE:CODE:NOROOT(0)
+//  560 static void zclOnOffLight_OnOffCB(uint8 light, uint8 cmd )
+zclOnOffLight_OnOffCB:
+        CFI Block cfiBlock26 Using cfiCommon0
+        CFI Function zclOnOffLight_OnOffCB
+        CODE
+//  561 {
+        FUNCALL zclOnOffLight_OnOffCB, zclLightReportEvent
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 9, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 9, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL zclOnOffLight_OnOffCB, zclLightReportEvent
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 9, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 9, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL zclOnOffLight_OnOffCB, zclLightReportEvent
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 9, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 9, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL zclOnOffLight_OnOffCB, zclLightReportEvent
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 9, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 9, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        MOV     A,#-0x9
+        LCALL   ?BANKED_ENTER_XDATA
+        CFI DPH0 load(1, XDATA, add(CFA_XSP16, literal(-1)))
+        CFI DPL0 load(1, XDATA, add(CFA_XSP16, literal(-2)))
+        CFI ?BRET_EXT load(1, XDATA, add(CFA_XSP16, literal(-3)))
+        CFI ?RET_HIGH load(1, XDATA, add(CFA_XSP16, literal(-4)))
+        CFI ?RET_LOW load(1, XDATA, add(CFA_XSP16, literal(-5)))
+        CFI R7 load(1, XDATA, add(CFA_XSP16, literal(-6)))
+        CFI V0 load(1, XDATA, add(CFA_XSP16, literal(-7)))
+        CFI VB load(1, XDATA, add(CFA_XSP16, literal(-8)))
+        CFI R6 load(1, XDATA, add(CFA_XSP16, literal(-9)))
+        CFI CFA_SP SP+0
+        CFI CFA_XSP16 add(XSP16, 9)
+        ; Saved register size: 9
+        ; Auto size: 0
+        MOV     A,R1
+        MOV     R6,A
+        MOV     A,R2
+        MOV     R7,A
+//  562   uint8 *zclOnOffLight_OnOff;
+//  563   
+//  564   if (light == 0)
+        MOV     A,R6
+        JNZ     ??zclOnOffLight_OnOffCB_0
+//  565     zclOnOffLight_OnOff = &zclOnOffLight0_OnOff;
+        MOV     DPL,#zclOnOffLight0_OnOff & 0xff
+        MOV     DPH,#(zclOnOffLight0_OnOff >> 8) & 0xff
+        SJMP    ??zclOnOffLight_OnOffCB_1
+//  566   else if(light == 1)
+??zclOnOffLight_OnOffCB_0:
+        MOV     A,#0x1
+        XRL     A,R6
+        JNZ     ??zclOnOffLight_OnOffCB_2
+//  567     zclOnOffLight_OnOff = &zclOnOffLight1_OnOff;
+        MOV     DPL,#zclOnOffLight1_OnOff & 0xff
+        MOV     DPH,#(zclOnOffLight1_OnOff >> 8) & 0xff
+        SJMP    ??zclOnOffLight_OnOffCB_1
+//  568   else if(light == 2)
+??zclOnOffLight_OnOffCB_2:
+        MOV     A,#0x2
+        XRL     A,R6
+        JNZ     ??zclOnOffLight_OnOffCB_3
+//  569    zclOnOffLight_OnOff = &zclOnOffLight2_OnOff;
+        MOV     DPL,#zclOnOffLight2_OnOff & 0xff
+        MOV     DPH,#(zclOnOffLight2_OnOff >> 8) & 0xff
+        SJMP    ??zclOnOffLight_OnOffCB_1
+//  570   else if(light == 3)
+??zclOnOffLight_OnOffCB_3:
+        MOV     A,#0x3
+        XRL     A,R6
+        JNZ     ??zclOnOffLight_OnOffCB_1
+//  571    zclOnOffLight_OnOff = &zclOnOffLight3_OnOff;
+        MOV     DPL,#zclOnOffLight3_OnOff & 0xff
+        MOV     DPH,#(zclOnOffLight3_OnOff >> 8) & 0xff
+//  572   
+//  573   if ( cmd == COMMAND_ON ) 
+??zclOnOffLight_OnOffCB_1:
+        MOV     A,#0x1
+        XRL     A,R7
+        JNZ     ??zclOnOffLight_OnOffCB_4
+//  574   {
+//  575     *zclOnOffLight_OnOff = LIGHT_ON;
+??zclOnOffLight_OnOffCB_5:
+        MOV     A,#0x1
+        MOVX    @DPTR,A
+//  576   } else if ( cmd == COMMAND_OFF ) 
+//  577   {
+//  578     *zclOnOffLight_OnOff = LIGHT_OFF;
+//  579   } else 
+//  580   {
+//  581     if ( *zclOnOffLight_OnOff == LIGHT_OFF )
+//  582       *zclOnOffLight_OnOff = LIGHT_ON;
+//  583     else
+//  584       *zclOnOffLight_OnOff = LIGHT_OFF;
+//  585   }
+//  586   
+//  587   if ( *zclOnOffLight_OnOff == LIGHT_ON ) 
+//  588   {
+//  589     if (light == 0)
+        MOV     A,R6
+        JNZ     ??zclOnOffLight_OnOffCB_6
+//  590       LIGHT_TURN_ON_LIGHT0();
+        SETB    0x90.4
+//  591     else if(light == 1)
+//  592       LIGHT_TURN_ON_LIGHT1();
+//  593     else if(light == 2)
+//  594      LIGHT_TURN_ON_LIGHT2();
+//  595     else if(light == 3)
+//  596       LIGHT_TURN_ON_LIGHT3();
+//  597   } else 
+//  598   {
+//  599     if (light == 0)
+//  600       LIGHT_TURN_OFF_LIGHT0();
+//  601     else if(light == 1)
+//  602       LIGHT_TURN_OFF_LIGHT1();
+//  603    else if(light == 2)
+//  604      LIGHT_TURN_OFF_LIGHT2();
+//  605     else if(light == 3)
+//  606       LIGHT_TURN_OFF_LIGHT3();
+//  607   }
+//  608   
+//  609   if (light == 0) {
+//  610     zclLightReportEvent(ONOFFLIGHT0_ENDPOINT, &zclOnOffLight0_OnOff);
+??zclOnOffLight_OnOffCB_7:
+        ; Setup parameters for call to function zclLightReportEvent
+        MOV     R4,#zclOnOffLight0_OnOff & 0xff
+        MOV     R5,#(zclOnOffLight0_OnOff >> 8) & 0xff
+        MOV     R2,#0x10
+        SJMP    ??zclOnOffLight_OnOffCB_8
+//  611   } else if(light == 1) {
+??zclOnOffLight_OnOffCB_4:
+        MOV     A,R7
+        JNZ     ??zclOnOffLight_OnOffCB_9
+??zclOnOffLight_OnOffCB_10:
+        CLR     A
+        MOVX    @DPTR,A
+        MOV     A,R6
+        JNZ     ??zclOnOffLight_OnOffCB_11
+        CLR     0x90.4
+        SJMP    ??zclOnOffLight_OnOffCB_7
+??zclOnOffLight_OnOffCB_9:
+        MOVX    A,@DPTR
+        JNZ     ??zclOnOffLight_OnOffCB_10
+        SJMP    ??zclOnOffLight_OnOffCB_5
+??zclOnOffLight_OnOffCB_6:
+        MOV     A,#0x1
+        XRL     A,R6
+        JNZ     ??zclOnOffLight_OnOffCB_12
+        SETB    0x90.5
+//  612     zclLightReportEvent(ONOFFLIGHT1_ENDPOINT, &zclOnOffLight1_OnOff);
+??zclOnOffLight_OnOffCB_13:
+        ; Setup parameters for call to function zclLightReportEvent
+        MOV     R4,#zclOnOffLight1_OnOff & 0xff
+        MOV     R5,#(zclOnOffLight1_OnOff >> 8) & 0xff
+        MOV     R2,#0x11
+        SJMP    ??zclOnOffLight_OnOffCB_8
+//  613   } else if(light == 2){
+??zclOnOffLight_OnOffCB_12:
+        MOV     A,#0x2
+        XRL     A,R6
+        JNZ     ??zclOnOffLight_OnOffCB_14
+        SETB    0x80.3
+//  614   zclLightReportEvent(ONOFFLIGHT2_ENDPOINT, &zclOnOffLight2_OnOff);
+??zclOnOffLight_OnOffCB_15:
+        ; Setup parameters for call to function zclLightReportEvent
+        MOV     R4,#zclOnOffLight2_OnOff & 0xff
+        MOV     R5,#(zclOnOffLight2_OnOff >> 8) & 0xff
+        MOV     R2,#0x12
+        SJMP    ??zclOnOffLight_OnOffCB_8
+//  615   } 
+??zclOnOffLight_OnOffCB_14:
+        MOV     A,#0x3
+        XRL     A,R6
+        JNZ     ??zclOnOffLight_OnOffCB_16
+        SETB    0x90.6
+        SJMP    ??zclOnOffLight_OnOffCB_17
+??zclOnOffLight_OnOffCB_11:
+        MOV     A,#0x1
+        XRL     A,R6
+        JNZ     ??zclOnOffLight_OnOffCB_18
+        CLR     0x90.5
+        SJMP    ??zclOnOffLight_OnOffCB_13
+??zclOnOffLight_OnOffCB_18:
+        MOV     A,#0x2
+        XRL     A,R6
+        JNZ     ??zclOnOffLight_OnOffCB_19
+        CLR     0x80.3
+        SJMP    ??zclOnOffLight_OnOffCB_15
+??zclOnOffLight_OnOffCB_19:
+        MOV     A,#0x3
+        XRL     A,R6
+        JNZ     ??zclOnOffLight_OnOffCB_16
+        CLR     0x90.6
+        SJMP    ??zclOnOffLight_OnOffCB_17
+//  616   else if(light == 3){
+??zclOnOffLight_OnOffCB_16:
+        MOV     A,#0x3
+        XRL     A,R6
+        JNZ     ??zclOnOffLight_OnOffCB_20
+//  617     zclLightReportEvent(ONOFFLIGHT3_ENDPOINT, &zclOnOffLight3_OnOff);
+??zclOnOffLight_OnOffCB_17:
+        ; Setup parameters for call to function zclLightReportEvent
+        MOV     R4,#zclOnOffLight3_OnOff & 0xff
+        MOV     R5,#(zclOnOffLight3_OnOff >> 8) & 0xff
+        MOV     R2,#0x13
+??zclOnOffLight_OnOffCB_8:
+        MOV     R3,#0x0
+        LCALL   ??zclLightReportEvent?relay
+//  618   }
+//  619 }
+??zclOnOffLight_OnOffCB_20:
+        LJMP    ??Subroutine8_0 & 0xFFFF
+        CFI EndBlock cfiBlock26
+        REQUIRE _A_P1
+        REQUIRE _A_P0
+//  620 
+//  621 
+//  622 /****************************************************************************** 
+//  623 * 
+//  624  *  Functions for processing ZCL Foundation incoming Command/Response messages
+//  625  *
+//  626  *****************************************************************************/
+//  627 
+//  628 /*********************************************************************
+//  629  * @fn      zclOnOffLight_ProcessIncomingMsg
+//  630  *
+//  631  * @brief   Process ZCL Foundation incoming message
+//  632  *
+//  633  * @param   pInMsg - pointer to the received message
+//  634  *
+//  635  * @return  none
+//  636  */
+//  637 static void zclOnOffLight_ProcessIncomingMsg( zclIncomingMsg_t *pInMsg)
+//  638 {
+//  639  
+//  640   switch ( pInMsg->zclHdr.commandID )
+//  641   {
+//  642 #ifdef ZCL_READ
+//  643     case ZCL_CMD_READ_RSP:
+//  644       zclOnOffLight_ProcessInReadRspCmd( pInMsg );
+//  645       break;
+//  646 #endif
+//  647 #ifdef ZCL_WRITE    
+//  648     case ZCL_CMD_WRITE_RSP:
+//  649       zclOnOffLight_ProcessInWriteRspCmd( pInMsg );
+//  650       break;
+//  651 #endif
+//  652 #ifdef ZCL_REPORT
+//  653     // See ZCL Test Applicaiton (zcl_testapp.c) for sample code on Attribute Reporting
+//  654     case ZCL_CMD_CONFIG_REPORT:
+//  655       //zclOnOffLight_ProcessInConfigReportCmd( pInMsg );
+//  656       break;
+//  657     
+//  658     case ZCL_CMD_CONFIG_REPORT_RSP:
+//  659       //zclOnOffLight_ProcessInConfigReportRspCmd( pInMsg );
+//  660       break;
+//  661     
+//  662     case ZCL_CMD_READ_REPORT_CFG:
+//  663       //zclOnOffLight_ProcessInReadReportCfgCmd( pInMsg );
+//  664       break;
+//  665     
+//  666     case ZCL_CMD_READ_REPORT_CFG_RSP:
+//  667       //zclOnOffLight_ProcessInReadReportCfgRspCmd( pInMsg );
+//  668       break;
+//  669     
+//  670     case ZCL_CMD_REPORT:
+//  671       //zclOnOffLight_ProcessInReportCmd( pInMsg );
+//  672       break;
+//  673 #endif   
+//  674     case ZCL_CMD_DEFAULT_RSP:
+//  675       zclOnOffLight_ProcessInDefaultRspCmd( pInMsg );
+//  676       break;
+//  677 #ifdef ZCL_DISCOVER     
+//  678     case ZCL_CMD_DISCOVER_RSP:
+//  679       zclOnOffLight_ProcessInDiscRspCmd( pInMsg );
+//  680       break;
+//  681 #endif  
+//  682     default:
+//  683       break;
+//  684   }
+//  685   
+//  686   if ( pInMsg->attrCmd )
+//  687     osal_mem_free( pInMsg->attrCmd );
+//  688 }
+//  689 
+//  690 #ifdef ZCL_READ
+//  691 /*********************************************************************
+//  692  * @fn      zclOnOffLight_ProcessInReadRspCmd
+//  693  *
+//  694  * @brief   Process the "Profile" Read Response Command
+//  695  *
+//  696  * @param   pInMsg - incoming message to process
+//  697  *
+//  698  * @return  none
+//  699  */
+//  700 static uint8 zclOnOffLight_ProcessInReadRspCmd( zclIncomingMsg_t *pInMsg )
+//  701 {
+//  702   zclReadRspCmd_t *readRspCmd;
+//  703   uint8 i;
+//  704 
+//  705   readRspCmd = (zclReadRspCmd_t *)pInMsg->attrCmd;
+//  706   for (i = 0; i < readRspCmd->numAttr; i++)
+//  707   {
+//  708     // Notify the originator of the results of the original read attributes 
+//  709     // attempt and, for each successfull request, the value of the requested 
+//  710     // attribute
+//  711   }
+//  712 
+//  713   return TRUE; 
+//  714 }
+//  715 #endif // ZCL_READ
+//  716 
+//  717 #ifdef ZCL_WRITE
+//  718 /*********************************************************************
+//  719  * @fn      zclOnOffLight_ProcessInWriteRspCmd
+//  720  *
+//  721  * @brief   Process the "Profile" Write Response Command
+//  722  *
+//  723  * @param   pInMsg - incoming message to process
+//  724  *
+//  725  * @return  none
+//  726  */
+//  727 static uint8 zclOnOffLight_ProcessInWriteRspCmd( zclIncomingMsg_t *pInMsg )
+//  728 {
+//  729   zclWriteRspCmd_t *writeRspCmd;
+//  730   uint8 i;
+//  731 
+//  732   writeRspCmd = (zclWriteRspCmd_t *)pInMsg->attrCmd;
+//  733   for (i = 0; i < writeRspCmd->numAttr; i++)
+//  734   {
+//  735     // Notify the device of the results of the its original write attributes
+//  736     // command.
+//  737   }
+//  738 
+//  739   return TRUE; 
+//  740 }
+//  741 #endif // ZCL_WRITE
+//  742 
+//  743 /*********************************************************************
+//  744  * @fn      zclOnOffLight_ProcessInDefaultRspCmd
+//  745  *
+//  746  * @brief   Process the "Profile" Default Response Command
+//  747  *
+//  748  * @param   pInMsg - incoming message to process
+//  749  *
+//  750  * @return  none
+//  751  */
+//  752 static uint8 zclOnOffLight_ProcessInDefaultRspCmd( zclIncomingMsg_t *pInMsg )
+//  753 {
+//  754   // zclDefaultRspCmd_t *defaultRspCmd = (zclDefaultRspCmd_t *)pInMsg->attrCmd;
+//  755    
+//  756   // Device is notified of the Default Response command.
+//  757   (void)pInMsg;
+//  758   
+//  759   return TRUE; 
+//  760 }
+//  761 
+//  762 #ifdef ZCL_DISCOVER
+//  763 /*********************************************************************
+//  764  * @fn      zclOnOffLight_ProcessInDiscRspCmd
+//  765  *
+//  766  * @brief   Process the "Profile" Discover Response Command
+//  767  *
+//  768  * @param   pInMsg - incoming message to process
+//  769  *
+//  770  * @return  none
+//  771  */
+//  772 static uint8 zclOnOffLight_ProcessInDiscRspCmd( zclIncomingMsg_t *pInMsg )
+//  773 {
+//  774   zclDiscoverRspCmd_t *discoverRspCmd;
+//  775   uint8 i;
+//  776   
+//  777   discoverRspCmd = (zclDiscoverRspCmd_t *)pInMsg->attrCmd;
+//  778   for ( i = 0; i < discoverRspCmd->numAttr; i++ )
+//  779   {
+//  780     // Device is notified of the result of its attribute discovery command.
+//  781   }
+//  782   
+//  783   return TRUE;
+//  784 }
+//  785 #endif // ZCL_DISCOVER
+//  786 
+//  787 
+//  788 /****************************************************************************
+//  789 ****************************************************************************/
+//  790 
+//  791 
+//  792 /***************************************************************************
+//  793 *****************************************************************************/
+
+        RSEG BANKED_CODE:CODE:NOROOT(0)
+//  794 void Device_App_MessageMSGCB(afIncomingMSGPacket_t *pkt)
+Device_App_MessageMSGCB:
+        CFI Block cfiBlock27 Using cfiCommon0
+        CFI Function Device_App_MessageMSGCB
+        CODE
+//  795 {
+        FUNCALL Device_App_MessageMSGCB, NLME_PermitJoiningRequest
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 10, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 10, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL Device_App_MessageMSGCB, osal_rand
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 10, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 10, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL Device_App_MessageMSGCB, osal_start_timerEx
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 10, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 10, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        MOV     A,#-0xa
+        LCALL   ?BANKED_ENTER_XDATA
+        CFI DPH0 load(1, XDATA, add(CFA_XSP16, literal(-1)))
+        CFI DPL0 load(1, XDATA, add(CFA_XSP16, literal(-2)))
+        CFI ?BRET_EXT load(1, XDATA, add(CFA_XSP16, literal(-3)))
+        CFI ?RET_HIGH load(1, XDATA, add(CFA_XSP16, literal(-4)))
+        CFI ?RET_LOW load(1, XDATA, add(CFA_XSP16, literal(-5)))
+        CFI R7 load(1, XDATA, add(CFA_XSP16, literal(-6)))
+        CFI V1 load(1, XDATA, add(CFA_XSP16, literal(-7)))
+        CFI V0 load(1, XDATA, add(CFA_XSP16, literal(-8)))
+        CFI VB load(1, XDATA, add(CFA_XSP16, literal(-9)))
+        CFI R6 load(1, XDATA, add(CFA_XSP16, literal(-10)))
+        CFI CFA_SP SP+0
+        CFI CFA_XSP16 add(XSP16, 10)
+        ; Saved register size: 10
+        ; Auto size: 0
+//  796   switch(pkt->clusterId)
+        MOV     DPL,R2
+        MOV     DPH,R3
+        INC     DPTR
+        INC     DPTR
+        INC     DPTR
+        INC     DPTR
+        MOVX    A,@DPTR
+        MOV     ?V0 + 0,A
+        INC     DPTR
+        MOVX    A,@DPTR
+        MOV     ?V0 + 1,A
+        MOV     R0,#?V0 + 0
+        LCALL   ?US_SWITCH_SPARSE
+`?<Jumptable for Device_App_MessageMSGCB>_0`:
+        DATA
+        DATA16
+        DATA
+        DATA16
+        DATA
+        DATA16
+        DW        0
+        DATA
+        DATA16
+        DATA
+        DATA16
+        DATA
+        DATA16
+        DW        2
+        DATA
+        DATA16
+        DATA
+        DATA16
+        DATA
+        DATA16
+        DW        6
+        DATA
+        DATA16
+        DATA
+        DATA16
+        DATA
+        DATA16
+        DW        ??Device_App_MessageMSGCB_0
+        DATA
+        DATA16
+        DATA
+        DATA16
+        DATA
+        DATA16
+        DW        2304
+        DATA
+        DATA16
+        DATA
+        DATA16
+        DATA
+        DATA16
+        DW        ??Device_App_MessageMSGCB_1
+        DATA
+        DATA16
+        DATA
+        DATA16
+        DW        ??CrossCallReturnLabel_15
+        CODE
+//  797   {
+//  798   case ZCL_CLUSTER_ID_PREMIT_JOIN_ZB_NET:
+//  799     if(pkt->cmd.Data[0] == 0xFF)
+??Device_App_MessageMSGCB_1:
+        MOV     A,R2
+        ADD     A,#0x22
+        MOV     R2,A
+        MOV     A,R3
+        ADDC    A,#0x0
+        LCALL   ?Subroutine4 & 0xFFFF
+??CrossCallReturnLabel_11:
+        MOV     DPL,R0
+        MOV     DPH,R1
+        MOVX    A,@DPTR
+        CPL     A
+        JNZ     ??Device_App_MessageMSGCB_2
+//  800     {
+//  801       pkt->cmd.Data[0] = 60;
+        MOV     A,#0x3c
+        MOVX    @DPTR,A
+//  802     }
+//  803     NLME_PermitJoiningRequest(pkt->cmd.Data[0]);
+??Device_App_MessageMSGCB_2:
+        ; Setup parameters for call to function NLME_PermitJoiningRequest
+        LCALL   ?Subroutine6 & 0xFFFF
+??CrossCallReturnLabel_7:
+        MOVX    A,@DPTR
+        MOV     R1,A
+        LCALL   ??NLME_PermitJoiningRequest?relay
+//  804     break;
+        SJMP    ??CrossCallReturnLabel_15
+//  805     
+//  806   case ZCL_CLUSTER_ID_GEN_ON_OFF:
+//  807     {
+//  808       if(pkt->cmd.Data[3]== DEVICE_All || pkt->cmd.Data[3]== DEVICE_LIGHT)
+??Device_App_MessageMSGCB_0:
+        MOV     A,R2
+        ADD     A,#0x22
+        MOV     R0,A
+        MOV     A,R3
+        ADDC    A,#0x0
+        MOV     R1,A
+        MOV     A,R0
+        MOV     R2,A
+        MOV     A,R1
+        LCALL   ?Subroutine4 & 0xFFFF
+??CrossCallReturnLabel_12:
+        MOV     A,R0
+        ADD     A,#0x3
+        MOV     DPL,A
+        MOV     A,R1
+        ADDC    A,#0x0
+        MOV     DPH,A
+        MOVX    A,@DPTR
+        JZ      ??Device_App_MessageMSGCB_3
+        XRL     A,#0x1
+        JNZ     ??CrossCallReturnLabel_15
+//  809       {
+//  810         if(pkt->cmd.Data[2] == COMMAND_ON)
+??Device_App_MessageMSGCB_3:
+        MOV     A,R0
+        ADD     A,#0x2
+        MOV     DPL,A
+        MOV     A,R1
+        ADDC    A,#0x0
+        MOV     DPH,A
+        MOVX    A,@DPTR
+        XRL     A,#0x1
+        JNZ     ??Device_App_MessageMSGCB_4
+//  811         {
+//  812           LIGHT_TURN_ON_LIGHT0();
+        SETB    0x90.4
+//  813           LIGHT_TURN_ON_LIGHT1();
+        SETB    0x90.5
+//  814           LIGHT_TURN_ON_LIGHT2();
+        SETB    0x80.3
+//  815           LIGHT_TURN_ON_LIGHT3();
+        SETB    0x90.6
+        SJMP    ??Device_App_MessageMSGCB_5
+//  816         }
+//  817         else if(pkt->cmd.Data[2] == COMMAND_OFF)
+??Device_App_MessageMSGCB_4:
+        MOVX    A,@DPTR
+        JNZ     ??Device_App_MessageMSGCB_5
+//  818         {
+//  819           LIGHT_TURN_OFF_LIGHT0();
+        CLR     0x90.4
+//  820           LIGHT_TURN_OFF_LIGHT1();
+        CLR     0x90.5
+//  821           LIGHT_TURN_OFF_LIGHT2(); 
+        CLR     0x80.3
+//  822           LIGHT_TURN_OFF_LIGHT3();
+        CLR     0x90.6
+//  823         }
+//  824         
+//  825         zclOnOffLight0_OnOff = pkt->cmd.Data[2];
+??Device_App_MessageMSGCB_5:
+        MOV     DPL,R2
+        MOV     DPH,R3
+        INC     DPTR
+        MOVX    A,@DPTR
+        MOV     DPH,A
+        MOV     DPL,R0
+        INC     DPTR
+        INC     DPTR
+        MOVX    A,@DPTR
+        MOV     DPTR,#zclOnOffLight0_OnOff
+        LCALL   ?Subroutine1 & 0xFFFF
+//  826         zclOnOffLight1_OnOff = pkt->cmd.Data[2];
+??CrossCallReturnLabel_0:
+        MOV     DPTR,#zclOnOffLight1_OnOff
+        LCALL   ?Subroutine1 & 0xFFFF
+//  827         zclOnOffLight2_OnOff = pkt->cmd.Data[2];
+??CrossCallReturnLabel_1:
+        MOV     DPTR,#zclOnOffLight2_OnOff
+        LCALL   ?Subroutine1 & 0xFFFF
+//  828         zclOnOffLight3_OnOff = pkt->cmd.Data[2];
+??CrossCallReturnLabel_2:
+        MOV     DPTR,#zclOnOffLight3_OnOff
+        MOVX    @DPTR,A
+//  829         
+//  830         osal_start_timerEx(zclOnOffLight_TaskID, 
+//  831                            ZCL_DEVICE_SEND_ONOFF_STATE_EVENT,
+//  832                            ZCL_DEVICE_SEND_INFO_TIME_3S);
+        ; Setup parameters for call to function osal_rand
+        LCALL   ??osal_rand?relay
+        ; Setup parameters for call to function osal_start_timerEx
+        MOV     A,R2
+        ADD     A,#-0x48
+        MOV     R4,A
+        CLR     A
+        ADDC    A,#0xb
+        MOV     R5,A
+        MOV     R2,#0x2
+        LCALL   ??Subroutine9_0 & 0xFFFF
+//  833       }
+//  834     }
+//  835     break;
+//  836   default:
+//  837     break;
+//  838   }
+//  839 
+//  840 }
+??CrossCallReturnLabel_15:
+        MOV     R7,#0x2
+        LJMP    ?BANKED_LEAVE_XDATA
+        CFI EndBlock cfiBlock27
+        REQUIRE _A_P1
+        REQUIRE _A_P0
+
+        RSEG BANKED_CODE:CODE:NOROOT(0)
+?Subroutine3:
+        CFI Block cfiCond28 Using cfiCommon0
+        CFI NoFunction
+        CFI Conditional ??CrossCallReturnLabel_20
+        CFI R6 load(1, XDATA, add(CFA_XSP16, literal(-12)))
+        CFI VB load(1, XDATA, add(CFA_XSP16, literal(-11)))
+        CFI V0 load(1, XDATA, add(CFA_XSP16, literal(-10)))
+        CFI V1 load(1, XDATA, add(CFA_XSP16, literal(-9)))
+        CFI V2 load(1, XDATA, add(CFA_XSP16, literal(-8)))
+        CFI V3 load(1, XDATA, add(CFA_XSP16, literal(-7)))
+        CFI R7 load(1, XDATA, add(CFA_XSP16, literal(-6)))
+        CFI ?RET_LOW load(1, XDATA, add(CFA_XSP16, literal(-5)))
+        CFI ?RET_HIGH load(1, XDATA, add(CFA_XSP16, literal(-4)))
+        CFI ?BRET_EXT load(1, XDATA, add(CFA_XSP16, literal(-3)))
+        CFI DPL0 load(1, XDATA, add(CFA_XSP16, literal(-2)))
+        CFI DPH0 load(1, XDATA, add(CFA_XSP16, literal(-1)))
+        CFI CFA_SP SP+0
+        CFI CFA_XSP16 add(XSP16, 12)
+        CFI Block cfiCond29 Using cfiCommon0
+        CFI (cfiCond29) NoFunction
+        CFI (cfiCond29) Conditional ??CrossCallReturnLabel_13
+        CFI (cfiCond29) DPL0 Frame(CFA_SP, 4)
+        CFI (cfiCond29) DPH0 Frame(CFA_SP, 5)
+        CFI (cfiCond29) CFA_SP SP+-5
+        CFI Block cfiPicker30 Using cfiCommon1
+        CFI (cfiPicker30) NoFunction
+        CFI (cfiPicker30) Picker
+        MOV     R4,#-0x18
+        MOV     R5,#0x3
+        MOV     R2,#0x1
+        CFI EndBlock cfiCond28
+        CFI EndBlock cfiCond29
+        CFI EndBlock cfiPicker30
+        REQUIRE ??Subroutine9_0
+        ; // Fall through to label ??Subroutine9_0
+
+        RSEG BANKED_CODE:CODE:NOROOT(0)
+??Subroutine9_0:
+        CFI Block cfiCond31 Using cfiCommon0
+        CFI NoFunction
+        CFI Conditional ??CrossCallReturnLabel_14
+        CFI R6 load(1, XDATA, add(CFA_XSP16, literal(-12)))
+        CFI VB load(1, XDATA, add(CFA_XSP16, literal(-11)))
+        CFI V0 load(1, XDATA, add(CFA_XSP16, literal(-10)))
+        CFI V1 load(1, XDATA, add(CFA_XSP16, literal(-9)))
+        CFI V2 load(1, XDATA, add(CFA_XSP16, literal(-8)))
+        CFI V3 load(1, XDATA, add(CFA_XSP16, literal(-7)))
+        CFI R7 load(1, XDATA, add(CFA_XSP16, literal(-6)))
+        CFI ?RET_LOW load(1, XDATA, add(CFA_XSP16, literal(-5)))
+        CFI ?RET_HIGH load(1, XDATA, add(CFA_XSP16, literal(-4)))
+        CFI ?BRET_EXT load(1, XDATA, add(CFA_XSP16, literal(-3)))
+        CFI DPL0 load(1, XDATA, add(CFA_XSP16, literal(-2)))
+        CFI DPH0 load(1, XDATA, add(CFA_XSP16, literal(-1)))
+        CFI CFA_SP SP+0
+        CFI CFA_XSP16 add(XSP16, 12)
+        CFI Block cfiCond32 Using cfiCommon0
+        CFI (cfiCond32) NoFunction
+        CFI (cfiCond32) Conditional ??CrossCallReturnLabel_15
+        CFI (cfiCond32) R6 load(1, XDATA, add(CFA_XSP16, literal(-10)))
+        CFI (cfiCond32) VB load(1, XDATA, add(CFA_XSP16, literal(-9)))
+        CFI (cfiCond32) V0 load(1, XDATA, add(CFA_XSP16, literal(-8)))
+        CFI (cfiCond32) V1 load(1, XDATA, add(CFA_XSP16, literal(-7)))
+        CFI (cfiCond32) R7 load(1, XDATA, add(CFA_XSP16, literal(-6)))
+        CFI (cfiCond32) ?RET_LOW load(1, XDATA, add(CFA_XSP16, literal(-5)))
+        CFI (cfiCond32) ?RET_HIGH load(1, XDATA, add(CFA_XSP16, literal(-4)))
+        CFI (cfiCond32) ?BRET_EXT load(1, XDATA, add(CFA_XSP16, literal(-3)))
+        CFI (cfiCond32) DPL0 load(1, XDATA, add(CFA_XSP16, literal(-2)))
+        CFI (cfiCond32) DPH0 load(1, XDATA, add(CFA_XSP16, literal(-1)))
+        CFI (cfiCond32) CFA_SP SP+0
+        CFI (cfiCond32) CFA_XSP16 add(XSP16, 10)
+        CFI Block cfiCond33 Using cfiCommon0
+        CFI (cfiCond33) NoFunction
+        CFI (cfiCond33) Conditional ??CrossCallReturnLabel_20
+        CFI (cfiCond33) R6 load(1, XDATA, add(CFA_XSP16, literal(-12)))
+        CFI (cfiCond33) VB load(1, XDATA, add(CFA_XSP16, literal(-11)))
+        CFI (cfiCond33) V0 load(1, XDATA, add(CFA_XSP16, literal(-10)))
+        CFI (cfiCond33) V1 load(1, XDATA, add(CFA_XSP16, literal(-9)))
+        CFI (cfiCond33) V2 load(1, XDATA, add(CFA_XSP16, literal(-8)))
+        CFI (cfiCond33) V3 load(1, XDATA, add(CFA_XSP16, literal(-7)))
+        CFI (cfiCond33) R7 load(1, XDATA, add(CFA_XSP16, literal(-6)))
+        CFI (cfiCond33) ?RET_LOW load(1, XDATA, add(CFA_XSP16, literal(-5)))
+        CFI (cfiCond33) ?RET_HIGH load(1, XDATA, add(CFA_XSP16, literal(-4)))
+        CFI (cfiCond33) ?BRET_EXT load(1, XDATA, add(CFA_XSP16, literal(-3)))
+        CFI (cfiCond33) DPL0 load(1, XDATA, add(CFA_XSP16, literal(-2)))
+        CFI (cfiCond33) DPH0 load(1, XDATA, add(CFA_XSP16, literal(-1)))
+        CFI (cfiCond33) CFA_SP SP+0
+        CFI (cfiCond33) CFA_XSP16 add(XSP16, 12)
+        CFI Block cfiCond34 Using cfiCommon0
+        CFI (cfiCond34) NoFunction
+        CFI (cfiCond34) Conditional ??CrossCallReturnLabel_13
+        CFI (cfiCond34) DPL0 Frame(CFA_SP, 4)
+        CFI (cfiCond34) DPH0 Frame(CFA_SP, 5)
+        CFI (cfiCond34) CFA_SP SP+-5
+        CFI Block cfiPicker35 Using cfiCommon1
+        CFI (cfiPicker35) NoFunction
+        CFI (cfiPicker35) Picker
+        MOV     R3,#0x0
+        CFI EndBlock cfiCond31
+        CFI EndBlock cfiCond32
+        CFI EndBlock cfiCond33
+        CFI EndBlock cfiCond34
+        CFI EndBlock cfiPicker35
+        REQUIRE ??Subroutine10_0
+        ; // Fall through to label ??Subroutine10_0
+
+        RSEG BANKED_CODE:CODE:NOROOT(0)
+??Subroutine10_0:
+        CFI Block cfiCond36 Using cfiCommon0
+        CFI NoFunction
+        CFI Conditional ??CrossCallReturnLabel_16
+        CFI R6 load(1, XDATA, add(CFA_XSP16, literal(-12)))
+        CFI VB load(1, XDATA, add(CFA_XSP16, literal(-11)))
+        CFI V0 load(1, XDATA, add(CFA_XSP16, literal(-10)))
+        CFI V1 load(1, XDATA, add(CFA_XSP16, literal(-9)))
+        CFI V2 load(1, XDATA, add(CFA_XSP16, literal(-8)))
+        CFI V3 load(1, XDATA, add(CFA_XSP16, literal(-7)))
+        CFI R7 load(1, XDATA, add(CFA_XSP16, literal(-6)))
+        CFI ?RET_LOW load(1, XDATA, add(CFA_XSP16, literal(-5)))
+        CFI ?RET_HIGH load(1, XDATA, add(CFA_XSP16, literal(-4)))
+        CFI ?BRET_EXT load(1, XDATA, add(CFA_XSP16, literal(-3)))
+        CFI DPL0 load(1, XDATA, add(CFA_XSP16, literal(-2)))
+        CFI DPH0 load(1, XDATA, add(CFA_XSP16, literal(-1)))
+        CFI CFA_SP SP+0
+        CFI CFA_XSP16 add(XSP16, 12)
+        CFI Block cfiCond37 Using cfiCommon0
+        CFI (cfiCond37) NoFunction
+        CFI (cfiCond37) Conditional ??CrossCallReturnLabel_17
+        CFI (cfiCond37) R6 load(1, XDATA, add(CFA_XSP16, literal(-12)))
+        CFI (cfiCond37) VB load(1, XDATA, add(CFA_XSP16, literal(-11)))
+        CFI (cfiCond37) V0 load(1, XDATA, add(CFA_XSP16, literal(-10)))
+        CFI (cfiCond37) V1 load(1, XDATA, add(CFA_XSP16, literal(-9)))
+        CFI (cfiCond37) V2 load(1, XDATA, add(CFA_XSP16, literal(-8)))
+        CFI (cfiCond37) V3 load(1, XDATA, add(CFA_XSP16, literal(-7)))
+        CFI (cfiCond37) R7 load(1, XDATA, add(CFA_XSP16, literal(-6)))
+        CFI (cfiCond37) ?RET_LOW load(1, XDATA, add(CFA_XSP16, literal(-5)))
+        CFI (cfiCond37) ?RET_HIGH load(1, XDATA, add(CFA_XSP16, literal(-4)))
+        CFI (cfiCond37) ?BRET_EXT load(1, XDATA, add(CFA_XSP16, literal(-3)))
+        CFI (cfiCond37) DPL0 load(1, XDATA, add(CFA_XSP16, literal(-2)))
+        CFI (cfiCond37) DPH0 load(1, XDATA, add(CFA_XSP16, literal(-1)))
+        CFI (cfiCond37) CFA_SP SP+0
+        CFI (cfiCond37) CFA_XSP16 add(XSP16, 12)
+        CFI Block cfiCond38 Using cfiCommon0
+        CFI (cfiCond38) NoFunction
+        CFI (cfiCond38) Conditional ??CrossCallReturnLabel_18
+        CFI (cfiCond38) R6 load(1, XDATA, add(CFA_XSP16, literal(-12)))
+        CFI (cfiCond38) VB load(1, XDATA, add(CFA_XSP16, literal(-11)))
+        CFI (cfiCond38) V0 load(1, XDATA, add(CFA_XSP16, literal(-10)))
+        CFI (cfiCond38) V1 load(1, XDATA, add(CFA_XSP16, literal(-9)))
+        CFI (cfiCond38) V2 load(1, XDATA, add(CFA_XSP16, literal(-8)))
+        CFI (cfiCond38) V3 load(1, XDATA, add(CFA_XSP16, literal(-7)))
+        CFI (cfiCond38) R7 load(1, XDATA, add(CFA_XSP16, literal(-6)))
+        CFI (cfiCond38) ?RET_LOW load(1, XDATA, add(CFA_XSP16, literal(-5)))
+        CFI (cfiCond38) ?RET_HIGH load(1, XDATA, add(CFA_XSP16, literal(-4)))
+        CFI (cfiCond38) ?BRET_EXT load(1, XDATA, add(CFA_XSP16, literal(-3)))
+        CFI (cfiCond38) DPL0 load(1, XDATA, add(CFA_XSP16, literal(-2)))
+        CFI (cfiCond38) DPH0 load(1, XDATA, add(CFA_XSP16, literal(-1)))
+        CFI (cfiCond38) CFA_SP SP+0
+        CFI (cfiCond38) CFA_XSP16 add(XSP16, 12)
+        CFI Block cfiCond39 Using cfiCommon0
+        CFI (cfiCond39) NoFunction
+        CFI (cfiCond39) Conditional ??CrossCallReturnLabel_19
+        CFI (cfiCond39) R6 load(1, XDATA, add(CFA_XSP16, literal(-12)))
+        CFI (cfiCond39) VB load(1, XDATA, add(CFA_XSP16, literal(-11)))
+        CFI (cfiCond39) V0 load(1, XDATA, add(CFA_XSP16, literal(-10)))
+        CFI (cfiCond39) V1 load(1, XDATA, add(CFA_XSP16, literal(-9)))
+        CFI (cfiCond39) V2 load(1, XDATA, add(CFA_XSP16, literal(-8)))
+        CFI (cfiCond39) V3 load(1, XDATA, add(CFA_XSP16, literal(-7)))
+        CFI (cfiCond39) R7 load(1, XDATA, add(CFA_XSP16, literal(-6)))
+        CFI (cfiCond39) ?RET_LOW load(1, XDATA, add(CFA_XSP16, literal(-5)))
+        CFI (cfiCond39) ?RET_HIGH load(1, XDATA, add(CFA_XSP16, literal(-4)))
+        CFI (cfiCond39) ?BRET_EXT load(1, XDATA, add(CFA_XSP16, literal(-3)))
+        CFI (cfiCond39) DPL0 load(1, XDATA, add(CFA_XSP16, literal(-2)))
+        CFI (cfiCond39) DPH0 load(1, XDATA, add(CFA_XSP16, literal(-1)))
+        CFI (cfiCond39) CFA_SP SP+0
+        CFI (cfiCond39) CFA_XSP16 add(XSP16, 12)
+        CFI Block cfiCond40 Using cfiCommon0
+        CFI (cfiCond40) NoFunction
+        CFI (cfiCond40) Conditional ??CrossCallReturnLabel_14
+        CFI (cfiCond40) R6 load(1, XDATA, add(CFA_XSP16, literal(-12)))
+        CFI (cfiCond40) VB load(1, XDATA, add(CFA_XSP16, literal(-11)))
+        CFI (cfiCond40) V0 load(1, XDATA, add(CFA_XSP16, literal(-10)))
+        CFI (cfiCond40) V1 load(1, XDATA, add(CFA_XSP16, literal(-9)))
+        CFI (cfiCond40) V2 load(1, XDATA, add(CFA_XSP16, literal(-8)))
+        CFI (cfiCond40) V3 load(1, XDATA, add(CFA_XSP16, literal(-7)))
+        CFI (cfiCond40) R7 load(1, XDATA, add(CFA_XSP16, literal(-6)))
+        CFI (cfiCond40) ?RET_LOW load(1, XDATA, add(CFA_XSP16, literal(-5)))
+        CFI (cfiCond40) ?RET_HIGH load(1, XDATA, add(CFA_XSP16, literal(-4)))
+        CFI (cfiCond40) ?BRET_EXT load(1, XDATA, add(CFA_XSP16, literal(-3)))
+        CFI (cfiCond40) DPL0 load(1, XDATA, add(CFA_XSP16, literal(-2)))
+        CFI (cfiCond40) DPH0 load(1, XDATA, add(CFA_XSP16, literal(-1)))
+        CFI (cfiCond40) CFA_SP SP+0
+        CFI (cfiCond40) CFA_XSP16 add(XSP16, 12)
+        CFI Block cfiCond41 Using cfiCommon0
+        CFI (cfiCond41) NoFunction
+        CFI (cfiCond41) Conditional ??CrossCallReturnLabel_15
+        CFI (cfiCond41) R6 load(1, XDATA, add(CFA_XSP16, literal(-10)))
+        CFI (cfiCond41) VB load(1, XDATA, add(CFA_XSP16, literal(-9)))
+        CFI (cfiCond41) V0 load(1, XDATA, add(CFA_XSP16, literal(-8)))
+        CFI (cfiCond41) V1 load(1, XDATA, add(CFA_XSP16, literal(-7)))
+        CFI (cfiCond41) R7 load(1, XDATA, add(CFA_XSP16, literal(-6)))
+        CFI (cfiCond41) ?RET_LOW load(1, XDATA, add(CFA_XSP16, literal(-5)))
+        CFI (cfiCond41) ?RET_HIGH load(1, XDATA, add(CFA_XSP16, literal(-4)))
+        CFI (cfiCond41) ?BRET_EXT load(1, XDATA, add(CFA_XSP16, literal(-3)))
+        CFI (cfiCond41) DPL0 load(1, XDATA, add(CFA_XSP16, literal(-2)))
+        CFI (cfiCond41) DPH0 load(1, XDATA, add(CFA_XSP16, literal(-1)))
+        CFI (cfiCond41) CFA_SP SP+0
+        CFI (cfiCond41) CFA_XSP16 add(XSP16, 10)
+        CFI Block cfiCond42 Using cfiCommon0
+        CFI (cfiCond42) NoFunction
+        CFI (cfiCond42) Conditional ??CrossCallReturnLabel_20
+        CFI (cfiCond42) R6 load(1, XDATA, add(CFA_XSP16, literal(-12)))
+        CFI (cfiCond42) VB load(1, XDATA, add(CFA_XSP16, literal(-11)))
+        CFI (cfiCond42) V0 load(1, XDATA, add(CFA_XSP16, literal(-10)))
+        CFI (cfiCond42) V1 load(1, XDATA, add(CFA_XSP16, literal(-9)))
+        CFI (cfiCond42) V2 load(1, XDATA, add(CFA_XSP16, literal(-8)))
+        CFI (cfiCond42) V3 load(1, XDATA, add(CFA_XSP16, literal(-7)))
+        CFI (cfiCond42) R7 load(1, XDATA, add(CFA_XSP16, literal(-6)))
+        CFI (cfiCond42) ?RET_LOW load(1, XDATA, add(CFA_XSP16, literal(-5)))
+        CFI (cfiCond42) ?RET_HIGH load(1, XDATA, add(CFA_XSP16, literal(-4)))
+        CFI (cfiCond42) ?BRET_EXT load(1, XDATA, add(CFA_XSP16, literal(-3)))
+        CFI (cfiCond42) DPL0 load(1, XDATA, add(CFA_XSP16, literal(-2)))
+        CFI (cfiCond42) DPH0 load(1, XDATA, add(CFA_XSP16, literal(-1)))
+        CFI (cfiCond42) CFA_SP SP+0
+        CFI (cfiCond42) CFA_XSP16 add(XSP16, 12)
+        CFI Block cfiCond43 Using cfiCommon0
+        CFI (cfiCond43) NoFunction
+        CFI (cfiCond43) Conditional ??CrossCallReturnLabel_13
+        CFI (cfiCond43) DPL0 Frame(CFA_SP, 4)
+        CFI (cfiCond43) DPH0 Frame(CFA_SP, 5)
+        CFI (cfiCond43) CFA_SP SP+-5
+        CFI Block cfiPicker44 Using cfiCommon1
+        CFI (cfiPicker44) NoFunction
+        CFI (cfiPicker44) Picker
+        MOV     DPTR,#zclOnOffLight_TaskID
+        MOVX    A,@DPTR
+        MOV     R1,A
+        LCALL   ??osal_start_timerEx?relay
+        RET
+        CFI EndBlock cfiCond36
+        CFI EndBlock cfiCond37
+        CFI EndBlock cfiCond38
+        CFI EndBlock cfiCond39
+        CFI EndBlock cfiCond40
+        CFI EndBlock cfiCond41
+        CFI EndBlock cfiCond42
+        CFI EndBlock cfiCond43
+        CFI EndBlock cfiPicker44
+
+        RSEG BANKED_CODE:CODE:NOROOT(0)
+?Subroutine1:
+        CFI Block cfiCond45 Using cfiCommon0
+        CFI NoFunction
+        CFI Conditional ??CrossCallReturnLabel_0
+        CFI R6 load(1, XDATA, add(CFA_XSP16, literal(-10)))
+        CFI VB load(1, XDATA, add(CFA_XSP16, literal(-9)))
+        CFI V0 load(1, XDATA, add(CFA_XSP16, literal(-8)))
+        CFI V1 load(1, XDATA, add(CFA_XSP16, literal(-7)))
+        CFI R7 load(1, XDATA, add(CFA_XSP16, literal(-6)))
+        CFI ?RET_LOW load(1, XDATA, add(CFA_XSP16, literal(-5)))
+        CFI ?RET_HIGH load(1, XDATA, add(CFA_XSP16, literal(-4)))
+        CFI ?BRET_EXT load(1, XDATA, add(CFA_XSP16, literal(-3)))
+        CFI DPL0 load(1, XDATA, add(CFA_XSP16, literal(-2)))
+        CFI DPH0 load(1, XDATA, add(CFA_XSP16, literal(-1)))
+        CFI CFA_SP SP+0
+        CFI CFA_XSP16 add(XSP16, 10)
+        CFI Block cfiCond46 Using cfiCommon0
+        CFI (cfiCond46) NoFunction
+        CFI (cfiCond46) Conditional ??CrossCallReturnLabel_1
+        CFI (cfiCond46) R6 load(1, XDATA, add(CFA_XSP16, literal(-10)))
+        CFI (cfiCond46) VB load(1, XDATA, add(CFA_XSP16, literal(-9)))
+        CFI (cfiCond46) V0 load(1, XDATA, add(CFA_XSP16, literal(-8)))
+        CFI (cfiCond46) V1 load(1, XDATA, add(CFA_XSP16, literal(-7)))
+        CFI (cfiCond46) R7 load(1, XDATA, add(CFA_XSP16, literal(-6)))
+        CFI (cfiCond46) ?RET_LOW load(1, XDATA, add(CFA_XSP16, literal(-5)))
+        CFI (cfiCond46) ?RET_HIGH load(1, XDATA, add(CFA_XSP16, literal(-4)))
+        CFI (cfiCond46) ?BRET_EXT load(1, XDATA, add(CFA_XSP16, literal(-3)))
+        CFI (cfiCond46) DPL0 load(1, XDATA, add(CFA_XSP16, literal(-2)))
+        CFI (cfiCond46) DPH0 load(1, XDATA, add(CFA_XSP16, literal(-1)))
+        CFI (cfiCond46) CFA_SP SP+0
+        CFI (cfiCond46) CFA_XSP16 add(XSP16, 10)
+        CFI Block cfiCond47 Using cfiCommon0
+        CFI (cfiCond47) NoFunction
+        CFI (cfiCond47) Conditional ??CrossCallReturnLabel_2
+        CFI (cfiCond47) R6 load(1, XDATA, add(CFA_XSP16, literal(-10)))
+        CFI (cfiCond47) VB load(1, XDATA, add(CFA_XSP16, literal(-9)))
+        CFI (cfiCond47) V0 load(1, XDATA, add(CFA_XSP16, literal(-8)))
+        CFI (cfiCond47) V1 load(1, XDATA, add(CFA_XSP16, literal(-7)))
+        CFI (cfiCond47) R7 load(1, XDATA, add(CFA_XSP16, literal(-6)))
+        CFI (cfiCond47) ?RET_LOW load(1, XDATA, add(CFA_XSP16, literal(-5)))
+        CFI (cfiCond47) ?RET_HIGH load(1, XDATA, add(CFA_XSP16, literal(-4)))
+        CFI (cfiCond47) ?BRET_EXT load(1, XDATA, add(CFA_XSP16, literal(-3)))
+        CFI (cfiCond47) DPL0 load(1, XDATA, add(CFA_XSP16, literal(-2)))
+        CFI (cfiCond47) DPH0 load(1, XDATA, add(CFA_XSP16, literal(-1)))
+        CFI (cfiCond47) CFA_SP SP+0
+        CFI (cfiCond47) CFA_XSP16 add(XSP16, 10)
+        CFI Block cfiPicker48 Using cfiCommon1
+        CFI (cfiPicker48) NoFunction
+        CFI (cfiPicker48) Picker
+        MOVX    @DPTR,A
+        LCALL   ?Subroutine6 & 0xFFFF
+??CrossCallReturnLabel_8:
+        INC     DPTR
+        INC     DPTR
+        MOVX    A,@DPTR
+        RET
+        CFI EndBlock cfiCond45
+        CFI EndBlock cfiCond46
+        CFI EndBlock cfiCond47
+        CFI EndBlock cfiPicker48
+
+        RSEG BANKED_CODE:CODE:NOROOT(0)
+?Subroutine6:
+        CFI Block cfiCond49 Using cfiCommon0
+        CFI NoFunction
+        CFI Conditional ??CrossCallReturnLabel_7
+        CFI R6 load(1, XDATA, add(CFA_XSP16, literal(-10)))
+        CFI VB load(1, XDATA, add(CFA_XSP16, literal(-9)))
+        CFI V0 load(1, XDATA, add(CFA_XSP16, literal(-8)))
+        CFI V1 load(1, XDATA, add(CFA_XSP16, literal(-7)))
+        CFI R7 load(1, XDATA, add(CFA_XSP16, literal(-6)))
+        CFI ?RET_LOW load(1, XDATA, add(CFA_XSP16, literal(-5)))
+        CFI ?RET_HIGH load(1, XDATA, add(CFA_XSP16, literal(-4)))
+        CFI ?BRET_EXT load(1, XDATA, add(CFA_XSP16, literal(-3)))
+        CFI DPL0 load(1, XDATA, add(CFA_XSP16, literal(-2)))
+        CFI DPH0 load(1, XDATA, add(CFA_XSP16, literal(-1)))
+        CFI CFA_SP SP+0
+        CFI CFA_XSP16 add(XSP16, 10)
+        CFI Block cfiCond50 Using cfiCommon0
+        CFI (cfiCond50) NoFunction
+        CFI (cfiCond50) Conditional ??CrossCallReturnLabel_8, ??CrossCallReturnLabel_0
+        CFI (cfiCond50) R6 load(1, XDATA, add(CFA_XSP16, literal(-10)))
+        CFI (cfiCond50) VB load(1, XDATA, add(CFA_XSP16, literal(-9)))
+        CFI (cfiCond50) V0 load(1, XDATA, add(CFA_XSP16, literal(-8)))
+        CFI (cfiCond50) V1 load(1, XDATA, add(CFA_XSP16, literal(-7)))
+        CFI (cfiCond50) R7 load(1, XDATA, add(CFA_XSP16, literal(-6)))
+        CFI (cfiCond50) ?RET_LOW load(1, XDATA, add(CFA_XSP16, literal(-5)))
+        CFI (cfiCond50) ?RET_HIGH load(1, XDATA, add(CFA_XSP16, literal(-4)))
+        CFI (cfiCond50) ?BRET_EXT load(1, XDATA, add(CFA_XSP16, literal(-3)))
+        CFI (cfiCond50) DPL0 load(1, XDATA, add(CFA_XSP16, literal(-2)))
+        CFI (cfiCond50) DPH0 load(1, XDATA, add(CFA_XSP16, literal(-1)))
+        CFI (cfiCond50) CFA_SP SP+0
+        CFI (cfiCond50) CFA_XSP16 add(XSP16, 10)
+        CFI Block cfiCond51 Using cfiCommon0
+        CFI (cfiCond51) NoFunction
+        CFI (cfiCond51) Conditional ??CrossCallReturnLabel_8, ??CrossCallReturnLabel_1
+        CFI (cfiCond51) R6 load(1, XDATA, add(CFA_XSP16, literal(-10)))
+        CFI (cfiCond51) VB load(1, XDATA, add(CFA_XSP16, literal(-9)))
+        CFI (cfiCond51) V0 load(1, XDATA, add(CFA_XSP16, literal(-8)))
+        CFI (cfiCond51) V1 load(1, XDATA, add(CFA_XSP16, literal(-7)))
+        CFI (cfiCond51) R7 load(1, XDATA, add(CFA_XSP16, literal(-6)))
+        CFI (cfiCond51) ?RET_LOW load(1, XDATA, add(CFA_XSP16, literal(-5)))
+        CFI (cfiCond51) ?RET_HIGH load(1, XDATA, add(CFA_XSP16, literal(-4)))
+        CFI (cfiCond51) ?BRET_EXT load(1, XDATA, add(CFA_XSP16, literal(-3)))
+        CFI (cfiCond51) DPL0 load(1, XDATA, add(CFA_XSP16, literal(-2)))
+        CFI (cfiCond51) DPH0 load(1, XDATA, add(CFA_XSP16, literal(-1)))
+        CFI (cfiCond51) CFA_SP SP+0
+        CFI (cfiCond51) CFA_XSP16 add(XSP16, 10)
+        CFI Block cfiCond52 Using cfiCommon0
+        CFI (cfiCond52) NoFunction
+        CFI (cfiCond52) Conditional ??CrossCallReturnLabel_8, ??CrossCallReturnLabel_2
+        CFI (cfiCond52) R6 load(1, XDATA, add(CFA_XSP16, literal(-10)))
+        CFI (cfiCond52) VB load(1, XDATA, add(CFA_XSP16, literal(-9)))
+        CFI (cfiCond52) V0 load(1, XDATA, add(CFA_XSP16, literal(-8)))
+        CFI (cfiCond52) V1 load(1, XDATA, add(CFA_XSP16, literal(-7)))
+        CFI (cfiCond52) R7 load(1, XDATA, add(CFA_XSP16, literal(-6)))
+        CFI (cfiCond52) ?RET_LOW load(1, XDATA, add(CFA_XSP16, literal(-5)))
+        CFI (cfiCond52) ?RET_HIGH load(1, XDATA, add(CFA_XSP16, literal(-4)))
+        CFI (cfiCond52) ?BRET_EXT load(1, XDATA, add(CFA_XSP16, literal(-3)))
+        CFI (cfiCond52) DPL0 load(1, XDATA, add(CFA_XSP16, literal(-2)))
+        CFI (cfiCond52) DPH0 load(1, XDATA, add(CFA_XSP16, literal(-1)))
+        CFI (cfiCond52) CFA_SP SP+0
+        CFI (cfiCond52) CFA_XSP16 add(XSP16, 10)
+        CFI Block cfiPicker53 Using cfiCommon1
+        CFI (cfiPicker53) NoFunction
+        CFI (cfiPicker53) Picker
+        MOV     DPL,R2
+        MOV     DPH,R3
+        MOVX    A,@DPTR
+        MOV     R0,A
+        INC     DPTR
+        MOVX    A,@DPTR
+        MOV     DPH,A
+        MOV     DPL,R0
+        RET
+        CFI EndBlock cfiCond49
+        CFI EndBlock cfiCond50
+        CFI EndBlock cfiCond51
+        CFI EndBlock cfiCond52
+        CFI EndBlock cfiPicker53
+
+        RSEG XDATA_ID:CODE:NOROOT(0)
+`?<Initializer for zclDevice_JoinNetworkOk>`:
+        DATA8
+        DB 8
+
+        RSEG XDATA_ID:CODE:NOROOT(0)
+`?<Initializer for zclOnOffLight0_CmdCallbacks>`:
+        DATA16
+        DW ??zclOnOffLight_BasicResetCB?relay
+        DW ??zclOnOffLight_IdentifyCB?relay
+        DW ??zclOnOffLight_IdentifyQueryRspCB?relay
+        DW ??zclOnOffLight0_OnOffCB?relay
+        DW 0H
+        DW 0H
+        DW 0H
+        DW 0H
+        DW 0H
+        DW 0H
+        DW 0H
+        DW 0H
+        DW 0H
+        DW 0H
+        DB 0, 0
+
+        RSEG XDATA_ID:CODE:NOROOT(0)
+`?<Initializer for zclOnOffLight1_CmdCallbacks>`:
+        DATA16
+        DW ??zclOnOffLight_BasicResetCB?relay
+        DW ??zclOnOffLight_IdentifyCB?relay
+        DW ??zclOnOffLight_IdentifyQueryRspCB?relay
+        DW ??zclOnOffLight1_OnOffCB?relay
+        DW 0H
+        DW 0H
+        DW 0H
+        DW 0H
+        DW 0H
+        DW 0H
+        DW 0H
+        DW 0H
+        DW 0H
+        DW 0H
+        DB 0, 0
+
+        RSEG XDATA_ID:CODE:NOROOT(0)
+`?<Initializer for zclOnOffLight2_CmdCallbacks>`:
+        DATA16
+        DW ??zclOnOffLight_BasicResetCB?relay
+        DW ??zclOnOffLight_IdentifyCB?relay
+        DW ??zclOnOffLight_IdentifyQueryRspCB?relay
+        DW ??zclOnOffLight2_OnOffCB?relay
+        DW 0H
+        DW 0H
+        DW 0H
+        DW 0H
+        DW 0H
+        DW 0H
+        DW 0H
+        DW 0H
+        DW 0H
+        DW 0H
+        DB 0, 0
+
+        RSEG XDATA_ID:CODE:NOROOT(0)
+`?<Initializer for zclOnOffLight3_CmdCallbacks>`:
+        DATA16
+        DW ??zclOnOffLight_BasicResetCB?relay
+        DW ??zclOnOffLight_IdentifyCB?relay
+        DW ??zclOnOffLight_IdentifyQueryRspCB?relay
+        DW ??zclOnOffLight3_OnOffCB?relay
+        DW 0H
+        DW 0H
+        DW 0H
+        DW 0H
+        DW 0H
+        DW 0H
+        DW 0H
+        DW 0H
+        DW 0H
+        DW 0H
+        DB 0, 0
+
+        RSEG BANK_RELAYS:CODE:REORDER:NOROOT(0)
+??zclOnOffLight_Init?relay:
+        LCALL   ?BDISPATCH
+        DATA
+        DC24    zclOnOffLight_Init
+
+        RSEG BANK_RELAYS:CODE:REORDER:NOROOT(0)
+??zclOnOffLight_event_loop?relay:
+        LCALL   ?BDISPATCH
+        DATA
+        DC24    zclOnOffLight_event_loop
+
+        RSEG BANK_RELAYS:CODE:REORDER:NOROOT(0)
+??zclOnOffLight_BasicResetCB?relay:
+        LCALL   ?BDISPATCH
+        DATA
+        DC24    zclOnOffLight_BasicResetCB
+
+        RSEG BANK_RELAYS:CODE:REORDER:NOROOT(0)
+??zclOnOffLight_IdentifyCB?relay:
+        LCALL   ?BDISPATCH
+        DATA
+        DC24    zclOnOffLight_IdentifyCB
+
+        RSEG BANK_RELAYS:CODE:REORDER:NOROOT(0)
+??zclOnOffLight_IdentifyQueryRspCB?relay:
+        LCALL   ?BDISPATCH
+        DATA
+        DC24    zclOnOffLight_IdentifyQueryRspCB
+
+        RSEG BANK_RELAYS:CODE:REORDER:NOROOT(0)
+??zclOnOffLight0_OnOffCB?relay:
+        LCALL   ?BDISPATCH
+        DATA
+        DC24    zclOnOffLight0_OnOffCB
+
+        RSEG BANK_RELAYS:CODE:REORDER:NOROOT(0)
+??zclOnOffLight1_OnOffCB?relay:
+        LCALL   ?BDISPATCH
+        DATA
+        DC24    zclOnOffLight1_OnOffCB
+
+        RSEG BANK_RELAYS:CODE:REORDER:NOROOT(0)
+??zclOnOffLight2_OnOffCB?relay:
+        LCALL   ?BDISPATCH
+        DATA
+        DC24    zclOnOffLight2_OnOffCB
+
+        RSEG BANK_RELAYS:CODE:REORDER:NOROOT(0)
+??zclOnOffLight3_OnOffCB?relay:
+        LCALL   ?BDISPATCH
+        DATA
+        DC24    zclOnOffLight3_OnOffCB
+
+        RSEG BANK_RELAYS:CODE:REORDER:NOROOT(0)
+??zclOnOffLight_OnOffCB?relay:
+        LCALL   ?BDISPATCH
+        DATA
+        DC24    zclOnOffLight_OnOffCB
+
+        RSEG BANK_RELAYS:CODE:REORDER:NOROOT(0)
+??Device_App_MessageMSGCB?relay:
+        LCALL   ?BDISPATCH
+        DATA
+        DC24    Device_App_MessageMSGCB
+
+        END
+//  841 
+//  842 void PrintfNetState( devStates_t NwkState )
+//  843 {
+//  844   switch(NwkState)
+//  845   {
+//  846   case DEV_HOLD:
+//  847     HalUARTWrite(0,(uint8 *)NwkState,sizeof(NwkState));//AF
+//  848     break;
+//  849   case DEV_INIT:
+//  850     HalUARTWrite(0,(uint8 *)NwkState,sizeof(NwkState));
+//  851     break;
+//  852   case DEV_NWK_DISC:
+//  853     HalUARTWrite(0,(uint8 *)NwkState,sizeof(NwkState));
+//  854     break;
+//  855   case DEV_NWK_JOINING:
+//  856     HalUARTWrite(0,(uint8 *)NwkState,sizeof(NwkState));
+//  857     break;
+//  858   case DEV_NWK_REJOIN:
+//  859     HalUARTWrite(0,(uint8 *)NwkState,sizeof(NwkState));
+//  860     break;
+//  861   case DEV_END_DEVICE_UNAUTH:
+//  862     HalUARTWrite(0,(uint8 *)NwkState,sizeof(NwkState));
+//  863     break;
+//  864   case DEV_END_DEVICE:
+//  865     HalUARTWrite(0,(uint8 *)NwkState,sizeof(NwkState));
+//  866     break;
+//  867   case DEV_ROUTER:
+//  868     HalUARTWrite(0,(uint8 *)NwkState,sizeof(NwkState));
+//  869     break;
+//  870   case DEV_COORD_STARTING:
+//  871     HalUARTWrite(0,(uint8 *)NwkState,sizeof(NwkState));
+//  872     break;
+//  873   case DEV_ZB_COORD:
+//  874     HalUARTWrite(0,(uint8 *)NwkState,sizeof(NwkState));
+//  875     break;
+//  876   case DEV_NWK_ORPHAN:
+//  877     HalUARTWrite(0,(uint8 *)NwkState,sizeof(NwkState));
+//  878     break;
+//  879     
+//  880   default:
+//  881     break;
+//  882   }
+//  883 }
+// 
+// 1 242 bytes in segment BANKED_CODE
+//    66 bytes in segment BANK_RELAYS
+//     2 bytes in segment SFR_AN
+//   121 bytes in segment XDATA_I
+//   121 bytes in segment XDATA_ID
+//    17 bytes in segment XDATA_Z
+// 
+// 1 429 bytes of CODE  memory
+//     0 bytes of DATA  memory (+ 2 bytes shared)
+//   138 bytes of XDATA memory
+//
+//Errors: none
+//Warnings: none

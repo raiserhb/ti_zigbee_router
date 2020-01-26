@@ -1,0 +1,225 @@
+###############################################################################
+#                                                                             #
+# IAR C/C++ Compiler V8.10.1.10194/W32 for 8051         12/Oct/2016  17:53:49 #
+# Copyright 2004-2011 IAR Systems AB.                                         #
+#                                                                             #
+#    Core               =  plain                                              #
+#    Code model         =  banked                                             #
+#    Data model         =  large                                              #
+#    Calling convention =  xdata reentrant                                    #
+#    Constant location  =  data_rom                                           #
+#    Dptr setup         =  1,16                                               #
+#    Source file        =  D:\work space\work space\Smart                     #
+#                          Product\SmartLightSwitch\two                       #
+#                          key\v1.00.0\ZStack-CC2530-2.5.1a\ZStack-CC2530-2.5 #
+#                          .1a\Projects\zstack\HomeAutomation\SmartSwitchLigh #
+#                          t\CC2530DB\EWACC2.tmp                              #
+#    Command line       =  -f "D:\work space\work space\Smart                 #
+#                          Product\SmartLightSwitch\two                       #
+#                          key\v1.00.0\ZStack-CC2530-2.5.1a\ZStack-CC2530-2.5 #
+#                          .1a\Projects\zstack\HomeAutomation\SmartSwitchLigh #
+#                          t\CC2530DB\..\Tools\CC2530DB\f8wRouter.cfg"        #
+#                          (-DCPU32MHZ -DROOT=__near_func                     #
+#                          -DMAC_CFG_APP_PENDING_QUEUE=TRUE                   #
+#                          -DMAC_CFG_TX_DATA_MAX=5 -DMAC_CFG_TX_MAX=8         #
+#                          -DMAC_CFG_RX_MAX=5 -DRTR_NWK -DNV_RESTORE          #
+#                          -DNV_INIT -DHAL_KEY=FALSE -DHAL_LED=FALSE          #
+#                          -DHAL_LCD=FALSE -DHAL_ADC=FALSE                    #
+#                          -DTC_LINKKEY_JOIN) -f "D:\work space\work          #
+#                          space\Smart Product\SmartLightSwitch\two           #
+#                          key\v1.00.0\ZStack-CC2530-2.5.1a\ZStack-CC2530-2.5 #
+#                          .1a\Projects\zstack\HomeAutomation\SmartSwitchLigh #
+#                          t\CC2530DB\..\Tools\CC2530DB\f8wConfig.cfg"        #
+#                          (-DZIGBEEPRO -DSECURE=1 -DZG_SECURE_DYNAMIC=0      #
+#                          -DREFLECTOR -DDEFAULT_CHANLIST=0x00000800          #
+#                          -DZDAPP_CONFIG_PAN_ID=0xFFFF                       #
+#                          -DNWK_START_DELAY=100 -DEXTENDED_JOINING_RANDOM_MA #
+#                          SK=0x007F -DBEACON_REQUEST_DELAY=1000              #
+#                          -DBEACON_REQ_DELAY_MASK=0x00FF                     #
+#                          -DLINK_STATUS_JITTER_MASK=0x007F                   #
+#                          -DROUTE_EXPIRY_TIME=30 -DAPSC_ACK_WAIT_DURATION_PO #
+#                          LLED=3000 -DNWK_INDIRECT_MSG_TIMEOUT=7             #
+#                          -DMAX_RREQ_ENTRIES=8 -DAPSC_MAX_FRAME_RETRIES=3    #
+#                          -DNWK_MAX_DATA_RETRIES=2                           #
+#                          -DMAX_POLL_FAILURE_RETRIES=2 -DMAX_BCAST=9         #
+#                          -DAPS_MAX_GROUPS=16 -DMAX_RTG_ENTRIES=40           #
+#                          -DNWK_MAX_BINDING_ENTRIES=4                        #
+#                          -DMAX_BINDING_CLUSTER_IDS=4                        #
+#                          -DDEFAULT_KEY={0x79,0x69,0x20,0x68,0x75,0x69,0x20, #
+#                          0x79,0x75,0x6E,0x20,0x73,0x6D,0x61,0x72,0x74}      #
+#                          -DMAC_MAX_FRAME_SIZE=116                           #
+#                          -DZDNWKMGR_MIN_TRANSMISSIONS=20 "-DCONST=const     #
+#                          __code" -DGENERIC=__generic                        #
+#                          -DRFD_RCVC_ALWAYS_ON=TRUE -DPOLL_RATE=0            #
+#                          -DQUEUED_POLL_RATE=0 -DRESPONSE_POLL_RATE=0        #
+#                          -DREJOIN_POLL_RATE=440) -f "D:\work space\work     #
+#                          space\Smart Product\SmartLightSwitch\two           #
+#                          key\v1.00.0\ZStack-CC2530-2.5.1a\ZStack-CC2530-2.5 #
+#                          .1a\Projects\zstack\HomeAutomation\SmartSwitchLigh #
+#                          t\CC2530DB\..\Tools\CC2530DB\f8wZCL.cfg"           #
+#                          (-DZCL_READ -DZCL_WRITE -DZCL_REPORT -DZCL_BASIC   #
+#                          -DZCL_IDENTIFY -DZCL_ON_OFF -DZCL_KEY_ESTABLISH    #
+#                          -DZCL_KEY_ESTABLISHMENT_KEY_GENERATE_TIMEOUT=4     #
+#                          -DZCL_KEY_ESTABLISHMENT_MAC_GENERATE_TIMEOUT=10    #
+#                          -DZCL_KEY_ESTABLISHMENT_EKEY_GENERATE_TIMEOUT=10   #
+#                          -DZCL_LOAD_CONTROL -DZCL_SIMPLE_METERING           #
+#                          -DZCL_PRICING -DZCL_MESSAGE -DZCL_TUNNELING        #
+#                          -DZCL_TOU) -DZCL_DEVICE_MGMT "D:\work space\work   #
+#                          space\Smart Product\SmartLightSwitch\two           #
+#                          key\v1.00.0\ZStack-CC2530-2.5.1a\ZStack-CC2530-2.5 #
+#                          .1a\Projects\zstack\HomeAutomation\SmartSwitchLigh #
+#                          t\CC2530DB\EWACC2.tmp" -lC "D:\work space\work     #
+#                          space\Smart Product\SmartLightSwitch\two           #
+#                          key\v1.00.0\ZStack-CC2530-2.5.1a\ZStack-CC2530-2.5 #
+#                          .1a\Projects\zstack\HomeAutomation\SmartSwitchLigh #
+#                          t\CC2530DB\RouterDeviceEB\List\" -lA "D:\work      #
+#                          space\work space\Smart Product\SmartLightSwitch\tw #
+#                          o key\v1.00.0\ZStack-CC2530-2.5.1a\ZStack-CC2530-2 #
+#                          .5.1a\Projects\zstack\HomeAutomation\SmartSwitchLi #
+#                          ght\CC2530DB\RouterDeviceEB\List\"                 #
+#                          --diag_suppress Pe001,Pa010 -o "D:\work            #
+#                          space\work space\Smart Product\SmartLightSwitch\tw #
+#                          o key\v1.00.0\ZStack-CC2530-2.5.1a\ZStack-CC2530-2 #
+#                          .5.1a\Projects\zstack\HomeAutomation\SmartSwitchLi #
+#                          ght\CC2530DB\RouterDeviceEB\Obj\" -e --debug       #
+#                          --core=plain --dptr=16,1 --data_model=large        #
+#                          --code_model=banked --calling_convention=xdata_ree #
+#                          ntrant --place_constants=data_rom                  #
+#                          --nr_virtual_regs 16 -I "D:\work space\work        #
+#                          space\Smart Product\SmartLightSwitch\two           #
+#                          key\v1.00.0\ZStack-CC2530-2.5.1a\ZStack-CC2530-2.5 #
+#                          .1a\Projects\zstack\HomeAutomation\SmartSwitchLigh #
+#                          t\CC2530DB\" -I "D:\work space\work space\Smart    #
+#                          Product\SmartLightSwitch\two                       #
+#                          key\v1.00.0\ZStack-CC2530-2.5.1a\ZStack-CC2530-2.5 #
+#                          .1a\Projects\zstack\HomeAutomation\SmartSwitchLigh #
+#                          t\CC2530DB\..\Source\" -I "D:\work space\work      #
+#                          space\Smart Product\SmartLightSwitch\two           #
+#                          key\v1.00.0\ZStack-CC2530-2.5.1a\ZStack-CC2530-2.5 #
+#                          .1a\Projects\zstack\HomeAutomation\SmartSwitchLigh #
+#                          t\CC2530DB\..\..\Source\" -I "D:\work space\work   #
+#                          space\Smart Product\SmartLightSwitch\two           #
+#                          key\v1.00.0\ZStack-CC2530-2.5.1a\ZStack-CC2530-2.5 #
+#                          .1a\Projects\zstack\HomeAutomation\SmartSwitchLigh #
+#                          t\CC2530DB\..\..\..\ZMain\TI2530DB\" -I "D:\work   #
+#                          space\work space\Smart Product\SmartLightSwitch\tw #
+#                          o key\v1.00.0\ZStack-CC2530-2.5.1a\ZStack-CC2530-2 #
+#                          .5.1a\Projects\zstack\HomeAutomation\SmartSwitchLi #
+#                          ght\CC2530DB\..\..\..\..\..\Components\hal\include #
+#                          \" -I "D:\work space\work space\Smart              #
+#                          Product\SmartLightSwitch\two                       #
+#                          key\v1.00.0\ZStack-CC2530-2.5.1a\ZStack-CC2530-2.5 #
+#                          .1a\Projects\zstack\HomeAutomation\SmartSwitchLigh #
+#                          t\CC2530DB\..\..\..\..\..\Components\hal\target\CC #
+#                          2530EB\" -I "D:\work space\work space\Smart        #
+#                          Product\SmartLightSwitch\two                       #
+#                          key\v1.00.0\ZStack-CC2530-2.5.1a\ZStack-CC2530-2.5 #
+#                          .1a\Projects\zstack\HomeAutomation\SmartSwitchLigh #
+#                          t\CC2530DB\..\..\..\..\..\Components\mac\include\" #
+#                           -I "D:\work space\work space\Smart                #
+#                          Product\SmartLightSwitch\two                       #
+#                          key\v1.00.0\ZStack-CC2530-2.5.1a\ZStack-CC2530-2.5 #
+#                          .1a\Projects\zstack\HomeAutomation\SmartSwitchLigh #
+#                          t\CC2530DB\..\..\..\..\..\Components\mac\high_leve #
+#                          l\" -I "D:\work space\work space\Smart             #
+#                          Product\SmartLightSwitch\two                       #
+#                          key\v1.00.0\ZStack-CC2530-2.5.1a\ZStack-CC2530-2.5 #
+#                          .1a\Projects\zstack\HomeAutomation\SmartSwitchLigh #
+#                          t\CC2530DB\..\..\..\..\..\Components\mac\low_level #
+#                          \srf04\" -I "D:\work space\work space\Smart        #
+#                          Product\SmartLightSwitch\two                       #
+#                          key\v1.00.0\ZStack-CC2530-2.5.1a\ZStack-CC2530-2.5 #
+#                          .1a\Projects\zstack\HomeAutomation\SmartSwitchLigh #
+#                          t\CC2530DB\..\..\..\..\..\Components\mac\low_level #
+#                          \srf04\single_chip\" -I "D:\work space\work        #
+#                          space\Smart Product\SmartLightSwitch\two           #
+#                          key\v1.00.0\ZStack-CC2530-2.5.1a\ZStack-CC2530-2.5 #
+#                          .1a\Projects\zstack\HomeAutomation\SmartSwitchLigh #
+#                          t\CC2530DB\..\..\..\..\..\Components\mt\" -I       #
+#                          "D:\work space\work space\Smart                    #
+#                          Product\SmartLightSwitch\two                       #
+#                          key\v1.00.0\ZStack-CC2530-2.5.1a\ZStack-CC2530-2.5 #
+#                          .1a\Projects\zstack\HomeAutomation\SmartSwitchLigh #
+#                          t\CC2530DB\..\..\..\..\..\Components\osal\include\ #
+#                          " -I "D:\work space\work space\Smart               #
+#                          Product\SmartLightSwitch\two                       #
+#                          key\v1.00.0\ZStack-CC2530-2.5.1a\ZStack-CC2530-2.5 #
+#                          .1a\Projects\zstack\HomeAutomation\SmartSwitchLigh #
+#                          t\CC2530DB\..\..\..\..\..\Components\services\sadd #
+#                          r\" -I "D:\work space\work space\Smart             #
+#                          Product\SmartLightSwitch\two                       #
+#                          key\v1.00.0\ZStack-CC2530-2.5.1a\ZStack-CC2530-2.5 #
+#                          .1a\Projects\zstack\HomeAutomation\SmartSwitchLigh #
+#                          t\CC2530DB\..\..\..\..\..\Components\services\sdat #
+#                          a\" -I "D:\work space\work space\Smart             #
+#                          Product\SmartLightSwitch\two                       #
+#                          key\v1.00.0\ZStack-CC2530-2.5.1a\ZStack-CC2530-2.5 #
+#                          .1a\Projects\zstack\HomeAutomation\SmartSwitchLigh #
+#                          t\CC2530DB\..\..\..\..\..\Components\stack\af\"    #
+#                          -I "D:\work space\work space\Smart                 #
+#                          Product\SmartLightSwitch\two                       #
+#                          key\v1.00.0\ZStack-CC2530-2.5.1a\ZStack-CC2530-2.5 #
+#                          .1a\Projects\zstack\HomeAutomation\SmartSwitchLigh #
+#                          t\CC2530DB\..\..\..\..\..\Components\stack\nwk\"   #
+#                          -I "D:\work space\work space\Smart                 #
+#                          Product\SmartLightSwitch\two                       #
+#                          key\v1.00.0\ZStack-CC2530-2.5.1a\ZStack-CC2530-2.5 #
+#                          .1a\Projects\zstack\HomeAutomation\SmartSwitchLigh #
+#                          t\CC2530DB\..\..\..\..\..\Components\stack\sapi\"  #
+#                          -I "D:\work space\work space\Smart                 #
+#                          Product\SmartLightSwitch\two                       #
+#                          key\v1.00.0\ZStack-CC2530-2.5.1a\ZStack-CC2530-2.5 #
+#                          .1a\Projects\zstack\HomeAutomation\SmartSwitchLigh #
+#                          t\CC2530DB\..\..\..\..\..\Components\stack\sec\"   #
+#                          -I "D:\work space\work space\Smart                 #
+#                          Product\SmartLightSwitch\two                       #
+#                          key\v1.00.0\ZStack-CC2530-2.5.1a\ZStack-CC2530-2.5 #
+#                          .1a\Projects\zstack\HomeAutomation\SmartSwitchLigh #
+#                          t\CC2530DB\..\..\..\..\..\Components\stack\sys\"   #
+#                          -I "D:\work space\work space\Smart                 #
+#                          Product\SmartLightSwitch\two                       #
+#                          key\v1.00.0\ZStack-CC2530-2.5.1a\ZStack-CC2530-2.5 #
+#                          .1a\Projects\zstack\HomeAutomation\SmartSwitchLigh #
+#                          t\CC2530DB\..\..\..\..\..\Components\stack\zcl\"   #
+#                          -I "D:\work space\work space\Smart                 #
+#                          Product\SmartLightSwitch\two                       #
+#                          key\v1.00.0\ZStack-CC2530-2.5.1a\ZStack-CC2530-2.5 #
+#                          .1a\Projects\zstack\HomeAutomation\SmartSwitchLigh #
+#                          t\CC2530DB\..\..\..\..\..\Components\stack\zdo\"   #
+#                          -I "D:\work space\work space\Smart                 #
+#                          Product\SmartLightSwitch\two                       #
+#                          key\v1.00.0\ZStack-CC2530-2.5.1a\ZStack-CC2530-2.5 #
+#                          .1a\Projects\zstack\HomeAutomation\SmartSwitchLigh #
+#                          t\CC2530DB\..\..\..\..\..\Components\zmac\" -I     #
+#                          "D:\work space\work space\Smart                    #
+#                          Product\SmartLightSwitch\two                       #
+#                          key\v1.00.0\ZStack-CC2530-2.5.1a\ZStack-CC2530-2.5 #
+#                          .1a\Projects\zstack\HomeAutomation\SmartSwitchLigh #
+#                          t\CC2530DB\..\..\..\..\..\Components\zmac\f8w\"    #
+#                          -Oh --require_prototypes --predef_macros "D:\work  #
+#                          space\work space\Smart Product\SmartLightSwitch\tw #
+#                          o key\v1.00.0\ZStack-CC2530-2.5.1a\ZStack-CC2530-2 #
+#                          .5.1a\Projects\zstack\HomeAutomation\SmartSwitchLi #
+#                          ght\CC2530DB\EWACC1.tmp"                           #
+#    List file          =  D:\work space\work space\Smart                     #
+#                          Product\SmartLightSwitch\two                       #
+#                          key\v1.00.0\ZStack-CC2530-2.5.1a\ZStack-CC2530-2.5 #
+#                          .1a\Projects\zstack\HomeAutomation\SmartSwitchLigh #
+#                          t\CC2530DB\RouterDeviceEB\List\EWACC2.lst          #
+#    Object file        =  D:\work space\work space\Smart                     #
+#                          Product\SmartLightSwitch\two                       #
+#                          key\v1.00.0\ZStack-CC2530-2.5.1a\ZStack-CC2530-2.5 #
+#                          .1a\Projects\zstack\HomeAutomation\SmartSwitchLigh #
+#                          t\CC2530DB\RouterDeviceEB\Obj\EWACC2.r51           #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+
+
+ 
+ 
+ 0 bytes of memory
+
+Errors: none
+Warnings: none

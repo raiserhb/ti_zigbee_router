@@ -1,0 +1,1129 @@
+###############################################################################
+#                                                                             #
+# IAR C/C++ Compiler V8.10.1.10194/W32 for 8051         13/Dec/2016  10:06:15 #
+# Copyright 2004-2011 IAR Systems AB.                                         #
+#                                                                             #
+#    Core               =  plain                                              #
+#    Code model         =  banked                                             #
+#    Data model         =  large                                              #
+#    Calling convention =  xdata reentrant                                    #
+#    Constant location  =  data_rom                                           #
+#    Dptr setup         =  1,16                                               #
+#    Source file        =  D:\work space\Smart Product\SmartLightSwitch\three #
+#                           key\v1.00.0\ZStack-CC2530-2.5.1a\ZStack-CC2530-2. #
+#                          5.1a\Projects\zstack\HomeAutomation\SmartSwitchLig #
+#                          ht\Source\zcl_onofflight_data.c                    #
+#    Command line       =  -f "D:\work space\Smart Product\SmartLightSwitch\t #
+#                          hree key\v1.00.0\ZStack-CC2530-2.5.1a\ZStack-CC253 #
+#                          0-2.5.1a\Projects\zstack\HomeAutomation\SmartSwitc #
+#                          hLight\CC2530DB\..\Tools\CC2530DB\f8wRouter.cfg"   #
+#                          (-DCPU32MHZ -DROOT=__near_func                     #
+#                          -DMAC_CFG_APP_PENDING_QUEUE=TRUE                   #
+#                          -DMAC_CFG_TX_DATA_MAX=5 -DMAC_CFG_TX_MAX=8         #
+#                          -DMAC_CFG_RX_MAX=5 -DRTR_NWK -DNV_RESTORE          #
+#                          -DNV_INIT -DHAL_KEY=FALSE -DHAL_LED=FALSE          #
+#                          -DHAL_LCD=FALSE -DHAL_ADC=FALSE                    #
+#                          -DROUTE_DISCOVERY_TIME=120 -DTC_LINKKEY_JOIN       #
+#                          -DMAX_NEIGHBOR_ENTRIES=48 -DTVSA_DATA_CNF=1        #
+#                          -DPACKET_FILTER_STATS -DNWK_LINK_STATUS_PERIOD=60) #
+#                           -f "D:\work space\Smart                           #
+#                          Product\SmartLightSwitch\three                     #
+#                          key\v1.00.0\ZStack-CC2530-2.5.1a\ZStack-CC2530-2.5 #
+#                          .1a\Projects\zstack\HomeAutomation\SmartSwitchLigh #
+#                          t\CC2530DB\..\Tools\CC2530DB\f8wConfig.cfg"        #
+#                          (-DZIGBEEPRO -DSECURE=1 -DZG_SECURE_DYNAMIC=0      #
+#                          -DREFLECTOR -DDEFAULT_CHANLIST=0x00000800          #
+#                          -DZDAPP_CONFIG_PAN_ID=0xFFFF                       #
+#                          -DNWK_START_DELAY=100 -DEXTENDED_JOINING_RANDOM_MA #
+#                          SK=0x007F -DBEACON_REQUEST_DELAY=5000              #
+#                          -DBEACON_REQ_DELAY_MASK=0x00FF                     #
+#                          -DLINK_STATUS_JITTER_MASK=0xEFFF                   #
+#                          -DROUTE_EXPIRY_TIME=30 -DAPSC_ACK_WAIT_DURATION_PO #
+#                          LLED=3000 -DNWK_INDIRECT_MSG_TIMEOUT=7             #
+#                          -DMAX_RREQ_ENTRIES=8 -DAPSC_MAX_FRAME_RETRIES=3    #
+#                          -DNWK_MAX_DATA_RETRIES=2                           #
+#                          -DMAX_POLL_FAILURE_RETRIES=2 -DMAX_BCAST=9         #
+#                          -DAPS_MAX_GROUPS=16 -DMAX_RTG_ENTRIES=40           #
+#                          -DNWK_MAX_BINDING_ENTRIES=4                        #
+#                          -DMAX_BINDING_CLUSTER_IDS=4                        #
+#                          -DDEFAULT_KEY={0x79,0x69,0x20,0x68,0x75,0x69,0x20, #
+#                          0x79,0x75,0x6E,0x20,0x73,0x6D,0x61,0x72,0x74}      #
+#                          -DMAC_MAX_FRAME_SIZE=116                           #
+#                          -DZDNWKMGR_MIN_TRANSMISSIONS=20 "-DCONST=const     #
+#                          __code" -DGENERIC=__generic                        #
+#                          -DRFD_RCVC_ALWAYS_ON=TRUE -DPOLL_RATE=0            #
+#                          -DQUEUED_POLL_RATE=0 -DRESPONSE_POLL_RATE=0        #
+#                          -DREJOIN_POLL_RATE=440) -f "D:\work space\Smart    #
+#                          Product\SmartLightSwitch\three                     #
+#                          key\v1.00.0\ZStack-CC2530-2.5.1a\ZStack-CC2530-2.5 #
+#                          .1a\Projects\zstack\HomeAutomation\SmartSwitchLigh #
+#                          t\CC2530DB\..\Tools\CC2530DB\f8wZCL.cfg"           #
+#                          (-DZCL_READ -DZCL_WRITE -DZCL_REPORT -DZCL_BASIC   #
+#                          -DZCL_IDENTIFY -DZCL_ON_OFF -DZCL_KEY_ESTABLISH    #
+#                          -DZCL_KEY_ESTABLISHMENT_KEY_GENERATE_TIMEOUT=4     #
+#                          -DZCL_KEY_ESTABLISHMENT_MAC_GENERATE_TIMEOUT=10    #
+#                          -DZCL_KEY_ESTABLISHMENT_EKEY_GENERATE_TIMEOUT=10   #
+#                          -DZCL_LOAD_CONTROL -DZCL_SIMPLE_METERING           #
+#                          -DZCL_PRICING -DZCL_MESSAGE -DZCL_TUNNELING        #
+#                          -DZCL_TOU) -DZCL_DEVICE_MGMT "D:\work space\Smart  #
+#                          Product\SmartLightSwitch\three                     #
+#                          key\v1.00.0\ZStack-CC2530-2.5.1a\ZStack-CC2530-2.5 #
+#                          .1a\Projects\zstack\HomeAutomation\SmartSwitchLigh #
+#                          t\Source\zcl_onofflight_data.c" -lC "D:\work       #
+#                          space\Smart Product\SmartLightSwitch\three         #
+#                          key\v1.00.0\ZStack-CC2530-2.5.1a\ZStack-CC2530-2.5 #
+#                          .1a\Projects\zstack\HomeAutomation\SmartSwitchLigh #
+#                          t\CC2530DB\RouterDeviceEB\List\" -lA "D:\work      #
+#                          space\Smart Product\SmartLightSwitch\three         #
+#                          key\v1.00.0\ZStack-CC2530-2.5.1a\ZStack-CC2530-2.5 #
+#                          .1a\Projects\zstack\HomeAutomation\SmartSwitchLigh #
+#                          t\CC2530DB\RouterDeviceEB\List\" --diag_suppress   #
+#                          Pe001,Pa010 -o "D:\work space\Smart                #
+#                          Product\SmartLightSwitch\three                     #
+#                          key\v1.00.0\ZStack-CC2530-2.5.1a\ZStack-CC2530-2.5 #
+#                          .1a\Projects\zstack\HomeAutomation\SmartSwitchLigh #
+#                          t\CC2530DB\RouterDeviceEB\Obj\" -e --debug         #
+#                          --core=plain --dptr=16,1 --data_model=large        #
+#                          --code_model=banked --calling_convention=xdata_ree #
+#                          ntrant --place_constants=data_rom                  #
+#                          --nr_virtual_regs 16 -I "D:\work space\Smart       #
+#                          Product\SmartLightSwitch\three                     #
+#                          key\v1.00.0\ZStack-CC2530-2.5.1a\ZStack-CC2530-2.5 #
+#                          .1a\Projects\zstack\HomeAutomation\SmartSwitchLigh #
+#                          t\CC2530DB\" -I "D:\work space\Smart               #
+#                          Product\SmartLightSwitch\three                     #
+#                          key\v1.00.0\ZStack-CC2530-2.5.1a\ZStack-CC2530-2.5 #
+#                          .1a\Projects\zstack\HomeAutomation\SmartSwitchLigh #
+#                          t\CC2530DB\..\Source\" -I "D:\work space\Smart     #
+#                          Product\SmartLightSwitch\three                     #
+#                          key\v1.00.0\ZStack-CC2530-2.5.1a\ZStack-CC2530-2.5 #
+#                          .1a\Projects\zstack\HomeAutomation\SmartSwitchLigh #
+#                          t\CC2530DB\..\..\Source\" -I "D:\work space\Smart  #
+#                          Product\SmartLightSwitch\three                     #
+#                          key\v1.00.0\ZStack-CC2530-2.5.1a\ZStack-CC2530-2.5 #
+#                          .1a\Projects\zstack\HomeAutomation\SmartSwitchLigh #
+#                          t\CC2530DB\..\..\..\ZMain\TI2530DB\" -I "D:\work   #
+#                          space\Smart Product\SmartLightSwitch\three         #
+#                          key\v1.00.0\ZStack-CC2530-2.5.1a\ZStack-CC2530-2.5 #
+#                          .1a\Projects\zstack\HomeAutomation\SmartSwitchLigh #
+#                          t\CC2530DB\..\..\..\..\..\Components\hal\include\" #
+#                           -I "D:\work space\Smart                           #
+#                          Product\SmartLightSwitch\three                     #
+#                          key\v1.00.0\ZStack-CC2530-2.5.1a\ZStack-CC2530-2.5 #
+#                          .1a\Projects\zstack\HomeAutomation\SmartSwitchLigh #
+#                          t\CC2530DB\..\..\..\..\..\Components\hal\target\CC #
+#                          2530EB\" -I "D:\work space\Smart                   #
+#                          Product\SmartLightSwitch\three                     #
+#                          key\v1.00.0\ZStack-CC2530-2.5.1a\ZStack-CC2530-2.5 #
+#                          .1a\Projects\zstack\HomeAutomation\SmartSwitchLigh #
+#                          t\CC2530DB\..\..\..\..\..\Components\mac\include\" #
+#                           -I "D:\work space\Smart                           #
+#                          Product\SmartLightSwitch\three                     #
+#                          key\v1.00.0\ZStack-CC2530-2.5.1a\ZStack-CC2530-2.5 #
+#                          .1a\Projects\zstack\HomeAutomation\SmartSwitchLigh #
+#                          t\CC2530DB\..\..\..\..\..\Components\mac\high_leve #
+#                          l\" -I "D:\work space\Smart                        #
+#                          Product\SmartLightSwitch\three                     #
+#                          key\v1.00.0\ZStack-CC2530-2.5.1a\ZStack-CC2530-2.5 #
+#                          .1a\Projects\zstack\HomeAutomation\SmartSwitchLigh #
+#                          t\CC2530DB\..\..\..\..\..\Components\mac\low_level #
+#                          \srf04\" -I "D:\work space\Smart                   #
+#                          Product\SmartLightSwitch\three                     #
+#                          key\v1.00.0\ZStack-CC2530-2.5.1a\ZStack-CC2530-2.5 #
+#                          .1a\Projects\zstack\HomeAutomation\SmartSwitchLigh #
+#                          t\CC2530DB\..\..\..\..\..\Components\mac\low_level #
+#                          \srf04\single_chip\" -I "D:\work space\Smart       #
+#                          Product\SmartLightSwitch\three                     #
+#                          key\v1.00.0\ZStack-CC2530-2.5.1a\ZStack-CC2530-2.5 #
+#                          .1a\Projects\zstack\HomeAutomation\SmartSwitchLigh #
+#                          t\CC2530DB\..\..\..\..\..\Components\mt\" -I       #
+#                          "D:\work space\Smart Product\SmartLightSwitch\thre #
+#                          e key\v1.00.0\ZStack-CC2530-2.5.1a\ZStack-CC2530-2 #
+#                          .5.1a\Projects\zstack\HomeAutomation\SmartSwitchLi #
+#                          ght\CC2530DB\..\..\..\..\..\Components\osal\includ #
+#                          e\" -I "D:\work space\Smart                        #
+#                          Product\SmartLightSwitch\three                     #
+#                          key\v1.00.0\ZStack-CC2530-2.5.1a\ZStack-CC2530-2.5 #
+#                          .1a\Projects\zstack\HomeAutomation\SmartSwitchLigh #
+#                          t\CC2530DB\..\..\..\..\..\Components\services\sadd #
+#                          r\" -I "D:\work space\Smart                        #
+#                          Product\SmartLightSwitch\three                     #
+#                          key\v1.00.0\ZStack-CC2530-2.5.1a\ZStack-CC2530-2.5 #
+#                          .1a\Projects\zstack\HomeAutomation\SmartSwitchLigh #
+#                          t\CC2530DB\..\..\..\..\..\Components\services\sdat #
+#                          a\" -I "D:\work space\Smart                        #
+#                          Product\SmartLightSwitch\three                     #
+#                          key\v1.00.0\ZStack-CC2530-2.5.1a\ZStack-CC2530-2.5 #
+#                          .1a\Projects\zstack\HomeAutomation\SmartSwitchLigh #
+#                          t\CC2530DB\..\..\..\..\..\Components\stack\af\"    #
+#                          -I "D:\work space\Smart Product\SmartLightSwitch\t #
+#                          hree key\v1.00.0\ZStack-CC2530-2.5.1a\ZStack-CC253 #
+#                          0-2.5.1a\Projects\zstack\HomeAutomation\SmartSwitc #
+#                          hLight\CC2530DB\..\..\..\..\..\Components\stack\nw #
+#                          k\" -I "D:\work space\Smart                        #
+#                          Product\SmartLightSwitch\three                     #
+#                          key\v1.00.0\ZStack-CC2530-2.5.1a\ZStack-CC2530-2.5 #
+#                          .1a\Projects\zstack\HomeAutomation\SmartSwitchLigh #
+#                          t\CC2530DB\..\..\..\..\..\Components\stack\sapi\"  #
+#                          -I "D:\work space\Smart Product\SmartLightSwitch\t #
+#                          hree key\v1.00.0\ZStack-CC2530-2.5.1a\ZStack-CC253 #
+#                          0-2.5.1a\Projects\zstack\HomeAutomation\SmartSwitc #
+#                          hLight\CC2530DB\..\..\..\..\..\Components\stack\se #
+#                          c\" -I "D:\work space\Smart                        #
+#                          Product\SmartLightSwitch\three                     #
+#                          key\v1.00.0\ZStack-CC2530-2.5.1a\ZStack-CC2530-2.5 #
+#                          .1a\Projects\zstack\HomeAutomation\SmartSwitchLigh #
+#                          t\CC2530DB\..\..\..\..\..\Components\stack\sys\"   #
+#                          -I "D:\work space\Smart Product\SmartLightSwitch\t #
+#                          hree key\v1.00.0\ZStack-CC2530-2.5.1a\ZStack-CC253 #
+#                          0-2.5.1a\Projects\zstack\HomeAutomation\SmartSwitc #
+#                          hLight\CC2530DB\..\..\..\..\..\Components\stack\zc #
+#                          l\" -I "D:\work space\Smart                        #
+#                          Product\SmartLightSwitch\three                     #
+#                          key\v1.00.0\ZStack-CC2530-2.5.1a\ZStack-CC2530-2.5 #
+#                          .1a\Projects\zstack\HomeAutomation\SmartSwitchLigh #
+#                          t\CC2530DB\..\..\..\..\..\Components\stack\zdo\"   #
+#                          -I "D:\work space\Smart Product\SmartLightSwitch\t #
+#                          hree key\v1.00.0\ZStack-CC2530-2.5.1a\ZStack-CC253 #
+#                          0-2.5.1a\Projects\zstack\HomeAutomation\SmartSwitc #
+#                          hLight\CC2530DB\..\..\..\..\..\Components\zmac\"   #
+#                          -I "D:\work space\Smart Product\SmartLightSwitch\t #
+#                          hree key\v1.00.0\ZStack-CC2530-2.5.1a\ZStack-CC253 #
+#                          0-2.5.1a\Projects\zstack\HomeAutomation\SmartSwitc #
+#                          hLight\CC2530DB\..\..\..\..\..\Components\zmac\f8w #
+#                          \" -Oh --require_prototypes                        #
+#    List file          =  D:\work space\Smart Product\SmartLightSwitch\three #
+#                           key\v1.00.0\ZStack-CC2530-2.5.1a\ZStack-CC2530-2. #
+#                          5.1a\Projects\zstack\HomeAutomation\SmartSwitchLig #
+#                          ht\CC2530DB\RouterDeviceEB\List\zcl_onofflight_dat #
+#                          a.lst                                              #
+#    Object file        =  D:\work space\Smart Product\SmartLightSwitch\three #
+#                           key\v1.00.0\ZStack-CC2530-2.5.1a\ZStack-CC2530-2. #
+#                          5.1a\Projects\zstack\HomeAutomation\SmartSwitchLig #
+#                          ht\CC2530DB\RouterDeviceEB\Obj\zcl_onofflight_data #
+#                          .r51                                               #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+D:\work space\Smart Product\SmartLightSwitch\three key\v1.00.0\ZStack-CC2530-2.5.1a\ZStack-CC2530-2.5.1a\Projects\zstack\HomeAutomation\SmartSwitchLight\Source\zcl_onofflight_data.c
+      1          /**************************************************************************************************
+      2            Filename:       zcl_onofflight_data.c
+      3            Revised:        $Date: 2008-03-11 11:01:35 -0700 (Tue, 11 Mar 2008) $
+      4            Revision:       $Revision: 16570 $
+      5          
+      6          
+      7            Description:    Zigbee Cluster Library - sample device application.
+      8          
+      9          
+     10            Copyright 2006-2007 Texas Instruments Incorporated. All rights reserved.
+     11          
+     12            IMPORTANT: Your use of this Software is limited to those specific rights
+     13            granted under the terms of a software license agreement between the user
+     14            who downloaded the software, his/her employer (which must be your employer)
+     15            and Texas Instruments Incorporated (the "License").  You may not use this
+     16            Software unless you agree to abide by the terms of the License. The License
+     17            limits your use, and you acknowledge, that the Software may not be modified,
+     18            copied or distributed unless embedded on a Texas Instruments microcontroller
+     19            or used solely and exclusively in conjunction with a Texas Instruments radio
+     20            frequency transceiver, which is integrated into your product.  Other than for
+     21            the foregoing purpose, you may not use, reproduce, copy, prepare derivative
+     22            works of, modify, distribute, perform, display or sell this Software and/or
+     23            its documentation for any purpose.
+     24          
+     25            YOU FURTHER ACKNOWLEDGE AND AGREE THAT THE SOFTWARE AND DOCUMENTATION ARE
+     26            PROVIDED “AS IS?WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED, 
+     27            INCLUDING WITHOUT LIMITATION, ANY WARRANTY OF MERCHANTABILITY, TITLE, 
+     28            NON-INFRINGEMENT AND FITNESS FOR A PARTICULAR PURPOSE. IN NO EVENT SHALL
+     29            TEXAS INSTRUMENTS OR ITS LICENSORS BE LIABLE OR OBLIGATED UNDER CONTRACT,
+     30            NEGLIGENCE, STRICT LIABILITY, CONTRIBUTION, BREACH OF WARRANTY, OR OTHER
+     31            LEGAL EQUITABLE THEORY ANY DIRECT OR INDIRECT DAMAGES OR EXPENSES
+     32            INCLUDING BUT NOT LIMITED TO ANY INCIDENTAL, SPECIAL, INDIRECT, PUNITIVE
+     33            OR CONSEQUENTIAL DAMAGES, LOST PROFITS OR LOST DATA, COST OF PROCUREMENT
+     34            OF SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
+     35            (INCLUDING BUT NOT LIMITED TO ANY DEFENSE THEREOF), OR OTHER SIMILAR COSTS.
+     36          
+     37            Should you have any questions regarding your right to use this Software,
+     38            contact Texas Instruments Incorporated at www.TI.com. 
+     39          **************************************************************************************************/
+     40          
+     41          /*********************************************************************
+     42           * INCLUDES
+     43           */
+     44          #include "ZComDef.h"
+     45          #include "OSAL.h"
+     46          #include "AF.h"
+     47          #include "ZDConfig.h"
+     48          
+     49          #include "zcl.h"
+     50          #include "zcl_general.h"
+     51          #include "zcl_ha.h"
+     52          
+     53          #include "zcl_onofflight.h"
+     54          
+     55          /*********************************************************************
+     56           * CONSTANTS
+     57           */
+     58          
+     59          #define ONOFFLIGHT_DEVICE_VERSION     0
+     60          #define ONOFFLIGHT_FLAGS              0
+     61          
+     62          #define ONOFFLIGHT_HWVERSION          1
+     63          #define ONOFFLIGHT_ZCLVERSION         1
+     64          
+     65          /*********************************************************************
+     66           * TYPEDEFS
+     67           */
+     68          
+     69          /*********************************************************************
+     70           * MACROS
+     71           */
+     72          
+     73          /*********************************************************************
+     74           * GLOBAL VARIABLES
+     75           */
+     76          
+     77          // Basic Cluster
+
+   \                                 In  segment XDATA_ROM_C, align 1
+     78          const uint8 zclOnOffLight_HWRevision = ONOFFLIGHT_HWVERSION;
+   \                     zclOnOffLight_HWRevision:
+   \   000000   01           DB 1
+
+   \                                 In  segment XDATA_ROM_C, align 1
+     79          const uint8 zclOnOffLight_ZCLVersion = ONOFFLIGHT_ZCLVERSION;
+   \                     zclOnOffLight_ZCLVersion:
+   \   000000   01           DB 1
+
+   \                                 In  segment XDATA_ROM_C, align 1
+     80          const uint8 zclOnOffLight_ManufacturerName[] = { 16, 'T','e','x','a','s','I','n','s','t','r','u','m','e','n','t','s' };
+   \                     zclOnOffLight_ManufacturerName:
+   \   000000   10           DB 16
+   \   000001   54           DB 84
+   \   000002   65           DB 101
+   \   000003   78           DB 120
+   \   000004   61           DB 97
+   \   000005   73           DB 115
+   \   000006   49           DB 73
+   \   000007   6E           DB 110
+   \   000008   73           DB 115
+   \   000009   74           DB 116
+   \   00000A   72           DB 114
+   \   00000B   75           DB 117
+   \   00000C   6D           DB 109
+   \   00000D   65           DB 101
+   \   00000E   6E           DB 110
+   \   00000F   74           DB 116
+   \   000010   73           DB 115
+
+   \                                 In  segment XDATA_ROM_C, align 1
+     81          const uint8 zclOnOffLight_ModelId[] = { 16, 'T','I','0','0','0','1',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ' };
+   \                     zclOnOffLight_ModelId:
+   \   000000   10           DB 16
+   \   000001   54           DB 84
+   \   000002   49           DB 73
+   \   000003   30           DB 48
+   \   000004   30           DB 48
+   \   000005   30           DB 48
+   \   000006   31           DB 49
+   \   000007   20           DB 32
+   \   000008   20           DB 32
+   \   000009   20           DB 32
+   \   00000A   20           DB 32
+   \   00000B   20           DB 32
+   \   00000C   20           DB 32
+   \   00000D   20           DB 32
+   \   00000E   20           DB 32
+   \   00000F   20           DB 32
+   \   000010   20           DB 32
+
+   \                                 In  segment XDATA_ROM_C, align 1
+     82          const uint8 zclOnOffLight_DateCode[] = { 16, '2','0','0','6','0','8','3','1',' ',' ',' ',' ',' ',' ',' ',' ' };
+   \                     zclOnOffLight_DateCode:
+   \   000000   10           DB 16
+   \   000001   32           DB 50
+   \   000002   30           DB 48
+   \   000003   30           DB 48
+   \   000004   36           DB 54
+   \   000005   30           DB 48
+   \   000006   38           DB 56
+   \   000007   33           DB 51
+   \   000008   31           DB 49
+   \   000009   20           DB 32
+   \   00000A   20           DB 32
+   \   00000B   20           DB 32
+   \   00000C   20           DB 32
+   \   00000D   20           DB 32
+   \   00000E   20           DB 32
+   \   00000F   20           DB 32
+   \   000010   20           DB 32
+
+   \                                 In  segment XDATA_ROM_C, align 1
+     83          const uint8 zclOnOffLight_PowerSource = POWER_SOURCE_MAINS_1_PHASE;
+   \                     zclOnOffLight_PowerSource:
+   \   000000   01           DB 1
+     84          
+
+   \                                 In  segment XDATA_I, align 1, keep-with-next
+     85          uint8 zclOnOffLight_LocationDescription[17] = { 16, ' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ' };
+   \                     zclOnOffLight_LocationDescription:
+   \   000000                DS 17
+   \   000011                REQUIRE `?<Initializer for zclOnOffLight_LocationDescri`
+   \   000011                REQUIRE __INIT_XDATA_I
+
+   \                                 In  segment XDATA_Z, align 1, keep-with-next
+     86          uint8 zclOnOffLight_PhysicalEnvironment = 0;
+   \                     zclOnOffLight_PhysicalEnvironment:
+   \   000000                DS 1
+   \   000001                REQUIRE __INIT_XDATA_Z
+
+   \                                 In  segment XDATA_I, align 1, keep-with-next
+     87          uint8 zclOnOffLight_DeviceEnable = DEVICE_ENABLED;
+   \                     zclOnOffLight_DeviceEnable:
+   \   000000                DS 1
+   \   000001                REQUIRE `?<Initializer for zclOnOffLight_DeviceEnable>`
+   \   000001                REQUIRE __INIT_XDATA_I
+     88          
+     89          // Identify Cluster
+
+   \                                 In  segment XDATA_Z, align 1, keep-with-next
+     90          uint16 zclOnOffLight_IdentifyTime = 0;
+   \                     zclOnOffLight_IdentifyTime:
+   \   000000                DS 2
+   \   000002                REQUIRE __INIT_XDATA_Z
+     91          
+     92          // On/Off Cluster
+
+   \                                 In  segment XDATA_Z, align 1, keep-with-next
+     93          uint8  zclOnOffLight0_OnOff = LIGHT_OFF;
+   \                     zclOnOffLight0_OnOff:
+   \   000000                DS 1
+   \   000001                REQUIRE __INIT_XDATA_Z
+
+   \                                 In  segment XDATA_Z, align 1, keep-with-next
+     94          uint8  zclOnOffLight1_OnOff = LIGHT_OFF;
+   \                     zclOnOffLight1_OnOff:
+   \   000000                DS 1
+   \   000001                REQUIRE __INIT_XDATA_Z
+
+   \                                 In  segment XDATA_Z, align 1, keep-with-next
+     95          uint8  zclOnOffLight2_OnOff = LIGHT_OFF;
+   \                     zclOnOffLight2_OnOff:
+   \   000000                DS 1
+   \   000001                REQUIRE __INIT_XDATA_Z
+     96          
+     97          /*********************************************************************
+     98           * ATTRIBUTE DEFINITIONS - Uses REAL cluster IDs
+     99           */
+
+   \                                 In  segment CODE_C, align 1
+    100          CONST zclAttrRec_t zclOnOffLight0_Attrs[ONOFFLIGHT_MAX_ATTRIBUTES] =
+   \                     zclOnOffLight0_Attrs:
+   \   000000   0000         DW 0
+   \   000002   0300         DW 3
+   \   000004   20           DB 32
+   \   000005   01           DB 1
+   \   000006   ....         DW zclOnOffLight_HWRevision
+   \   000008   0000         DW 0
+   \   00000A   0000         DW 0
+   \   00000C   20           DB 32
+   \   00000D   01           DB 1
+   \   00000E   ....         DW zclOnOffLight_ZCLVersion
+   \   000010   0000         DW 0
+   \   000012   0400         DW 4
+   \   000014   42           DB 66
+   \   000015   01           DB 1
+   \   000016   ....         DW zclOnOffLight_ManufacturerName
+   \   000018   0000         DW 0
+   \   00001A   0500         DW 5
+   \   00001C   42           DB 66
+   \   00001D   01           DB 1
+   \   00001E   ....         DW zclOnOffLight_ModelId
+   \   000020   0000         DW 0
+   \   000022   0600         DW 6
+   \   000024   42           DB 66
+   \   000025   01           DB 1
+   \   000026   ....         DW zclOnOffLight_DateCode
+   \   000028   0000         DW 0
+   \   00002A   0700         DW 7
+   \   00002C   20           DB 32
+   \   00002D   01           DB 1
+   \   00002E   ....         DW zclOnOffLight_PowerSource
+   \   000030   0000         DW 0
+   \   000032   1000         DW 16
+   \   000034   42           DB 66
+   \   000035   03           DB 3
+   \   000036   ....         DW zclOnOffLight_LocationDescription
+   \   000038   0000         DW 0
+   \   00003A   1100         DW 17
+   \   00003C   20           DB 32
+   \   00003D   03           DB 3
+   \   00003E   ....         DW zclOnOffLight_PhysicalEnvironment
+   \   000040   0000         DW 0
+   \   000042   1200         DW 18
+   \   000044   10           DB 16
+   \   000045   03           DB 3
+   \   000046   ....         DW zclOnOffLight_DeviceEnable
+   \   000048   0300         DW 3
+   \   00004A   0000         DW 0
+   \   00004C   21           DB 33
+   \   00004D   03           DB 3
+   \   00004E   ....         DW zclOnOffLight_IdentifyTime
+   \   000050   0600         DW 6
+   \   000052   0000         DW 0
+   \   000054   20           DB 32
+   \   000055   01           DB 1
+   \   000056   ....         DW zclOnOffLight0_OnOff
+   \   000058   00000000     DB 0, 0, 0, 0, 0, 0, 0, 0
+   \            00000000
+    101          {
+    102            // *** General Basic Cluster Attributes ***
+    103            {
+    104              ZCL_CLUSTER_ID_GEN_BASIC,             // Cluster IDs - defined in the foundation (ie. zcl.h)
+    105              {  // Attribute record
+    106                ATTRID_BASIC_HW_VERSION,            // Attribute ID - Found in Cluster Library header (ie. zcl_general.h)
+    107                ZCL_DATATYPE_UINT8,                 // Data Type - found in zcl.h
+    108                ACCESS_CONTROL_READ,                // Variable access control - found in zcl.h
+    109                (void *)&zclOnOffLight_HWRevision  // Pointer to attribute variable
+    110              }
+    111            },
+    112            {
+    113              ZCL_CLUSTER_ID_GEN_BASIC,
+    114              { // Attribute record
+    115                ATTRID_BASIC_ZCL_VERSION,
+    116                ZCL_DATATYPE_UINT8,
+    117                ACCESS_CONTROL_READ,
+    118                (void *)&zclOnOffLight_ZCLVersion
+    119              }
+    120            },
+    121            {
+    122              ZCL_CLUSTER_ID_GEN_BASIC,
+    123              { // Attribute record
+    124                ATTRID_BASIC_MANUFACTURER_NAME,
+    125                ZCL_DATATYPE_CHAR_STR,
+    126                ACCESS_CONTROL_READ,
+    127                (void *)zclOnOffLight_ManufacturerName
+    128              }
+    129            },
+    130            {
+    131              ZCL_CLUSTER_ID_GEN_BASIC,
+    132              { // Attribute record
+    133                ATTRID_BASIC_MODEL_ID,
+    134                ZCL_DATATYPE_CHAR_STR,
+    135                ACCESS_CONTROL_READ,
+    136                (void *)zclOnOffLight_ModelId
+    137              }
+    138            },
+    139            {
+    140              ZCL_CLUSTER_ID_GEN_BASIC,
+    141              { // Attribute record
+    142                ATTRID_BASIC_DATE_CODE,
+    143                ZCL_DATATYPE_CHAR_STR,
+    144                ACCESS_CONTROL_READ,
+    145                (void *)zclOnOffLight_DateCode
+    146              }
+    147            },
+    148            {
+    149              ZCL_CLUSTER_ID_GEN_BASIC,
+    150              { // Attribute record
+    151                ATTRID_BASIC_POWER_SOURCE,
+    152                ZCL_DATATYPE_UINT8,
+    153                ACCESS_CONTROL_READ,
+    154                (void *)&zclOnOffLight_PowerSource
+    155              }
+    156            },
+    157            {
+    158              ZCL_CLUSTER_ID_GEN_BASIC,
+    159              { // Attribute record
+    160                ATTRID_BASIC_LOCATION_DESC,
+    161                ZCL_DATATYPE_CHAR_STR,
+    162                (ACCESS_CONTROL_READ | ACCESS_CONTROL_WRITE),
+    163                (void *)zclOnOffLight_LocationDescription
+    164              }
+    165            },
+    166            {
+    167              ZCL_CLUSTER_ID_GEN_BASIC,
+    168              { // Attribute record
+    169                ATTRID_BASIC_PHYSICAL_ENV,
+    170                ZCL_DATATYPE_UINT8,
+    171                (ACCESS_CONTROL_READ | ACCESS_CONTROL_WRITE),
+    172                (void *)&zclOnOffLight_PhysicalEnvironment
+    173              }
+    174            },
+    175            {
+    176              ZCL_CLUSTER_ID_GEN_BASIC,
+    177              { // Attribute record
+    178                ATTRID_BASIC_DEVICE_ENABLED,
+    179                ZCL_DATATYPE_BOOLEAN,
+    180                (ACCESS_CONTROL_READ | ACCESS_CONTROL_WRITE),
+    181                (void *)&zclOnOffLight_DeviceEnable
+    182              }
+    183            },
+    184          
+    185            // *** Identify Cluster Attribute ***
+    186            {
+    187              ZCL_CLUSTER_ID_GEN_IDENTIFY,
+    188              { // Attribute record
+    189                ATTRID_IDENTIFY_TIME,
+    190                ZCL_DATATYPE_UINT16,
+    191                (ACCESS_CONTROL_READ | ACCESS_CONTROL_WRITE),
+    192                (void *)&zclOnOffLight_IdentifyTime
+    193              }
+    194            },
+    195          
+    196            // *** On/Off Cluster Attributes ***
+    197            {
+    198              ZCL_CLUSTER_ID_GEN_ON_OFF,
+    199              { // Attribute record
+    200                ATTRID_ON_OFF,
+    201                ZCL_DATATYPE_UINT8,
+    202                ACCESS_CONTROL_READ,
+    203                (void *)&zclOnOffLight0_OnOff
+    204              }
+    205            },
+    206          };
+    207          
+    208          /*********************************************************************
+    209           * SIMPLE DESCRIPTOR
+    210           */
+    211          // This is the Cluster ID List and should be filled with Application
+    212          // specific cluster IDs.
+    213          #define ZCLONOFFLIGHT_MAX_INCLUSTERS       5
+
+   \                                 In  segment XDATA_ROM_C, align 1
+    214          const cId_t zclOnOffLight_InClusterList[ZCLONOFFLIGHT_MAX_INCLUSTERS] =
+   \                     zclOnOffLight_InClusterList:
+   \   000000   0000         DW 0
+   \   000002   0300         DW 3
+   \   000004   0500         DW 5
+   \   000006   0400         DW 4
+   \   000008   0600         DW 6
+    215          {
+    216            ZCL_CLUSTER_ID_GEN_BASIC,
+    217            ZCL_CLUSTER_ID_GEN_IDENTIFY,
+    218            ZCL_CLUSTER_ID_GEN_SCENES,
+    219            ZCL_CLUSTER_ID_GEN_GROUPS,
+    220            ZCL_CLUSTER_ID_GEN_ON_OFF
+    221          };
+    222          
+    223          #define ZCLONOFFLIGHT_MAX_OUTCLUSTERS       1
+
+   \                                 In  segment XDATA_ROM_C, align 1
+    224          const cId_t zclOnOffLight_OutClusterList[ZCLONOFFLIGHT_MAX_OUTCLUSTERS] =
+   \                     zclOnOffLight_OutClusterList:
+   \   000000   0000         DW 0
+    225          {
+    226            ZCL_CLUSTER_ID_GEN_BASIC
+    227          };
+    228          
+
+   \                                 In  segment XDATA_I, align 1, keep-with-next
+    229          SimpleDescriptionFormat_t zclOnOffLight0_SimpleDesc =
+   \                     zclOnOffLight0_SimpleDesc:
+   \   000000                DS 12
+   \   00000C                REQUIRE `?<Initializer for zclOnOffLight0_SimpleDesc>`
+   \   00000C                REQUIRE __INIT_XDATA_I
+    230          {
+    231            ONOFFLIGHT0_ENDPOINT,                  //  int Endpoint;
+    232            ZCL_HA_PROFILE_ID,                    //  uint16 AppProfId[2];
+    233            ZCL_HA_DEVICEID_ON_OFF_LIGHT,         //  uint16 AppDeviceId[2];
+    234            ONOFFLIGHT_DEVICE_VERSION,            //  int   AppDevVer:4;
+    235            ONOFFLIGHT_FLAGS,                     //  int   AppFlags:4;
+    236            ZCLONOFFLIGHT_MAX_INCLUSTERS,         //  byte  AppNumInClusters;
+    237            (cId_t *)zclOnOffLight_InClusterList, //  byte *pAppInClusterList;
+    238            ZCLONOFFLIGHT_MAX_OUTCLUSTERS,        //  byte  AppNumInClusters;
+    239            (cId_t *)zclOnOffLight_OutClusterList //  byte *pAppInClusterList;
+    240          };
+
+   \                                 In  segment CODE_C, align 1
+    241          CONST zclAttrRec_t zclOnOffLight1_Attrs[ONOFFLIGHT_MAX_ATTRIBUTES] =
+   \                     zclOnOffLight1_Attrs:
+   \   000000   0000         DW 0
+   \   000002   0300         DW 3
+   \   000004   20           DB 32
+   \   000005   01           DB 1
+   \   000006   ....         DW zclOnOffLight_HWRevision
+   \   000008   0000         DW 0
+   \   00000A   0000         DW 0
+   \   00000C   20           DB 32
+   \   00000D   01           DB 1
+   \   00000E   ....         DW zclOnOffLight_ZCLVersion
+   \   000010   0000         DW 0
+   \   000012   0400         DW 4
+   \   000014   42           DB 66
+   \   000015   01           DB 1
+   \   000016   ....         DW zclOnOffLight_ManufacturerName
+   \   000018   0000         DW 0
+   \   00001A   0500         DW 5
+   \   00001C   42           DB 66
+   \   00001D   01           DB 1
+   \   00001E   ....         DW zclOnOffLight_ModelId
+   \   000020   0000         DW 0
+   \   000022   0600         DW 6
+   \   000024   42           DB 66
+   \   000025   01           DB 1
+   \   000026   ....         DW zclOnOffLight_DateCode
+   \   000028   0000         DW 0
+   \   00002A   0700         DW 7
+   \   00002C   20           DB 32
+   \   00002D   01           DB 1
+   \   00002E   ....         DW zclOnOffLight_PowerSource
+   \   000030   0000         DW 0
+   \   000032   1000         DW 16
+   \   000034   42           DB 66
+   \   000035   03           DB 3
+   \   000036   ....         DW zclOnOffLight_LocationDescription
+   \   000038   0000         DW 0
+   \   00003A   1100         DW 17
+   \   00003C   20           DB 32
+   \   00003D   03           DB 3
+   \   00003E   ....         DW zclOnOffLight_PhysicalEnvironment
+   \   000040   0000         DW 0
+   \   000042   1200         DW 18
+   \   000044   10           DB 16
+   \   000045   03           DB 3
+   \   000046   ....         DW zclOnOffLight_DeviceEnable
+   \   000048   0300         DW 3
+   \   00004A   0000         DW 0
+   \   00004C   21           DB 33
+   \   00004D   03           DB 3
+   \   00004E   ....         DW zclOnOffLight_IdentifyTime
+   \   000050   0600         DW 6
+   \   000052   0000         DW 0
+   \   000054   20           DB 32
+   \   000055   01           DB 1
+   \   000056   ....         DW zclOnOffLight1_OnOff
+   \   000058   00000000     DB 0, 0, 0, 0, 0, 0, 0, 0
+   \            00000000
+    242          {
+    243            // *** General Basic Cluster Attributes ***
+    244            {
+    245              ZCL_CLUSTER_ID_GEN_BASIC,             // Cluster IDs - defined in the foundation (ie. zcl.h)
+    246              {  // Attribute record
+    247                ATTRID_BASIC_HW_VERSION,            // Attribute ID - Found in Cluster Library header (ie. zcl_general.h)
+    248                ZCL_DATATYPE_UINT8,                 // Data Type - found in zcl.h
+    249                ACCESS_CONTROL_READ,                // Variable access control - found in zcl.h
+    250                (void *)&zclOnOffLight_HWRevision  // Pointer to attribute variable
+    251              }
+    252            },
+    253            {
+    254              ZCL_CLUSTER_ID_GEN_BASIC,
+    255              { // Attribute record
+    256                ATTRID_BASIC_ZCL_VERSION,
+    257                ZCL_DATATYPE_UINT8,
+    258                ACCESS_CONTROL_READ,
+    259                (void *)&zclOnOffLight_ZCLVersion
+    260              }
+    261            },
+    262            {
+    263              ZCL_CLUSTER_ID_GEN_BASIC,
+    264              { // Attribute record
+    265                ATTRID_BASIC_MANUFACTURER_NAME,
+    266                ZCL_DATATYPE_CHAR_STR,
+    267                ACCESS_CONTROL_READ,
+    268                (void *)zclOnOffLight_ManufacturerName
+    269              }
+    270            },
+    271            {
+    272              ZCL_CLUSTER_ID_GEN_BASIC,
+    273              { // Attribute record
+    274                ATTRID_BASIC_MODEL_ID,
+    275                ZCL_DATATYPE_CHAR_STR,
+    276                ACCESS_CONTROL_READ,
+    277                (void *)zclOnOffLight_ModelId
+    278              }
+    279            },
+    280            {
+    281              ZCL_CLUSTER_ID_GEN_BASIC,
+    282              { // Attribute record
+    283                ATTRID_BASIC_DATE_CODE,
+    284                ZCL_DATATYPE_CHAR_STR,
+    285                ACCESS_CONTROL_READ,
+    286                (void *)zclOnOffLight_DateCode
+    287              }
+    288            },
+    289            {
+    290              ZCL_CLUSTER_ID_GEN_BASIC,
+    291              { // Attribute record
+    292                ATTRID_BASIC_POWER_SOURCE,
+    293                ZCL_DATATYPE_UINT8,
+    294                ACCESS_CONTROL_READ,
+    295                (void *)&zclOnOffLight_PowerSource
+    296              }
+    297            },
+    298            {
+    299              ZCL_CLUSTER_ID_GEN_BASIC,
+    300              { // Attribute record
+    301                ATTRID_BASIC_LOCATION_DESC,
+    302                ZCL_DATATYPE_CHAR_STR,
+    303                (ACCESS_CONTROL_READ | ACCESS_CONTROL_WRITE),
+    304                (void *)zclOnOffLight_LocationDescription
+    305              }
+    306            },
+    307            {
+    308              ZCL_CLUSTER_ID_GEN_BASIC,
+    309              { // Attribute record
+    310                ATTRID_BASIC_PHYSICAL_ENV,
+    311                ZCL_DATATYPE_UINT8,
+    312                (ACCESS_CONTROL_READ | ACCESS_CONTROL_WRITE),
+    313                (void *)&zclOnOffLight_PhysicalEnvironment
+    314              }
+    315            },
+    316            {
+    317              ZCL_CLUSTER_ID_GEN_BASIC,
+    318              { // Attribute record
+    319                ATTRID_BASIC_DEVICE_ENABLED,
+    320                ZCL_DATATYPE_BOOLEAN,
+    321                (ACCESS_CONTROL_READ | ACCESS_CONTROL_WRITE),
+    322                (void *)&zclOnOffLight_DeviceEnable
+    323              }
+    324            },
+    325          
+    326            // *** Identify Cluster Attribute ***
+    327            {
+    328              ZCL_CLUSTER_ID_GEN_IDENTIFY,
+    329              { // Attribute record
+    330                ATTRID_IDENTIFY_TIME,
+    331                ZCL_DATATYPE_UINT16,
+    332                (ACCESS_CONTROL_READ | ACCESS_CONTROL_WRITE),
+    333                (void *)&zclOnOffLight_IdentifyTime
+    334              }
+    335            },
+    336          
+    337            // *** On/Off Cluster Attributes ***
+    338            {
+    339              ZCL_CLUSTER_ID_GEN_ON_OFF,
+    340              { // Attribute record
+    341                ATTRID_ON_OFF,
+    342                ZCL_DATATYPE_UINT8,
+    343                ACCESS_CONTROL_READ,
+    344                (void *)&zclOnOffLight1_OnOff
+    345              }
+    346            },
+    347          };
+    348          
+
+   \                                 In  segment XDATA_I, align 1, keep-with-next
+    349          SimpleDescriptionFormat_t zclOnOffLight1_SimpleDesc =
+   \                     zclOnOffLight1_SimpleDesc:
+   \   000000                DS 12
+   \   00000C                REQUIRE `?<Initializer for zclOnOffLight1_SimpleDesc>`
+   \   00000C                REQUIRE __INIT_XDATA_I
+    350          {
+    351            ONOFFLIGHT1_ENDPOINT,                 //  int Endpoint;
+    352            ZCL_HA_PROFILE_ID,                    //  uint16 AppProfId[2];
+    353            ZCL_HA_DEVICEID_ON_OFF_LIGHT,         //  uint16 AppDeviceId[2];
+    354            ONOFFLIGHT_DEVICE_VERSION,            //  int   AppDevVer:4;
+    355            ONOFFLIGHT_FLAGS,                     //  int   AppFlags:4;
+    356            ZCLONOFFLIGHT_MAX_INCLUSTERS,         //  byte  AppNumInClusters;
+    357            (cId_t *)zclOnOffLight_InClusterList, //  byte *pAppInClusterList;
+    358            ZCLONOFFLIGHT_MAX_OUTCLUSTERS,        //  byte  AppNumInClusters;
+    359            (cId_t *)zclOnOffLight_OutClusterList //  byte *pAppInClusterList;
+    360          };
+    361          
+    362          ////////////////////////////////////////////////////////////////////////////////////////////2
+    363          
+
+   \                                 In  segment CODE_C, align 1
+    364          CONST zclAttrRec_t zclOnOffLight2_Attrs[ONOFFLIGHT_MAX_ATTRIBUTES] =
+   \                     zclOnOffLight2_Attrs:
+   \   000000   0000         DW 0
+   \   000002   0300         DW 3
+   \   000004   20           DB 32
+   \   000005   01           DB 1
+   \   000006   ....         DW zclOnOffLight_HWRevision
+   \   000008   0000         DW 0
+   \   00000A   0000         DW 0
+   \   00000C   20           DB 32
+   \   00000D   01           DB 1
+   \   00000E   ....         DW zclOnOffLight_ZCLVersion
+   \   000010   0000         DW 0
+   \   000012   0400         DW 4
+   \   000014   42           DB 66
+   \   000015   01           DB 1
+   \   000016   ....         DW zclOnOffLight_ManufacturerName
+   \   000018   0000         DW 0
+   \   00001A   0500         DW 5
+   \   00001C   42           DB 66
+   \   00001D   01           DB 1
+   \   00001E   ....         DW zclOnOffLight_ModelId
+   \   000020   0000         DW 0
+   \   000022   0600         DW 6
+   \   000024   42           DB 66
+   \   000025   01           DB 1
+   \   000026   ....         DW zclOnOffLight_DateCode
+   \   000028   0000         DW 0
+   \   00002A   0700         DW 7
+   \   00002C   20           DB 32
+   \   00002D   01           DB 1
+   \   00002E   ....         DW zclOnOffLight_PowerSource
+   \   000030   0000         DW 0
+   \   000032   1000         DW 16
+   \   000034   42           DB 66
+   \   000035   03           DB 3
+   \   000036   ....         DW zclOnOffLight_LocationDescription
+   \   000038   0000         DW 0
+   \   00003A   1100         DW 17
+   \   00003C   20           DB 32
+   \   00003D   03           DB 3
+   \   00003E   ....         DW zclOnOffLight_PhysicalEnvironment
+   \   000040   0000         DW 0
+   \   000042   1200         DW 18
+   \   000044   10           DB 16
+   \   000045   03           DB 3
+   \   000046   ....         DW zclOnOffLight_DeviceEnable
+   \   000048   0300         DW 3
+   \   00004A   0000         DW 0
+   \   00004C   21           DB 33
+   \   00004D   03           DB 3
+   \   00004E   ....         DW zclOnOffLight_IdentifyTime
+   \   000050   0600         DW 6
+   \   000052   0000         DW 0
+   \   000054   20           DB 32
+   \   000055   01           DB 1
+   \   000056   ....         DW zclOnOffLight2_OnOff
+   \   000058   00000000     DB 0, 0, 0, 0, 0, 0, 0, 0
+   \            00000000
+    365          {
+    366            // *** General Basic Cluster Attributes ***
+    367            {
+    368              ZCL_CLUSTER_ID_GEN_BASIC,             // Cluster IDs - defined in the foundation (ie. zcl.h)
+    369              {  // Attribute record
+    370                ATTRID_BASIC_HW_VERSION,            // Attribute ID - Found in Cluster Library header (ie. zcl_general.h)
+    371                ZCL_DATATYPE_UINT8,                 // Data Type - found in zcl.h
+    372                ACCESS_CONTROL_READ,                // Variable access control - found in zcl.h
+    373                (void *)&zclOnOffLight_HWRevision  // Pointer to attribute variable
+    374              }
+    375            },
+    376            {
+    377              ZCL_CLUSTER_ID_GEN_BASIC,
+    378              { // Attribute record
+    379                ATTRID_BASIC_ZCL_VERSION,
+    380                ZCL_DATATYPE_UINT8,
+    381                ACCESS_CONTROL_READ,
+    382                (void *)&zclOnOffLight_ZCLVersion
+    383              }
+    384            },
+    385            {
+    386              ZCL_CLUSTER_ID_GEN_BASIC,
+    387              { // Attribute record
+    388                ATTRID_BASIC_MANUFACTURER_NAME,
+    389                ZCL_DATATYPE_CHAR_STR,
+    390                ACCESS_CONTROL_READ,
+    391                (void *)zclOnOffLight_ManufacturerName
+    392              }
+    393            },
+    394            {
+    395              ZCL_CLUSTER_ID_GEN_BASIC,
+    396              { // Attribute record
+    397                ATTRID_BASIC_MODEL_ID,
+    398                ZCL_DATATYPE_CHAR_STR,
+    399                ACCESS_CONTROL_READ,
+    400                (void *)zclOnOffLight_ModelId
+    401              }
+    402            },
+    403            {
+    404              ZCL_CLUSTER_ID_GEN_BASIC,
+    405              { // Attribute record
+    406                ATTRID_BASIC_DATE_CODE,
+    407                ZCL_DATATYPE_CHAR_STR,
+    408                ACCESS_CONTROL_READ,
+    409                (void *)zclOnOffLight_DateCode
+    410              }
+    411            },
+    412            {
+    413              ZCL_CLUSTER_ID_GEN_BASIC,
+    414              { // Attribute record
+    415                ATTRID_BASIC_POWER_SOURCE,
+    416                ZCL_DATATYPE_UINT8,
+    417                ACCESS_CONTROL_READ,
+    418                (void *)&zclOnOffLight_PowerSource
+    419              }
+    420            },
+    421            {
+    422              ZCL_CLUSTER_ID_GEN_BASIC,
+    423              { // Attribute record
+    424                ATTRID_BASIC_LOCATION_DESC,
+    425                ZCL_DATATYPE_CHAR_STR,
+    426                (ACCESS_CONTROL_READ | ACCESS_CONTROL_WRITE),
+    427                (void *)zclOnOffLight_LocationDescription
+    428              }
+    429            },
+    430            {
+    431              ZCL_CLUSTER_ID_GEN_BASIC,
+    432              { // Attribute record
+    433                ATTRID_BASIC_PHYSICAL_ENV,
+    434                ZCL_DATATYPE_UINT8,
+    435                (ACCESS_CONTROL_READ | ACCESS_CONTROL_WRITE),
+    436                (void *)&zclOnOffLight_PhysicalEnvironment
+    437              }
+    438            },
+    439            {
+    440              ZCL_CLUSTER_ID_GEN_BASIC,
+    441              { // Attribute record
+    442                ATTRID_BASIC_DEVICE_ENABLED,
+    443                ZCL_DATATYPE_BOOLEAN,
+    444                (ACCESS_CONTROL_READ | ACCESS_CONTROL_WRITE),
+    445                (void *)&zclOnOffLight_DeviceEnable
+    446              }
+    447            },
+    448          
+    449            // *** Identify Cluster Attribute ***
+    450            {
+    451              ZCL_CLUSTER_ID_GEN_IDENTIFY,
+    452              { // Attribute record
+    453                ATTRID_IDENTIFY_TIME,
+    454                ZCL_DATATYPE_UINT16,
+    455                (ACCESS_CONTROL_READ | ACCESS_CONTROL_WRITE),
+    456                (void *)&zclOnOffLight_IdentifyTime
+    457              }
+    458            },
+    459          
+    460            // *** On/Off Cluster Attributes ***
+    461            {
+    462              ZCL_CLUSTER_ID_GEN_ON_OFF,
+    463              { // Attribute record
+    464                ATTRID_ON_OFF,
+    465                ZCL_DATATYPE_UINT8,
+    466                ACCESS_CONTROL_READ,
+    467                (void *)&zclOnOffLight2_OnOff
+    468              }
+    469            },
+    470          };
+    471          
+
+   \                                 In  segment XDATA_I, align 1, keep-with-next
+    472          SimpleDescriptionFormat_t zclOnOffLight2_SimpleDesc =
+   \                     zclOnOffLight2_SimpleDesc:
+   \   000000                DS 12
+   \   00000C                REQUIRE `?<Initializer for zclOnOffLight2_SimpleDesc>`
+   \   00000C                REQUIRE __INIT_XDATA_I
+
+   \                                 In  segment XDATA_ID, align 1, keep-with-next
+   \                     `?<Initializer for zclOnOffLight_LocationDescri`:
+   \   000000   10           DB 16
+   \   000001   20           DB 32
+   \   000002   20           DB 32
+   \   000003   20           DB 32
+   \   000004   20           DB 32
+   \   000005   20           DB 32
+   \   000006   20           DB 32
+   \   000007   20           DB 32
+   \   000008   20           DB 32
+   \   000009   20           DB 32
+   \   00000A   20           DB 32
+   \   00000B   20           DB 32
+   \   00000C   20           DB 32
+   \   00000D   20           DB 32
+   \   00000E   20           DB 32
+   \   00000F   20           DB 32
+   \   000010   20           DB 32
+
+   \                                 In  segment XDATA_ID, align 1, keep-with-next
+   \                     `?<Initializer for zclOnOffLight_DeviceEnable>`:
+   \   000000   01           DB 1
+
+   \                                 In  segment XDATA_ID, align 1, keep-with-next
+   \                     `?<Initializer for zclOnOffLight0_SimpleDesc>`:
+   \   000000   10           DB 16
+   \   000001   0401         DW 260
+   \   000003   0001         DW 256
+   \   000005   00           DB 0
+   \   000006   05           DB 5
+   \   000007   ....         DW zclOnOffLight_InClusterList
+   \   000009   01           DB 1
+   \   00000A   ....         DW zclOnOffLight_OutClusterList
+
+   \                                 In  segment XDATA_ID, align 1, keep-with-next
+   \                     `?<Initializer for zclOnOffLight1_SimpleDesc>`:
+   \   000000   11           DB 17
+   \   000001   0401         DW 260
+   \   000003   0001         DW 256
+   \   000005   00           DB 0
+   \   000006   05           DB 5
+   \   000007   ....         DW zclOnOffLight_InClusterList
+   \   000009   01           DB 1
+   \   00000A   ....         DW zclOnOffLight_OutClusterList
+
+   \                                 In  segment XDATA_ID, align 1, keep-with-next
+   \                     `?<Initializer for zclOnOffLight2_SimpleDesc>`:
+   \   000000   12           DB 18
+   \   000001   0401         DW 260
+   \   000003   0001         DW 256
+   \   000005   00           DB 0
+   \   000006   05           DB 5
+   \   000007   ....         DW zclOnOffLight_InClusterList
+   \   000009   01           DB 1
+   \   00000A   ....         DW zclOnOffLight_OutClusterList
+    473          {
+    474            ONOFFLIGHT2_ENDPOINT,                 //  int Endpoint;
+    475            ZCL_HA_PROFILE_ID,                    //  uint16 AppProfId[2];
+    476            ZCL_HA_DEVICEID_ON_OFF_LIGHT,         //  uint16 AppDeviceId[2];
+    477            ONOFFLIGHT_DEVICE_VERSION,            //  int   AppDevVer:4;
+    478            ONOFFLIGHT_FLAGS,                     //  int   AppFlags:4;
+    479            ZCLONOFFLIGHT_MAX_INCLUSTERS,         //  byte  AppNumInClusters;
+    480            (cId_t *)zclOnOffLight_InClusterList, //  byte *pAppInClusterList;
+    481            ZCLONOFFLIGHT_MAX_OUTCLUSTERS,        //  byte  AppNumInClusters;
+    482            (cId_t *)zclOnOffLight_OutClusterList //  byte *pAppInClusterList;
+    483          };
+    484          
+    485          /*********************************************************************
+    486           * GLOBAL FUNCTIONS
+    487           */
+    488          
+    489          /*********************************************************************
+    490           * LOCAL FUNCTIONS
+    491           */
+    492          
+    493          /****************************************************************************
+    494          ****************************************************************************/
+    495          
+    496          
+
+
+   Segment part sizes:
+
+     Function/Label                                 Bytes
+     --------------                                 -----
+     zclOnOffLight_HWRevision                          1
+     zclOnOffLight_ZCLVersion                          1
+     zclOnOffLight_ManufacturerName                   17
+     zclOnOffLight_ModelId                            17
+     zclOnOffLight_DateCode                           17
+     zclOnOffLight_PowerSource                         1
+     zclOnOffLight_LocationDescription
+                                                      17
+     zclOnOffLight_PhysicalEnvironment
+                                                       1
+     zclOnOffLight_DeviceEnable                        1
+     zclOnOffLight_IdentifyTime                        2
+     zclOnOffLight0_OnOff                              1
+     zclOnOffLight1_OnOff                              1
+     zclOnOffLight2_OnOff                              1
+     zclOnOffLight0_Attrs                             96
+     zclOnOffLight_InClusterList                      10
+     zclOnOffLight_OutClusterList                      2
+     zclOnOffLight0_SimpleDesc                        12
+     zclOnOffLight1_Attrs                             96
+     zclOnOffLight1_SimpleDesc                        12
+     zclOnOffLight2_Attrs                             96
+     zclOnOffLight2_SimpleDesc                        12
+     ?<Initializer for zclOnOffLight_LocationDescri   17
+     ?<Initializer for zclOnOffLight_DeviceEnable>     1
+     ?<Initializer for zclOnOffLight0_SimpleDesc>     12
+     ?<Initializer for zclOnOffLight1_SimpleDesc>     12
+     ?<Initializer for zclOnOffLight2_SimpleDesc>     12
+
+ 
+ 288 bytes in segment CODE_C
+  54 bytes in segment XDATA_I
+  54 bytes in segment XDATA_ID
+  66 bytes in segment XDATA_ROM_C
+   6 bytes in segment XDATA_Z
+ 
+ 342 bytes of CODE  memory
+  66 bytes of CONST memory
+  60 bytes of XDATA memory
+
+Errors: none
+Warnings: none

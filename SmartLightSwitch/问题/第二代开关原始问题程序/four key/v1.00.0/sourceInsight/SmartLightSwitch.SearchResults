@@ -1,0 +1,4 @@
+---- zclOnOffLight_event_loop Matches (3 in 3 files) ----
+OSAL_OnOffLight.c (d:\zigbee proiect\smartlightswitch\v1.00.0\zstack-cc2530-2.5.1a\zstack-cc2530-2.5.1a\projects\zstack\homeautomation\smartswitchlight\source):  zclOnOffLight_event_loop
+Zcl_onofflight.c (d:\zigbee proiect\smartlightswitch\v1.00.0\zstack-cc2530-2.5.1a\zstack-cc2530-2.5.1a\projects\zstack\homeautomation\smartswitchlight\source):uint16 zclOnOffLight_event_loop( uint8 task_id, uint16 events )
+Zcl_onofflight.h (d:\zigbee proiect\smartlightswitch\v1.00.0\zstack-cc2530-2.5.1a\zstack-cc2530-2.5.1a\projects\zstack\homeautomation\smartswitchlight\source):extern UINT16 zclOnOffLight_event_loop( byte task_id, UINT16 events );
